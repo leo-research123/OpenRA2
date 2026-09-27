@@ -67,6 +67,12 @@ virtual void alla(double malla) RX;
 #define RX {}
 #define RT(type) {return type();}
 
+// Original-game constructors supply their own vtables; standalone objects need
+// the compiler to initialize them, including directly instantiated UI classes.
+#if defined(RA2_FILES_GAME) || defined(RA2_IMAGE_GAME) || defined(RA2_YRPP_GAME)
 #define NOVTABLE __declspec(novtable)
+#else
+#define NOVTABLE
+#endif
 
 // noinit_t is declared by Memory.h -> platform/ABI.h.

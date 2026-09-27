@@ -32,14 +32,18 @@ struct BootstrapHost {
 BootstrapHost host(void* context) {
     return {*static_cast<decltype(ResourceContext::files)>(context)};
 }
+int disk(void* context) { return host(context).disk(); }
+void set_disk(void* context, int value) { host(context).set_disk(value); }
+bool raw_exists(void* context, const char* name) { return host(context).raw_exists(name); }
+MixFileClass* create_mix(void* context, const char* name) { return host(context).create_mix(name); }
+void append_expansion(void* context, MixFileClass* mix) { host(context).append_expansion(mix); }
+void set_generic(void* context, GenericMixSlot slot, MixFileClass* mix) {
+    host(context).set_generic(slot, mix);
+}
+bool cache(void* context, const char* name) { return host(context).cache(name); }
+// Named function addresses remain constant expressions on MSVC as well.
 constinit const BootstrapServices services{
-    [](void* context) { return host(context).disk(); },
-    [](void* context, int value) { host(context).set_disk(value); },
-    [](void* context, const char* name) { return host(context).raw_exists(name); },
-    [](void* context, const char* name) { return host(context).create_mix(name); },
-    [](void* context, MixFileClass* mix) { host(context).append_expansion(mix); },
-    [](void* context, GenericMixSlot slot, MixFileClass* mix) { host(context).set_generic(slot, mix); },
-    [](void* context, const char* name) { return host(context).cache(name); }
+    disk, set_disk, raw_exists, create_mix, append_expansion, set_generic, cache
 };
 }
 

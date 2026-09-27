@@ -47,20 +47,21 @@ struct Host {
 
 // MIX pointers are opaque to Bootstrap: these test objects are only passed
 // through the entry and converted back by this provider, never dereferenced as MIXes.
+int disk(void* context) { return static_cast<Host*>(context)->disk(); }
+void set_disk(void* context, int value) { static_cast<Host*>(context)->set_disk(value); }
+bool raw_exists(void* context, const char* name) { return static_cast<Host*>(context)->raw_exists(name); }
+MixFileClass* create_mix(void* context, const char* name) {
+    return reinterpret_cast<MixFileClass*>(static_cast<Host*>(context)->create_mix(name));
+}
+void append_expansion(void* context, MixFileClass* mix) {
+    static_cast<Host*>(context)->append_expansion(reinterpret_cast<Object*>(mix));
+}
+void set_generic(void* context, GenericMixSlot slot, MixFileClass* mix) {
+    static_cast<Host*>(context)->set_generic(slot, reinterpret_cast<Object*>(mix));
+}
+bool cache(void* context, const char* name) { return static_cast<Host*>(context)->cache(name); }
 constinit const BootstrapServices services{
-    [](void* context) { return static_cast<Host*>(context)->disk(); },
-    [](void* context, int value) { static_cast<Host*>(context)->set_disk(value); },
-    [](void* context, const char* name) { return static_cast<Host*>(context)->raw_exists(name); },
-    [](void* context, const char* name) {
-        return reinterpret_cast<MixFileClass*>(static_cast<Host*>(context)->create_mix(name));
-    },
-    [](void* context, MixFileClass* mix) {
-        static_cast<Host*>(context)->append_expansion(reinterpret_cast<Object*>(mix));
-    },
-    [](void* context, GenericMixSlot slot, MixFileClass* mix) {
-        static_cast<Host*>(context)->set_generic(slot, reinterpret_cast<Object*>(mix));
-    },
-    [](void* context, const char* name) { return static_cast<Host*>(context)->cache(name); }
+    disk, set_disk, raw_exists, create_mix, append_expansion, set_generic, cache
 };
 const BootstrapSession* active_session = nullptr;
 struct SessionScope {
