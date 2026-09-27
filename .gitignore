@@ -1,0 +1,26 @@
+# Build outputs and local dependencies.
+/out/
+build/
+cmake-build-*/
+.deps/
+vcpkg_installed/
+compile_commands.json
+
+# Editor and platform caches.
+.DS_Store
+.idea/
+
+# Python bytecode caches.
+*.pyc
+__pycache__/
+
+# Godot imports, .NET intermediates and legacy in-project libraries.
+/code/godot/.godot/
+/code/godot/android/
+/code/godot/bin/
+/code/godot/obj/
+# Generated from the authoritative sources in code/bridge/shaders/.
+/code/godot/shaders/
+
+# Documentation application backups.
+/.doc-backups/
