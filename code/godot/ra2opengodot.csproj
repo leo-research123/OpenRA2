@@ -1,0 +1,18 @@
+<Project Sdk="Godot.NET.Sdk/4.7.2">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Configuration)' != 'Debug'">
+    <Compile Remove="tests/**/*.cs" />
+  </ItemGroup>
+  <!-- Also prepare resources when the editor or test runner builds only C#. -->
+  <Target Name="PrepareBridgeShaders" BeforeTargets="PrepareForBuild">
+    <ItemGroup>
+      <BridgeShader Include="$(MSBuildProjectDirectory)/../bridge/shaders/*.glsl" />
+    </ItemGroup>
+    <Copy SourceFiles="@(BridgeShader)" DestinationFolder="$(MSBuildProjectDirectory)/shaders" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

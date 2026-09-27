@@ -1,0 +1,81 @@
+#pragma once
+
+#include "yrpp/platform/ABI.h"
+
+#include "yrpp/GeneralDefinitions.h"
+
+#include "yrpp/Helpers/CompileTime.h"
+
+class TechnoClass;
+
+class RadBeam
+{
+public:
+    /// Global VA: 0x00B04A60.
+    DEFINE_REFERENCE(DynamicVectorClass<RadBeam*>, Array, 0xB04A60u)
+
+    // Constructor removed - do not use it, use Allocate instead
+
+    ~RadBeam() = default;
+
+    /// VA: 0x00659110.
+    static RadBeam* YRPP_FASTCALL Allocate(RadBeamType mode)
+        { JMP_STD(0x659110); }
+
+    void SetColor(const ColorStruct &color)
+        { this->Color = color; }
+
+    void SetCoordsSource(const CoordStruct &loc)
+        { this->SourceLocation = loc; }
+
+    void SetCoordsTarget(const CoordStruct &loc)
+        { this->TargetLocation = loc; }
+
+    // Properties
+
+public:
+
+    DWORD unknown_0;
+    TechnoClass* Owner;
+    byte unknown_8;
+
+    /**
+     * if there's difference in the Y coord of SourceLocation and TargetLocation,
+     * they're both converted to screen coords (2D)
+     * and the difference of those Y coords is taken as this field
+     */
+    DWORD unknown_C;
+
+    RadBeamType Type;
+    DWORD unknown_14;
+    double unknown_18;
+    ColorStruct Color;
+    CoordStruct SourceLocation; //FLH
+    CoordStruct TargetLocation;
+    DWORD Period;
+    double Amplitude;
+    double unknown_48;
+    DWORD unknown_50;
+    DWORD unknown_54;
+    byte unknown_58;
+    DWORD unknown_5C;
+    DWORD unknown_60;
+    DWORD unknown_64;
+    double unknown_68;
+    CoordStruct AnotherLocation;
+    DWORD unknown_7C;
+    double unknown_80;
+    DWORD unknown_88;
+    DWORD unknown_8C;
+    CoordStruct AndAnotherLocation;
+    DWORD unknown_9C;
+    DWORD unknown_A0;
+    DWORD unknown_A4;
+    DWORD unknown_A8;
+    DWORD unknown_AC;
+    DWORD unknown_B0;
+    DWORD unknown_B4;
+    double unknown_B8;
+    byte unknown_C0;
+    DWORD unknown_C4;
+};

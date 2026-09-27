@@ -1,0 +1,94 @@
+#pragma once
+
+#include "yrpp/Helpers/CompileTime.h"
+
+#ifndef GAMEMD_STRING
+#define GAMEMD_STRING(name,addr)\
+DEFINE_POINTER(const char, name, addr)
+
+namespace GameStrings
+{
+    // unsorted names
+    GAMEMD_STRING(YURI_S_REVENGE, 0x849F48u);
+    GAMEMD_STRING(BLOWFISH_DLL  , 0x840A78u);
+    GAMEMD_STRING(XXICON_SHP    , 0x8204FCu);
+    GAMEMD_STRING(LSSOBS_SHP    , 0x8297F4u);
+    GAMEMD_STRING(_800          , 0x8297DCu);
+    GAMEMD_STRING(_640          , 0x8297E0u);
+    GAMEMD_STRING(_none_        , 0x817474u);
+    GAMEMD_STRING(none          , 0x817694u);
+    GAMEMD_STRING(Allied        , 0x846788u);
+    GAMEMD_STRING(Russian       , 0x846790u);
+    GAMEMD_STRING(Yuri          , 0x846798u);
+    GAMEMD_STRING(Neutral       , 0x82BA08u);
+    GAMEMD_STRING(Civilian      , 0x818164u);
+    GAMEMD_STRING(Special       , 0x817318u);
+    GAMEMD_STRING(MCVRedeploys  , 0x83CF68u);
+    GAMEMD_STRING(GAME_FNT      , 0x818B98u);
+    GAMEMD_STRING(SAVEGAME_NET  , 0x820DACu);
+
+    // ini file names
+    GAMEMD_STRING(UIMD_INI     , 0x827DC8u);
+    GAMEMD_STRING(THEMEMD_INI  , 0x825D94u);
+    GAMEMD_STRING(EVAMD_INI    , 0x825DF0u);
+    GAMEMD_STRING(SOUNDMD_INI  , 0x825E50u);
+    GAMEMD_STRING(BATTLEMD_INI , 0x826198u);
+    GAMEMD_STRING(AIMD_INI     , 0x82621Cu);
+    GAMEMD_STRING(ARTMD_INI    , 0x826254u);
+    GAMEMD_STRING(RULESMD_INI  , 0x826260u);
+    GAMEMD_STRING(RA2MD_INI    , 0x826444u);
+    GAMEMD_STRING(MAPSELMD_INI , 0x830370u);
+    GAMEMD_STRING(MISSIONMD_INI, 0x839724u);
+
+    // ini section names
+    GAMEMD_STRING(General        , 0x826278u);
+    GAMEMD_STRING(Basic          , 0x82BF9Cu);
+    GAMEMD_STRING(AudioVisual    , 0x839EA8u);
+    GAMEMD_STRING(AI             , 0x839DA4u);
+    GAMEMD_STRING(CombatDamage   , 0x839E8Cu);
+    GAMEMD_STRING(Radiation      , 0x839E80u);
+    GAMEMD_STRING(ToolTips       , 0x833188u);
+    GAMEMD_STRING(CrateRules     , 0x839E9Cu);
+    GAMEMD_STRING(JumpjetControls, 0x839D58u);
+    GAMEMD_STRING(Waypoints      , 0x82DB0Cu);
+    GAMEMD_STRING(VariableNames  , 0x83D824u);
+
+    // EVA entry names
+    GAMEMD_STRING(EVA_StructureSold      , 0x819030u);
+    GAMEMD_STRING(EVA_InsufficientFunds  , 0x819044u);
+    GAMEMD_STRING(EVA_UnitSold           , 0x822630u);
+    GAMEMD_STRING(EVA_OreMinerUnderAttack, 0x824784u);
+    GAMEMD_STRING(EVA_CannotDeployHere   , 0x82012Cu);
+    GAMEMD_STRING(EVA_UnitReady          , 0x8249A0u);
+
+    // CSF Labels
+    GAMEMD_STRING(TXT_TO_REPLAY           , 0x83DB24);
+    GAMEMD_STRING(TXT_OK                  , 0x825FB0);
+    GAMEMD_STRING(TXT_CANCEL              , 0x825FD0);
+    GAMEMD_STRING(TXT_CONTROL             , 0x82729C);
+    GAMEMD_STRING(TXT_INTERFACE           , 0x826FEC);
+    GAMEMD_STRING(TXT_SELECTION           , 0x827250);
+    GAMEMD_STRING(TXT_TAUNT               , 0x827218);
+    GAMEMD_STRING(TXT_TEAM                , 0x826FA4);
+    GAMEMD_STRING(TXT_MULTIPLAYER_GAME    , 0x820DBC);
+    GAMEMD_STRING(TXT_SAVING_GAME         , 0x820DD4);
+    GAMEMD_STRING(TXT_GAME_WAS_SAVED      , 0x829FE0);
+    GAMEMD_STRING(TXT_ERROR_SAVING_GAME   , 0x829EBC);
+    GAMEMD_STRING(TXT_ERROR_LOADING_GAME  , 0x829EA4);
+    GAMEMD_STRING(TXT_UNABLE_READ_SCENARIO, 0x831AF0);
+    GAMEMD_STRING(TXT_PRI                 , 0x843150);
+    GAMEMD_STRING(TXT_PRIMARY             , 0x843158);
+    GAMEMD_STRING(TXT_POWER_DRAIN2        , 0x843164);
+    GAMEMD_STRING(TXT_MONEY_FORMAT_1      , 0x83FAB0);
+    GAMEMD_STRING(TXT_MONEY_FORMAT_2      , 0x83FA9C);
+    GAMEMD_STRING(GUI_DEBUG               , 0x827AF8);
+    GAMEMD_STRING(TXT_COMPUTER            , 0x824FC8);
+    GAMEMD_STRING(GUI_AIHard              , 0x831C4C);
+    GAMEMD_STRING(GUI_AINormal            , 0x831C58);
+    GAMEMD_STRING(GUI_AIEasy              , 0x831C68);
+
+    // ....
+}
+
+#undef GAMEMD_STRING
+#endif

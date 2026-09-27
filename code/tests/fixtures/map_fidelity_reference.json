@@ -1,0 +1,187 @@
+{
+  "schema": 1,
+  "target": {
+    "file": "gamemd.exe",
+    "sha256": "7b8a068535d6af06845edf95ae829b113d00c02909330e16f197426cd7db94b6",
+    "image_base": "0x00400000"
+  },
+  "limits": [
+    "Static binary/decompiled-source calibration, not live execution of the original game",
+    "Synthetic SHP/INI/native-state tests do not establish full original pixel equality",
+    "Resource tests cover liveness and determinism; original heap, RNG and exact timing are not claimed",
+    "G-prefix probes are deliberately failing known gaps and are not acceptance passes"
+  ],
+  "sources": [
+    {
+      "file": "0045F230.c",
+      "va": "0x0045F230",
+      "sha256": "5c2d9b395d489dd183d7fa8949d237cd1272e65ea684745491f59abe7921a1ad",
+      "role": "Building body art.Image, auxiliary SHP loading and theater fallback"
+    },
+    {
+      "file": "005F96B0.c",
+      "va": "0x005F96B0",
+      "sha256": "75799514e866d64b3c22ef4e07f862da831e15f762be7e6c87204850c81b183e",
+      "role": "Building theater letter substitution independent of NewTheater"
+    },
+    {
+      "file": "005F9710.c",
+      "va": "0x005F9710",
+      "sha256": "5938bdc3f665162bf4a7a9009960a1f6da9859c7027e71f20536eae2b14f244a",
+      "role": "Fallback replaces the second filename character with G"
+    },
+    {
+      "file": "0045FE50.c",
+      "va": "0x0045FE50",
+      "sha256": "e8372fd1ed9cfdc0eeb7dd5820c2a3714349568fe64139fb1e7340421c05096b",
+      "role": "rules/art field source, upgrade keys and declaration count"
+    },
+    {
+      "file": "00712170.c",
+      "va": "0x00712170",
+      "sha256": "86a44990607bec12cca121b8fe6db47c2a5770a48cd196b9835dd855bd62a628",
+      "role": "Techno Remapable is read from art"
+    },
+    {
+      "file": "00451750.c",
+      "va": "0x00451750",
+      "sha256": "f1d3ca0604ea9010435bfa6c803ea4118dbacea7cd7da085a89a57cec760575d",
+      "role": "Damaged animation precedes garrisoned animation"
+    },
+    {
+      "file": "004509D0.c",
+      "va": "0x004509D0",
+      "sha256": "8420870a7702aa0bb89eaa224228d0b4408c84200c6dbcf3be3383529b99b643",
+      "role": "SHP turret absolute facing frame and stopped animation timer"
+    },
+    {
+      "file": "0043EF90.c",
+      "va": "0x0043EF90",
+      "sha256": "7b727a0a5d681fc8c03d42378b10af33b9731dcb89a72093868f63a4525f8b0f",
+      "role": "Building frame state branches (only the documented subset ported)"
+    },
+    {
+      "file": "0043D290.c",
+      "va": "0x0043D290",
+      "sha256": "ae17c034194b7217b780170c6e2ca87293f0ad608ae18ef0e4d44a7f28840435",
+      "role": "Factory composite/state drawing: still incomplete"
+    },
+    {
+      "file": "0043DA80.c",
+      "va": "0x0043DA80",
+      "sha256": "47b97b1f53a2cf33668138276f55c0de863397a5b508e8e4f8fb75bfccdacafe",
+      "role": "Original VXL turret/barrel draw branch: still unimplemented"
+    },
+    {
+      "file": "006F64A0.c",
+      "va": "0x006F64A0",
+      "sha256": "ce300304ba9acbd5ea04a487abf4419ff0636c18e130b7f683858f9d72c4527a",
+      "role": "PIPS building health bar: known gap, not repaired"
+    },
+    {
+      "file": "006F5190.c",
+      "va": "0x006F5190",
+      "sha256": "8296059f7c974683cebf75e9f41e2f0f8170fd4a2f9b4890056806d5ebf4c037",
+      "role": "Projected selection outline: known gap, not repaired"
+    }
+  ],
+  "turret": {
+    "table_va": "0x007F4890",
+    "table_i32": [
+      28,
+      27,
+      26,
+      25,
+      24,
+      23,
+      22,
+      21,
+      20,
+      19,
+      18,
+      17,
+      16,
+      15,
+      14,
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      31,
+      30,
+      29
+    ],
+    "witnesses": [
+      {
+        "va": "0x0045125E",
+        "bytes": "8d8e88030000",
+        "role": "lea ecx,[esi+0x388]: PrimaryFacing"
+      },
+      {
+        "va": "0x0045126A",
+        "bytes": "8b008b8e80050000c1e80a40d1e883e01f85c974178b148590487f008991ac000000",
+        "role": "Facing quantization, table lookup and absolute frame assignment"
+      },
+      {
+        "va": "0x0045128C",
+        "bytes": "c781c400000000000000",
+        "role": "Writes zero to animation Rate"
+      }
+    ],
+    "fixture": "building_turret_reference.txt",
+    "sample_count": 160,
+    "quantization": "(((raw_u16 >> 10) + 1) >> 1) & 31",
+    "sampling": "For every i in [0,31], raw=i*2048+delta, delta in [0,1023,1024,1025,2047]",
+    "fixture_sha256": "0a3fbc082ab2bc0468f35bdcb91a4ddb56c58cdef2c0881c1bd32a5872779f51"
+  },
+  "acceptance_cases": [
+    "F01_art_image_alias",
+    "F02_art_remapable",
+    "F03_rules_turret",
+    "F04_factory_shapes",
+    "F05_powerup_location_keys",
+    "F06_damage_before_garrison",
+    "F07_resource_cohort_128_2",
+    "N01_alias_preserves_art_section",
+    "N02_building_theater_without_newtheater",
+    "N03_generic_theater_fallback",
+    "N04_auxiliary_theater_and_ownership",
+    "N05_rules_remapable_ignored",
+    "N06_undeclared_powerup_ignored",
+    "N07_all_three_powerup_slots",
+    "N08_turret_garrison_rules_image_section",
+    "N09_turret_facings_original_table",
+    "N10_turret_does_not_free_run",
+    "N11_turret_updates_with_facing",
+    "N12_turret_damage_transition",
+    "N13_voxel_not_registered_as_shp",
+    "N14_inactive_slots_not_auto_started",
+    "N15_shp_turret_draw_submission",
+    "N16_body_never_uses_shadow_half",
+    "N17_no_shadow_uses_all_body_frames",
+    "N18_construction_not_damaged_idle",
+    "N19_gate_damaged_bank",
+    "N20_resource_cohort_192_3",
+    "N21_resource_cohort_65_2",
+    "N22_resource_disabled",
+    "N23_resource_zero_probability",
+    "N24_resource_reload_determinism",
+    "N25_resource_reseed_resets_due_time",
+    "N26_resource_spread_is_live"
+  ],
+  "known_gap_probes": [
+    "G01_original_pips_health_bar",
+    "G02_projected_selection_edges",
+    "G03_construction_uses_buildup"
+  ]
+}

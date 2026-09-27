@@ -1,0 +1,90 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/SettingsScreen.cs" id="1"]
+
+[node name="SettingsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Form" type="VBoxContainer" parent="Center"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Center/Form"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "显示设置"
+horizontal_alignment = 1
+
+[node name="Fields" type="GridContainer" parent="Center/Form"]
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 18
+columns = 2
+
+[node name="ResolutionLabel" type="Label" parent="Center/Form/Fields"]
+layout_mode = 2
+text = "分辨率"
+
+[node name="ResolutionOption" type="OptionButton" parent="Center/Form/Fields"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(340, 52)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ModeLabel" type="Label" parent="Center/Form/Fields"]
+layout_mode = 2
+text = "显示模式"
+
+[node name="ModeOption" type="OptionButton" parent="Center/Form/Fields"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(340, 52)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Hint" type="Label" parent="Center/Form"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.66, 0.71, 0.77, 1)
+text = "全屏时按所选分辨率绘制游戏画面，文字保持清晰。\n窗口超过屏幕可用区域时会自动缩小。"
+
+[node name="Actions" type="HBoxContainer" parent="Center/Form"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ApplyButton" type="Button" parent="Center/Form/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "应用"
+
+[node name="BackButton" type="Button" parent="Center/Form/Actions"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 52)
+size_flags_horizontal = 3
+text = "返回"
+
+[node name="Status" type="Label" parent="Center/Form"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 2
+
+[connection signal="pressed" from="Center/Form/Actions/ApplyButton" to="." method="OnApplyPressed"]
+[connection signal="pressed" from="Center/Form/Actions/BackButton" to="." method="OnBackPressed"]

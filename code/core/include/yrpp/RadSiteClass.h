@@ -1,0 +1,150 @@
+/*
+    RadSites
+*/
+
+#pragma once
+
+#include "yrpp/platform/ABI.h"
+
+#include "yrpp/AbstractClass.h"
+
+class LightSourceClass;
+class WeaponTypeClass;
+
+class NOVTABLE RadSiteClass : public AbstractClass
+{
+public:
+    static const AbstractType AbsID = AbstractType::RadSite;
+
+    // Static
+    /// Global VA: 0x00B04BD0.
+    DEFINE_REFERENCE(DynamicVectorClass<RadSiteClass*>, Array, 0xB04BD0u)
+
+    // IPersist
+    /// VA: unknown (legacy placeholder).
+    virtual HRESULT YRPP_STDCALL GetClassID(CLSID* pClassID) R0;
+
+    // IPersistStream
+    /// VA: unknown (legacy placeholder).
+    virtual HRESULT YRPP_STDCALL Load(IStream* pStm) R0;
+    /// VA: unknown (legacy placeholder).
+    virtual HRESULT YRPP_STDCALL Save(IStream* pStm,BOOL fClearDirty) R0;
+
+    // Destructor
+    /// VA: unknown (legacy placeholder).
+    virtual ~RadSiteClass() RX;
+
+    // AbstractClass
+    /// VA: unknown (legacy placeholder).
+    virtual AbstractType WhatAmI() const RT(AbstractType);
+    /// VA: unknown (legacy placeholder).
+    virtual int Size() const R0;
+
+    // non-virtual
+public:
+    // Start irradiating an area. Be sure to set the BaseCell, Spread and RadLevel first!
+    /// VA: 0x0065B580.
+    void Activate()
+        { JMP_THIS(0x65B580); }
+
+    // Remove the radiation effect of this site completely
+    /// VA: 0x0065BB50.
+    void Deactivate()
+        { JMP_THIS(0x65BB50); }
+
+    // Add the radiation of this RadSite to the cells.
+    /// VA: 0x0065B9C0.
+    void Radiate()
+        { JMP_THIS(0x65B9C0); }
+
+    // Decrease the radiation of this RadSite by one step.
+    /// VA: 0x0065BD00.
+    void DecreaseRadiation()
+        { JMP_THIS(0x65BD00); }
+
+    // Decrease the cell tint and intensity of this RadSite.
+    /// VA: 0x0065BE90.
+    void DecreaseLight()
+        { JMP_THIS(0x65BE90); }
+
+    // Add this RadLevel to the current radiation.
+    /// VA: 0x0065B530.
+    void Add(int nRadLevel)
+        { JMP_THIS(0x65B530); }
+
+    // Gets the current rad level (corresponds to the RadLevel at BaseCell).
+    /// VA: 0x0065B510.
+    int GetRadLevel()
+        { JMP_THIS(0x65B510); }
+
+    // Gets the rad level applied by this RadSite to a certain cell.
+    /// VA: 0x0065B8F0.
+    int GetRadLevelAt(CellStruct* pCell)
+        { JMP_THIS(0x65B8F0); }
+
+    // Sets the rad level and the appropriate duration values.
+    /// VA: 0x0065B4F0.
+    void SetRadLevel(int nRadLevel)
+        { JMP_THIS(0x65B4F0); }
+
+    // Sets the center cell. Do not change when RadSite is activated.
+    /// VA: 0x0065B4C0.
+    void SetBaseCell(CellStruct* pCell)
+        { JMP_THIS(0x65B4C0); }
+
+    // Gets the spread in cells.
+    /// VA: 0x0065B4B0.
+    void GetSpread()
+        { JMP_THIS(0x65B4B0); }
+
+    // Sets the spread in cells. Also updates the SpreadInLeptons.
+    /// VA: 0x0065B4D0.
+    void SetSpread(int nCells)
+        { JMP_THIS(0x65B4D0); }
+
+    // helper methods
+
+    // Gets the current strenght of the effect, the ratio between time left and initial duration.
+    double GetEffectPercentage() {
+        return (this->RadDuration <= 0) ? 0.0 :
+            static_cast<double>(this->RadTimeLeft) / static_cast<double>(this->RadDuration);
+    }
+
+    // Constructor
+    /// VA: 0x0065B1E0.
+    RadSiteClass()
+        : RadSiteClass(noinit_t())
+    { JMP_THIS(0x65B1E0); }
+
+    RadSiteClass(CellStruct nBaseCoords, int nSpread, int nRadLevel) noexcept
+        : RadSiteClass()
+    {
+        SetBaseCell(&nBaseCoords);
+        SetSpread(nSpread);
+        SetRadLevel(nRadLevel);
+    }
+
+protected:
+    explicit __forceinline RadSiteClass(noinit_t) noexcept
+        : AbstractClass(noinit_t())
+    { }
+
+    // Properties
+
+public:
+
+    LightSourceClass* LightSource; // the light source attached to this instance
+    DECLARE_PROPERTY(CDTimerClass, RadLevelTimer); // used to count down RadLevelDelay
+    DECLARE_PROPERTY(CDTimerClass, RadLightTimer); // used to count down RadLightDelay
+    CellStruct        BaseCell; // center cell
+    int               Spread; // range in cells
+    int               SpreadInLeptons; // range in leptons
+    int               RadLevel; // the radiation level,
+    int               LevelSteps; // cell's rad level reduced by (RadLevel/LevelSteps) every time RadLevelTimer elapses
+    int               Intensity; // the intensity at the beginning
+    TintStruct        Tint; // RadColor at the current level
+    int               IntensitySteps; // the number of intensity decreases during the duration
+    int               IntensityDecrement; // Intensity decremented by this every time RadLightDelay elapses
+    int               RadDuration; // as currently set up, the rad site will stay for so many frames
+    int               RadTimeLeft; // the remaining frames. divided by RadDuration gives the factor
+};

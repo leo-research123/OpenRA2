@@ -1,0 +1,488 @@
+[
+  {
+    "address": "0x65cac0",
+    "export": "RA2Files_RawFile_SetFileName",
+    "cls": "RawFileClass",
+    "method": "SetFileName",
+    "ret": "const char*",
+    "args": "const char* name",
+    "vals": "name"
+  },
+  {
+    "address": "0x65cb30",
+    "export": "RA2Files_RawFile_OpenEx",
+    "cls": "RawFileClass",
+    "method": "OpenEx",
+    "ret": "int",
+    "args": "const char* name, FileAccessMode mode",
+    "vals": "name, mode"
+  },
+  {
+    "address": "0x65cb50",
+    "export": "RA2Files_RawFile_Open",
+    "cls": "RawFileClass",
+    "method": "Open",
+    "ret": "int",
+    "args": "FileAccessMode mode",
+    "vals": "mode"
+  },
+  {
+    "address": "0x65cbf0",
+    "export": "RA2Files_RawFile_Exists",
+    "cls": "RawFileClass",
+    "method": "Exists",
+    "ret": "int",
+    "args": "bool shared",
+    "vals": "shared"
+  },
+  {
+    "address": "0x65cca0",
+    "export": "RA2Files_RawFile_Close",
+    "cls": "RawFileClass",
+    "method": "Close",
+    "ret": "void",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x65cce0",
+    "export": "RA2Files_RawFile_ReadBytes",
+    "cls": "RawFileClass",
+    "method": "ReadBytes",
+    "ret": "int",
+    "args": "void* data, int size",
+    "vals": "data, size"
+  },
+  {
+    "address": "0x65cdd0",
+    "export": "RA2Files_RawFile_WriteBytes",
+    "cls": "RawFileClass",
+    "method": "WriteBytes",
+    "ret": "int",
+    "args": "void* data, int size",
+    "vals": "data, size"
+  },
+  {
+    "address": "0x65cf00",
+    "export": "RA2Files_RawFile_Seek",
+    "cls": "RawFileClass",
+    "method": "Seek",
+    "ret": "int",
+    "args": "int offset, FileSeekMode mode",
+    "vals": "offset, mode"
+  },
+  {
+    "address": "0x65d0d0",
+    "export": "RA2Files_RawFile_GetFileSize",
+    "cls": "RawFileClass",
+    "method": "GetFileSize",
+    "ret": "int",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x65d150",
+    "export": "RA2Files_RawFile_CreateFile",
+    "cls": "RawFileClass",
+    "method": "CreateFile",
+    "ret": "int",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x65d190",
+    "export": "RA2Files_RawFile_DeleteFile",
+    "cls": "RawFileClass",
+    "method": "DeleteFile",
+    "ret": "int",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x65d1f0",
+    "export": "RA2Files_RawFile_GetFileTime",
+    "cls": "RawFileClass",
+    "method": "GetFileTime",
+    "ret": "DWORD",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x65d240",
+    "export": "RA2Files_RawFile_SetFileTime",
+    "cls": "RawFileClass",
+    "method": "SetFileTime",
+    "ret": "int",
+    "args": "DWORD time",
+    "vals": "time"
+  },
+  {
+    "address": "0x65d2b0",
+    "export": "RA2Files_RawFile_Bias",
+    "cls": "RawFileClass",
+    "method": "Bias",
+    "ret": "void",
+    "args": "int start, int length",
+    "vals": "start, length"
+  },
+  {
+    "address": "0x65d420",
+    "export": "RA2Files_RawFile_HasHandle",
+    "cls": "RawFileClass",
+    "method": "HasHandle",
+    "ret": "int",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x431bc0",
+    "export": "RA2Files_BufferIOFile_Cache",
+    "cls": "BufferIOFileClass",
+    "method": "Cache",
+    "ret": "int",
+    "args": "int size, void* buffer",
+    "vals": "size, buffer"
+  },
+  {
+    "address": "0x431d90",
+    "export": "RA2Files_BufferIOFile_Free",
+    "cls": "BufferIOFileClass",
+    "method": "Free",
+    "ret": "void",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x431dd0",
+    "export": "RA2Files_BufferIOFile_Commit",
+    "cls": "BufferIOFileClass",
+    "method": "Commit",
+    "ret": "int",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x431e80",
+    "export": "RA2Files_BufferIOFile_SetFileName",
+    "cls": "BufferIOFileClass",
+    "method": "SetFileName",
+    "ret": "const char*",
+    "args": "const char* name",
+    "vals": "name"
+  },
+  {
+    "address": "0x431f10",
+    "export": "RA2Files_BufferIOFile_Exists",
+    "cls": "BufferIOFileClass",
+    "method": "Exists",
+    "ret": "int",
+    "args": "bool shared",
+    "vals": "shared"
+  },
+  {
+    "address": "0x431f30",
+    "export": "RA2Files_BufferIOFile_HasHandle",
+    "cls": "BufferIOFileClass",
+    "method": "HasHandle",
+    "ret": "int",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x431f50",
+    "export": "RA2Files_BufferIOFile_OpenEx",
+    "cls": "BufferIOFileClass",
+    "method": "OpenEx",
+    "ret": "int",
+    "args": "const char* name, FileAccessMode mode",
+    "vals": "name, mode"
+  },
+  {
+    "address": "0x431f70",
+    "export": "RA2Files_BufferIOFile_Open",
+    "cls": "BufferIOFileClass",
+    "method": "Open",
+    "ret": "int",
+    "args": "FileAccessMode mode",
+    "vals": "mode"
+  },
+  {
+    "address": "0x432050",
+    "export": "RA2Files_BufferIOFile_WriteBytes",
+    "cls": "BufferIOFileClass",
+    "method": "WriteBytes",
+    "ret": "int",
+    "args": "void* data, int size",
+    "vals": "data, size"
+  },
+  {
+    "address": "0x4322a0",
+    "export": "RA2Files_BufferIOFile_ReadBytes",
+    "cls": "BufferIOFileClass",
+    "method": "ReadBytes",
+    "ret": "int",
+    "args": "void* data, int size",
+    "vals": "data, size"
+  },
+  {
+    "address": "0x4324b0",
+    "export": "RA2Files_BufferIOFile_Seek",
+    "cls": "BufferIOFileClass",
+    "method": "Seek",
+    "ret": "int",
+    "args": "int offset, FileSeekMode mode",
+    "vals": "offset, mode"
+  },
+  {
+    "address": "0x4325a0",
+    "export": "RA2Files_BufferIOFile_GetFileSize",
+    "cls": "BufferIOFileClass",
+    "method": "GetFileSize",
+    "ret": "int",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x4325c0",
+    "export": "RA2Files_BufferIOFile_Close",
+    "cls": "BufferIOFileClass",
+    "method": "Close",
+    "ret": "void",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x47ae10",
+    "export": "RA2Files_CDFile_SetFileName",
+    "cls": "CDFileClass",
+    "method": "SetFileName",
+    "ret": "const char*",
+    "args": "const char* name",
+    "vals": "name"
+  },
+  {
+    "address": "0x47aab0",
+    "export": "RA2Files_CDFile_Open",
+    "cls": "CDFileClass",
+    "method": "Open",
+    "ret": "int",
+    "args": "FileAccessMode mode",
+    "vals": "mode"
+  },
+  {
+    "address": "0x47af10",
+    "export": "RA2Files_CDFile_OpenEx",
+    "cls": "CDFileClass",
+    "method": "OpenEx",
+    "ret": "int",
+    "args": "const char* name, FileAccessMode mode",
+    "vals": "name, mode"
+  },
+  {
+    "address": "0x473ae0",
+    "export": "RA2Files_CCFile_WriteBytes",
+    "cls": "CCFileClass",
+    "method": "WriteBytes",
+    "ret": "int",
+    "args": "void* data, int size",
+    "vals": "data, size"
+  },
+  {
+    "address": "0x473b10",
+    "export": "RA2Files_CCFile_ReadBytes",
+    "cls": "CCFileClass",
+    "method": "ReadBytes",
+    "ret": "int",
+    "args": "void* data, int size",
+    "vals": "data, size"
+  },
+  {
+    "address": "0x473ba0",
+    "export": "RA2Files_CCFile_Seek",
+    "cls": "CCFileClass",
+    "method": "Seek",
+    "ret": "int",
+    "args": "int offset, FileSeekMode mode",
+    "vals": "offset, mode"
+  },
+  {
+    "address": "0x473c00",
+    "export": "RA2Files_CCFile_GetFileSize",
+    "cls": "CCFileClass",
+    "method": "GetFileSize",
+    "ret": "int",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x473c50",
+    "export": "RA2Files_CCFile_Exists",
+    "cls": "CCFileClass",
+    "method": "Exists",
+    "ret": "int",
+    "args": "bool shared",
+    "vals": "shared"
+  },
+  {
+    "address": "0x473cd0",
+    "export": "RA2Files_CCFile_HasHandle",
+    "cls": "CCFileClass",
+    "method": "HasHandle",
+    "ret": "int",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x473ce0",
+    "export": "RA2Files_CCFile_Close",
+    "cls": "CCFileClass",
+    "method": "Close",
+    "ret": "void",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x473d10",
+    "export": "RA2Files_CCFile_Open",
+    "cls": "CCFileClass",
+    "method": "Open",
+    "ret": "int",
+    "args": "FileAccessMode mode",
+    "vals": "mode"
+  },
+  {
+    "address": "0x473e50",
+    "export": "RA2Files_CCFile_GetFileTime",
+    "cls": "CCFileClass",
+    "method": "GetFileTime",
+    "ret": "DWORD",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x473f00",
+    "export": "RA2Files_CCFile_SetFileTime",
+    "cls": "CCFileClass",
+    "method": "SetFileTime",
+    "ret": "int",
+    "args": "DWORD time",
+    "vals": "time"
+  },
+  {
+    "address": "0x473fc0",
+    "export": "RA2Files_CCFile_SetFileName",
+    "cls": "CCFileClass",
+    "method": "SetFileName",
+    "ret": "const char*",
+    "args": "const char* name",
+    "vals": "name"
+  },
+  {
+    "address": "0x401980",
+    "export": "RA2Files_CCFile_OpenEx",
+    "cls": "CCFileClass",
+    "method": "OpenEx",
+    "ret": "int",
+    "args": "const char* name, FileAccessMode mode",
+    "vals": "name, mode"
+  },
+  {
+    "address": "0x65ca80",
+    "export": "RA2Files_RawFile_Construct",
+    "cls": "RawFileClass",
+    "method": "Construct",
+    "ret": "RawFileClass*",
+    "args": "const char* name",
+    "vals": "name"
+  },
+  {
+    "address": "0x431b20",
+    "export": "RA2Files_BufferIOFile_Construct",
+    "cls": "BufferIOFileClass",
+    "method": "Construct",
+    "ret": "BufferIOFileClass*",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x47aa30",
+    "export": "RA2Files_CDFile_Construct",
+    "cls": "CDFileClass",
+    "method": "Construct",
+    "ret": "CDFileClass*",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x4739f0",
+    "export": "RA2Files_CCFile_Construct",
+    "cls": "CCFileClass",
+    "method": "Construct",
+    "ret": "CCFileClass*",
+    "args": "const char* name",
+    "vals": "name"
+  },
+  {
+    "address": "0x473a80",
+    "export": "RA2Files_CCFile_ConstructDefault",
+    "cls": "CCFileClass",
+    "method": "ConstructDefault",
+    "ret": "CCFileClass*",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x65ca00",
+    "export": "RA2Files_RawFile_Destruct",
+    "cls": "RawFileClass",
+    "method": "Destruct",
+    "ret": "void",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x431b80",
+    "export": "RA2Files_BufferIOFile_Destruct",
+    "cls": "BufferIOFileClass",
+    "method": "Destruct",
+    "ret": "void",
+    "args": "",
+    "vals": ""
+  },
+  {
+    "address": "0x65d3a0",
+    "export": "RA2Files_RawFile_Delete",
+    "cls": "RawFileClass",
+    "method": "Delete",
+    "ret": "void*",
+    "args": "unsigned flags",
+    "vals": "flags"
+  },
+  {
+    "address": "0x432610",
+    "export": "RA2Files_BufferIOFile_Delete",
+    "cls": "BufferIOFileClass",
+    "method": "Delete",
+    "ret": "void*",
+    "args": "unsigned flags",
+    "vals": "flags"
+  },
+  {
+    "address": "0x401950",
+    "export": "RA2Files_CDFile_Delete",
+    "cls": "CDFileClass",
+    "method": "Delete",
+    "ret": "void*",
+    "args": "unsigned flags",
+    "vals": "flags"
+  },
+  {
+    "address": "0x4019a0",
+    "export": "RA2Files_CCFile_Delete",
+    "cls": "CCFileClass",
+    "method": "Delete",
+    "ret": "void*",
+    "args": "unsigned flags",
+    "vals": "flags"
+  }
+]

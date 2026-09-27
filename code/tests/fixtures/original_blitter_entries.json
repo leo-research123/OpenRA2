@@ -1,0 +1,2355 @@
+{
+  "target_sha256": "7b8a068535d6af06845edf95ae829b113d00c02909330e16f197426cd7db94b6",
+  "entries": {
+    "0x499ce0": "RA2Images_Pixel_499CE0",
+    "0x4913f0": "RA2Images_Pixel_4913F0",
+    "0x491460": "RA2Images_Pixel_491460",
+    "0x491430": "RA2Images_Pixel_491430",
+    "0x491490": "RA2Images_Pixel_491490",
+    "0x499d00": "RA2Images_Pixel_499D00",
+    "0x4914c0": "RA2Images_Pixel_4914C0",
+    "0x491530": "RA2Images_Pixel_491530",
+    "0x491500": "RA2Images_Pixel_491500",
+    "0x491560": "RA2Images_Pixel_491560",
+    "0x499d20": "RA2Images_Pixel_499D20",
+    "0x491590": "RA2Images_Pixel_491590",
+    "0x491610": "RA2Images_Pixel_491610",
+    "0x4915e0": "RA2Images_Pixel_4915E0",
+    "0x491640": "RA2Images_Pixel_491640",
+    "0x499d40": "RA2Images_Pixel_499D40",
+    "0x491670": "RA2Images_Pixel_491670",
+    "0x4916e0": "RA2Images_Pixel_4916E0",
+    "0x4916b0": "RA2Images_Pixel_4916B0",
+    "0x491710": "RA2Images_Pixel_491710",
+    "0x499d60": "RA2Images_Pixel_499D60",
+    "0x491740": "RA2Images_Pixel_491740",
+    "0x4917c0": "RA2Images_Pixel_4917C0",
+    "0x491790": "RA2Images_Pixel_491790",
+    "0x4917f0": "RA2Images_Pixel_4917F0",
+    "0x499d80": "RA2Images_Pixel_499D80",
+    "0x491820": "RA2Images_Pixel_491820",
+    "0x4918a0": "RA2Images_Pixel_4918A0",
+    "0x499dc0": "RA2Images_Pixel_499DC0",
+    "0x4918e0": "RA2Images_Pixel_4918E0",
+    "0x491970": "RA2Images_Pixel_491970",
+    "0x499de0": "RA2Images_Pixel_499DE0",
+    "0x4919b0": "RA2Images_Pixel_4919B0",
+    "0x491a30": "RA2Images_Pixel_491A30",
+    "0x499e00": "RA2Images_Pixel_499E00",
+    "0x491a70": "RA2Images_Pixel_491A70",
+    "0x491b00": "RA2Images_Pixel_491B00",
+    "0x499e20": "RA2Images_Pixel_499E20",
+    "0x491b40": "RA2Images_Pixel_491B40",
+    "0x491c10": "RA2Images_Pixel_491C10",
+    "0x499e40": "RA2Images_Pixel_499E40",
+    "0x491c50": "RA2Images_Pixel_491C50",
+    "0x491d50": "RA2Images_Pixel_491D50",
+    "0x499e60": "RA2Images_Pixel_499E60",
+    "0x491d90": "RA2Images_Pixel_491D90",
+    "0x491e60": "RA2Images_Pixel_491E60",
+    "0x499e80": "RA2Images_Pixel_499E80",
+    "0x491ea0": "RA2Images_Pixel_491EA0",
+    "0x491f90": "RA2Images_Pixel_491F90",
+    "0x499ea0": "RA2Images_Pixel_499EA0",
+    "0x491fd0": "RA2Images_Pixel_491FD0",
+    "0x4920c0": "RA2Images_Pixel_4920C0",
+    "0x499ec0": "RA2Images_Pixel_499EC0",
+    "0x492100": "RA2Images_Pixel_492100",
+    "0x492210": "RA2Images_Pixel_492210",
+    "0x499ee0": "RA2Images_Pixel_499EE0",
+    "0x492250": "RA2Images_Pixel_492250",
+    "0x492330": "RA2Images_Pixel_492330",
+    "0x499f00": "RA2Images_Pixel_499F00",
+    "0x492370": "RA2Images_Pixel_492370",
+    "0x492480": "RA2Images_Pixel_492480",
+    "0x499f20": "RA2Images_Pixel_499F20",
+    "0x4924c0": "RA2Images_Pixel_4924C0",
+    "0x492530": "RA2Images_Pixel_492530",
+    "0x492500": "RA2Images_Pixel_492500",
+    "0x492560": "RA2Images_Pixel_492560",
+    "0x499ca0": "RA2Images_Pixel_499CA0",
+    "0x4912b0": "RA2Images_Pixel_4912B0",
+    "0x491330": "RA2Images_Pixel_491330",
+    "0x491300": "RA2Images_Pixel_491300",
+    "0x491360": "RA2Images_Pixel_491360",
+    "0x499f40": "RA2Images_Pixel_499F40",
+    "0x492590": "RA2Images_Pixel_492590",
+    "0x492610": "RA2Images_Pixel_492610",
+    "0x4925e0": "RA2Images_Pixel_4925E0",
+    "0x492640": "RA2Images_Pixel_492640",
+    "0x499f60": "RA2Images_Pixel_499F60",
+    "0x492670": "RA2Images_Pixel_492670",
+    "0x4926e0": "RA2Images_Pixel_4926E0",
+    "0x4926b0": "RA2Images_Pixel_4926B0",
+    "0x492710": "RA2Images_Pixel_492710",
+    "0x499f80": "RA2Images_Pixel_499F80",
+    "0x492740": "RA2Images_Pixel_492740",
+    "0x4927d0": "RA2Images_Pixel_4927D0",
+    "0x4927a0": "RA2Images_Pixel_4927A0",
+    "0x492800": "RA2Images_Pixel_492800",
+    "0x499fa0": "RA2Images_Pixel_499FA0",
+    "0x492830": "RA2Images_Pixel_492830",
+    "0x4928c0": "RA2Images_Pixel_4928C0",
+    "0x492890": "RA2Images_Pixel_492890",
+    "0x4928f0": "RA2Images_Pixel_4928F0",
+    "0x499fc0": "RA2Images_Pixel_499FC0",
+    "0x492920": "RA2Images_Pixel_492920",
+    "0x4929b0": "RA2Images_Pixel_4929B0",
+    "0x492980": "RA2Images_Pixel_492980",
+    "0x4929e0": "RA2Images_Pixel_4929E0",
+    "0x499fe0": "RA2Images_Pixel_499FE0",
+    "0x492a10": "RA2Images_Pixel_492A10",
+    "0x492aa0": "RA2Images_Pixel_492AA0",
+    "0x492a70": "RA2Images_Pixel_492A70",
+    "0x492ad0": "RA2Images_Pixel_492AD0",
+    "0x49a000": "RA2Images_Pixel_49A000",
+    "0x492b00": "RA2Images_Pixel_492B00",
+    "0x492ba0": "RA2Images_Pixel_492BA0",
+    "0x492b70": "RA2Images_Pixel_492B70",
+    "0x492bd0": "RA2Images_Pixel_492BD0",
+    "0x49a020": "RA2Images_Pixel_49A020",
+    "0x492c00": "RA2Images_Pixel_492C00",
+    "0x492cc0": "RA2Images_Pixel_492CC0",
+    "0x492c90": "RA2Images_Pixel_492C90",
+    "0x492cf0": "RA2Images_Pixel_492CF0",
+    "0x49a040": "RA2Images_Pixel_49A040",
+    "0x492d20": "RA2Images_Pixel_492D20",
+    "0x492db0": "RA2Images_Pixel_492DB0",
+    "0x492d80": "RA2Images_Pixel_492D80",
+    "0x492de0": "RA2Images_Pixel_492DE0",
+    "0x49a060": "RA2Images_Pixel_49A060",
+    "0x492e10": "RA2Images_Pixel_492E10",
+    "0x492ed0": "RA2Images_Pixel_492ED0",
+    "0x492ea0": "RA2Images_Pixel_492EA0",
+    "0x492f00": "RA2Images_Pixel_492F00",
+    "0x49a080": "RA2Images_Pixel_49A080",
+    "0x492f30": "RA2Images_Pixel_492F30",
+    "0x492ff0": "RA2Images_Pixel_492FF0",
+    "0x492fc0": "RA2Images_Pixel_492FC0",
+    "0x493020": "RA2Images_Pixel_493020",
+    "0x49a0a0": "RA2Images_Pixel_49A0A0",
+    "0x493050": "RA2Images_Pixel_493050",
+    "0x493110": "RA2Images_Pixel_493110",
+    "0x4930e0": "RA2Images_Pixel_4930E0",
+    "0x493140": "RA2Images_Pixel_493140",
+    "0x49a0c0": "RA2Images_Pixel_49A0C0",
+    "0x493170": "RA2Images_Pixel_493170",
+    "0x493240": "RA2Images_Pixel_493240",
+    "0x493210": "RA2Images_Pixel_493210",
+    "0x493270": "RA2Images_Pixel_493270",
+    "0x49a0e0": "RA2Images_Pixel_49A0E0",
+    "0x4932a0": "RA2Images_Pixel_4932A0",
+    "0x493370": "RA2Images_Pixel_493370",
+    "0x493340": "RA2Images_Pixel_493340",
+    "0x4933a0": "RA2Images_Pixel_4933A0",
+    "0x49a100": "RA2Images_Pixel_49A100",
+    "0x4933d0": "RA2Images_Pixel_4933D0",
+    "0x4934a0": "RA2Images_Pixel_4934A0",
+    "0x493470": "RA2Images_Pixel_493470",
+    "0x4934d0": "RA2Images_Pixel_4934D0",
+    "0x49a120": "RA2Images_Pixel_49A120",
+    "0x493500": "RA2Images_Pixel_493500",
+    "0x4935a0": "RA2Images_Pixel_4935A0",
+    "0x493570": "RA2Images_Pixel_493570",
+    "0x4935d0": "RA2Images_Pixel_4935D0",
+    "0x49a140": "RA2Images_Pixel_49A140",
+    "0x493600": "RA2Images_Pixel_493600",
+    "0x4936b0": "RA2Images_Pixel_4936B0",
+    "0x493680": "RA2Images_Pixel_493680",
+    "0x4936e0": "RA2Images_Pixel_4936E0",
+    "0x49a160": "RA2Images_Pixel_49A160",
+    "0x493710": "RA2Images_Pixel_493710",
+    "0x4937d0": "RA2Images_Pixel_4937D0",
+    "0x4937a0": "RA2Images_Pixel_4937A0",
+    "0x493800": "RA2Images_Pixel_493800",
+    "0x49a180": "RA2Images_Pixel_49A180",
+    "0x493830": "RA2Images_Pixel_493830",
+    "0x4938d0": "RA2Images_Pixel_4938D0",
+    "0x4938a0": "RA2Images_Pixel_4938A0",
+    "0x493900": "RA2Images_Pixel_493900",
+    "0x49a1a0": "RA2Images_Pixel_49A1A0",
+    "0x493930": "RA2Images_Pixel_493930",
+    "0x493a00": "RA2Images_Pixel_493A00",
+    "0x4939d0": "RA2Images_Pixel_4939D0",
+    "0x493a30": "RA2Images_Pixel_493A30",
+    "0x49a1c0": "RA2Images_Pixel_49A1C0",
+    "0x493a60": "RA2Images_Pixel_493A60",
+    "0x493b30": "RA2Images_Pixel_493B30",
+    "0x493b00": "RA2Images_Pixel_493B00",
+    "0x493b60": "RA2Images_Pixel_493B60",
+    "0x49a1e0": "RA2Images_Pixel_49A1E0",
+    "0x493b90": "RA2Images_Pixel_493B90",
+    "0x493c60": "RA2Images_Pixel_493C60",
+    "0x493c30": "RA2Images_Pixel_493C30",
+    "0x493c90": "RA2Images_Pixel_493C90",
+    "0x49a200": "RA2Images_Pixel_49A200",
+    "0x493cc0": "RA2Images_Pixel_493CC0",
+    "0x493d90": "RA2Images_Pixel_493D90",
+    "0x493d60": "RA2Images_Pixel_493D60",
+    "0x493dc0": "RA2Images_Pixel_493DC0",
+    "0x49a240": "RA2Images_Pixel_49A240",
+    "0x493df0": "RA2Images_Pixel_493DF0",
+    "0x493ed0": "RA2Images_Pixel_493ED0",
+    "0x493ea0": "RA2Images_Pixel_493EA0",
+    "0x493f00": "RA2Images_Pixel_493F00",
+    "0x49a280": "RA2Images_Pixel_49A280",
+    "0x493f30": "RA2Images_Pixel_493F30",
+    "0x494020": "RA2Images_Pixel_494020",
+    "0x493ff0": "RA2Images_Pixel_493FF0",
+    "0x494050": "RA2Images_Pixel_494050",
+    "0x49a2c0": "RA2Images_Pixel_49A2C0",
+    "0x494080": "RA2Images_Pixel_494080",
+    "0x494180": "RA2Images_Pixel_494180",
+    "0x494150": "RA2Images_Pixel_494150",
+    "0x4941b0": "RA2Images_Pixel_4941B0",
+    "0x49a300": "RA2Images_Pixel_49A300",
+    "0x4941e0": "RA2Images_Pixel_4941E0",
+    "0x4942d0": "RA2Images_Pixel_4942D0",
+    "0x4942a0": "RA2Images_Pixel_4942A0",
+    "0x494300": "RA2Images_Pixel_494300",
+    "0x49a340": "RA2Images_Pixel_49A340",
+    "0x494330": "RA2Images_Pixel_494330",
+    "0x494430": "RA2Images_Pixel_494430",
+    "0x494400": "RA2Images_Pixel_494400",
+    "0x494460": "RA2Images_Pixel_494460",
+    "0x49a380": "RA2Images_Pixel_49A380",
+    "0x494490": "RA2Images_Pixel_494490",
+    "0x494530": "RA2Images_Pixel_494530",
+    "0x494500": "RA2Images_Pixel_494500",
+    "0x494560": "RA2Images_Pixel_494560",
+    "0x49a3a0": "RA2Images_Pixel_49A3A0",
+    "0x494590": "RA2Images_Pixel_494590",
+    "0x494630": "RA2Images_Pixel_494630",
+    "0x494600": "RA2Images_Pixel_494600",
+    "0x494660": "RA2Images_Pixel_494660",
+    "0x49a3c0": "RA2Images_Pixel_49A3C0",
+    "0x494690": "RA2Images_Pixel_494690",
+    "0x4948c0": "RA2Images_Pixel_4948C0",
+    "0x494890": "RA2Images_Pixel_494890",
+    "0x4948f0": "RA2Images_Pixel_4948F0",
+    "0x49a3e0": "RA2Images_Pixel_49A3E0",
+    "0x494920": "RA2Images_Pixel_494920",
+    "0x4949e0": "RA2Images_Pixel_4949E0",
+    "0x4949b0": "RA2Images_Pixel_4949B0",
+    "0x494a10": "RA2Images_Pixel_494A10",
+    "0x49a400": "RA2Images_Pixel_49A400",
+    "0x494a40": "RA2Images_Pixel_494A40",
+    "0x494b00": "RA2Images_Pixel_494B00",
+    "0x494ad0": "RA2Images_Pixel_494AD0",
+    "0x494b30": "RA2Images_Pixel_494B30",
+    "0x49a420": "RA2Images_Pixel_49A420",
+    "0x494b60": "RA2Images_Pixel_494B60",
+    "0x494c40": "RA2Images_Pixel_494C40",
+    "0x494d20": "RA2Images_Pixel_494D20",
+    "0x494d50": "RA2Images_Pixel_494D50",
+    "0x49a460": "RA2Images_Pixel_49A460",
+    "0x494d90": "RA2Images_Pixel_494D90",
+    "0x494ec0": "RA2Images_Pixel_494EC0",
+    "0x494e90": "RA2Images_Pixel_494E90",
+    "0x494ef0": "RA2Images_Pixel_494EF0",
+    "0x49a4a0": "RA2Images_Pixel_49A4A0",
+    "0x494f20": "RA2Images_Pixel_494F20",
+    "0x495060": "RA2Images_Pixel_495060",
+    "0x495030": "RA2Images_Pixel_495030",
+    "0x495090": "RA2Images_Pixel_495090",
+    "0x49a4e0": "RA2Images_Pixel_49A4E0",
+    "0x4950c0": "RA2Images_Pixel_4950C0",
+    "0x4951f0": "RA2Images_Pixel_4951F0",
+    "0x4951c0": "RA2Images_Pixel_4951C0",
+    "0x495220": "RA2Images_Pixel_495220",
+    "0x49a520": "RA2Images_Pixel_49A520",
+    "0x495250": "RA2Images_Pixel_495250",
+    "0x495390": "RA2Images_Pixel_495390",
+    "0x495360": "RA2Images_Pixel_495360",
+    "0x4953c0": "RA2Images_Pixel_4953C0",
+    "0x49a560": "RA2Images_Pixel_49A560",
+    "0x4953f0": "RA2Images_Pixel_4953F0",
+    "0x495530": "RA2Images_Pixel_495530",
+    "0x495500": "RA2Images_Pixel_495500",
+    "0x495560": "RA2Images_Pixel_495560",
+    "0x49a5a0": "RA2Images_Pixel_49A5A0",
+    "0x495590": "RA2Images_Pixel_495590",
+    "0x4956d0": "RA2Images_Pixel_4956D0",
+    "0x4956a0": "RA2Images_Pixel_4956A0",
+    "0x495700": "RA2Images_Pixel_495700",
+    "0x49a5e0": "RA2Images_Pixel_49A5E0",
+    "0x495730": "RA2Images_Pixel_495730",
+    "0x495870": "RA2Images_Pixel_495870",
+    "0x495840": "RA2Images_Pixel_495840",
+    "0x4958a0": "RA2Images_Pixel_4958A0",
+    "0x49a620": "RA2Images_Pixel_49A620",
+    "0x4958d0": "RA2Images_Pixel_4958D0",
+    "0x4959f0": "RA2Images_Pixel_4959F0",
+    "0x4959c0": "RA2Images_Pixel_4959C0",
+    "0x495a20": "RA2Images_Pixel_495A20",
+    "0x49a660": "RA2Images_Pixel_49A660",
+    "0x495a50": "RA2Images_Pixel_495A50",
+    "0x495b60": "RA2Images_Pixel_495B60",
+    "0x495b30": "RA2Images_Pixel_495B30",
+    "0x495b90": "RA2Images_Pixel_495B90",
+    "0x49a6a0": "RA2Images_Pixel_49A6A0",
+    "0x495bc0": "RA2Images_Pixel_495BC0",
+    "0x495d00": "RA2Images_Pixel_495D00",
+    "0x495cd0": "RA2Images_Pixel_495CD0",
+    "0x495d30": "RA2Images_Pixel_495D30",
+    "0x49a6e0": "RA2Images_Pixel_49A6E0",
+    "0x495d60": "RA2Images_Pixel_495D60",
+    "0x495ea0": "RA2Images_Pixel_495EA0",
+    "0x495e70": "RA2Images_Pixel_495E70",
+    "0x495ed0": "RA2Images_Pixel_495ED0",
+    "0x49a720": "RA2Images_Pixel_49A720",
+    "0x495f00": "RA2Images_Pixel_495F00",
+    "0x496040": "RA2Images_Pixel_496040",
+    "0x496010": "RA2Images_Pixel_496010",
+    "0x496070": "RA2Images_Pixel_496070",
+    "0x49a760": "RA2Images_Pixel_49A760",
+    "0x4960a0": "RA2Images_Pixel_4960A0",
+    "0x496130": "RA2Images_Pixel_496130",
+    "0x49a780": "RA2Images_Pixel_49A780",
+    "0x496170": "RA2Images_Pixel_496170",
+    "0x496210": "RA2Images_Pixel_496210",
+    "0x49a7a0": "RA2Images_Pixel_49A7A0",
+    "0x496250": "RA2Images_Pixel_496250",
+    "0x4962d0": "RA2Images_Pixel_4962D0",
+    "0x49a7c0": "RA2Images_Pixel_49A7C0",
+    "0x496310": "RA2Images_Pixel_496310",
+    "0x4963b0": "RA2Images_Pixel_4963B0",
+    "0x49a7e0": "RA2Images_Pixel_49A7E0",
+    "0x4963f0": "RA2Images_Pixel_4963F0",
+    "0x496490": "RA2Images_Pixel_496490",
+    "0x49a800": "RA2Images_Pixel_49A800",
+    "0x4964d0": "RA2Images_Pixel_4964D0",
+    "0x496570": "RA2Images_Pixel_496570",
+    "0x49a820": "RA2Images_Pixel_49A820",
+    "0x4965b0": "RA2Images_Pixel_4965B0",
+    "0x496690": "RA2Images_Pixel_496690",
+    "0x49a840": "RA2Images_Pixel_49A840",
+    "0x4966d0": "RA2Images_Pixel_4966D0",
+    "0x4967e0": "RA2Images_Pixel_4967E0",
+    "0x49a860": "RA2Images_Pixel_49A860",
+    "0x496820": "RA2Images_Pixel_496820",
+    "0x4968f0": "RA2Images_Pixel_4968F0",
+    "0x49a880": "RA2Images_Pixel_49A880",
+    "0x496930": "RA2Images_Pixel_496930",
+    "0x496a40": "RA2Images_Pixel_496A40",
+    "0x49a8a0": "RA2Images_Pixel_49A8A0",
+    "0x496a80": "RA2Images_Pixel_496A80",
+    "0x496b80": "RA2Images_Pixel_496B80",
+    "0x49a8c0": "RA2Images_Pixel_49A8C0",
+    "0x496bc0": "RA2Images_Pixel_496BC0",
+    "0x496cd0": "RA2Images_Pixel_496CD0",
+    "0x49a8e0": "RA2Images_Pixel_49A8E0",
+    "0x496d10": "RA2Images_Pixel_496D10",
+    "0x496e20": "RA2Images_Pixel_496E20",
+    "0x49a900": "RA2Images_Pixel_49A900",
+    "0x496e60": "RA2Images_Pixel_496E60",
+    "0x496f70": "RA2Images_Pixel_496F70",
+    "0x49a920": "RA2Images_Pixel_49A920",
+    "0x496fb0": "RA2Images_Pixel_496FB0",
+    "0x4970c0": "RA2Images_Pixel_4970C0",
+    "0x49a940": "RA2Images_Pixel_49A940",
+    "0x497100": "RA2Images_Pixel_497100",
+    "0x4971f0": "RA2Images_Pixel_4971F0",
+    "0x49a960": "RA2Images_Pixel_49A960",
+    "0x497230": "RA2Images_Pixel_497230",
+    "0x497350": "RA2Images_Pixel_497350",
+    "0x49a980": "RA2Images_Pixel_49A980",
+    "0x497390": "RA2Images_Pixel_497390",
+    "0x497470": "RA2Images_Pixel_497470",
+    "0x49a9a0": "RA2Images_Pixel_49A9A0",
+    "0x4974b0": "RA2Images_Pixel_4974B0",
+    "0x4975d0": "RA2Images_Pixel_4975D0",
+    "0x49a9c0": "RA2Images_Pixel_49A9C0",
+    "0x497610": "RA2Images_Pixel_497610",
+    "0x497720": "RA2Images_Pixel_497720",
+    "0x49a9e0": "RA2Images_Pixel_49A9E0",
+    "0x497760": "RA2Images_Pixel_497760",
+    "0x497880": "RA2Images_Pixel_497880",
+    "0x49aa00": "RA2Images_Pixel_49AA00",
+    "0x4978c0": "RA2Images_Pixel_4978C0",
+    "0x4979d0": "RA2Images_Pixel_4979D0",
+    "0x49aa40": "RA2Images_Pixel_49AA40",
+    "0x497a10": "RA2Images_Pixel_497A10",
+    "0x497b40": "RA2Images_Pixel_497B40",
+    "0x49aa80": "RA2Images_Pixel_49AA80",
+    "0x497b80": "RA2Images_Pixel_497B80",
+    "0x497cb0": "RA2Images_Pixel_497CB0",
+    "0x49aac0": "RA2Images_Pixel_49AAC0",
+    "0x497cf0": "RA2Images_Pixel_497CF0",
+    "0x497e20": "RA2Images_Pixel_497E20",
+    "0x49ab00": "RA2Images_Pixel_49AB00",
+    "0x497e60": "RA2Images_Pixel_497E60",
+    "0x497f90": "RA2Images_Pixel_497F90",
+    "0x49ab40": "RA2Images_Pixel_49AB40",
+    "0x497fd0": "RA2Images_Pixel_497FD0",
+    "0x498150": "RA2Images_Pixel_498150",
+    "0x49ab80": "RA2Images_Pixel_49AB80",
+    "0x4982e0": "RA2Images_Pixel_4982E0",
+    "0x498490": "RA2Images_Pixel_498490",
+    "0x49abc0": "RA2Images_Pixel_49ABC0",
+    "0x4984d0": "RA2Images_Pixel_4984D0",
+    "0x498690": "RA2Images_Pixel_498690",
+    "0x49ac00": "RA2Images_Pixel_49AC00",
+    "0x4986d0": "RA2Images_Pixel_4986D0",
+    "0x498880": "RA2Images_Pixel_498880",
+    "0x49ac40": "RA2Images_Pixel_49AC40",
+    "0x4988c0": "RA2Images_Pixel_4988C0",
+    "0x498a80": "RA2Images_Pixel_498A80",
+    "0x49ac80": "RA2Images_Pixel_49AC80",
+    "0x498ac0": "RA2Images_Pixel_498AC0",
+    "0x498c90": "RA2Images_Pixel_498C90",
+    "0x49acc0": "RA2Images_Pixel_49ACC0",
+    "0x498cd0": "RA2Images_Pixel_498CD0",
+    "0x498e90": "RA2Images_Pixel_498E90",
+    "0x49ad00": "RA2Images_Pixel_49AD00",
+    "0x498ed0": "RA2Images_Pixel_498ED0",
+    "0x4990a0": "RA2Images_Pixel_4990A0",
+    "0x49ad40": "RA2Images_Pixel_49AD40",
+    "0x4990e0": "RA2Images_Pixel_4990E0",
+    "0x499280": "RA2Images_Pixel_499280",
+    "0x49ad80": "RA2Images_Pixel_49AD80",
+    "0x499430": "RA2Images_Pixel_499430",
+    "0x499610": "RA2Images_Pixel_499610",
+    "0x49adc0": "RA2Images_Pixel_49ADC0",
+    "0x499650": "RA2Images_Pixel_499650",
+    "0x499820": "RA2Images_Pixel_499820",
+    "0x49ae00": "RA2Images_Pixel_49AE00",
+    "0x499860": "RA2Images_Pixel_499860",
+    "0x499a50": "RA2Images_Pixel_499A50",
+    "0x49ae40": "RA2Images_Pixel_49AE40",
+    "0x499a90": "RA2Images_Pixel_499A90",
+    "0x499c60": "RA2Images_Pixel_499C60"
+  },
+  "fastcall_bytes": {
+    "RA2Images_Pixel_499CE0": 12,
+    "RA2Images_Pixel_4913F0": 40,
+    "RA2Images_Pixel_491460": 44,
+    "RA2Images_Pixel_491430": 36,
+    "RA2Images_Pixel_491490": 40,
+    "RA2Images_Pixel_499D00": 12,
+    "RA2Images_Pixel_4914C0": 40,
+    "RA2Images_Pixel_491530": 44,
+    "RA2Images_Pixel_491500": 36,
+    "RA2Images_Pixel_491560": 40,
+    "RA2Images_Pixel_499D20": 12,
+    "RA2Images_Pixel_491590": 40,
+    "RA2Images_Pixel_491610": 44,
+    "RA2Images_Pixel_4915E0": 36,
+    "RA2Images_Pixel_491640": 40,
+    "RA2Images_Pixel_499D40": 12,
+    "RA2Images_Pixel_491670": 40,
+    "RA2Images_Pixel_4916E0": 44,
+    "RA2Images_Pixel_4916B0": 36,
+    "RA2Images_Pixel_491710": 40,
+    "RA2Images_Pixel_499D60": 12,
+    "RA2Images_Pixel_491740": 40,
+    "RA2Images_Pixel_4917C0": 44,
+    "RA2Images_Pixel_491790": 36,
+    "RA2Images_Pixel_4917F0": 40,
+    "RA2Images_Pixel_499D80": 12,
+    "RA2Images_Pixel_491820": 48,
+    "RA2Images_Pixel_4918A0": 52,
+    "RA2Images_Pixel_499DC0": 12,
+    "RA2Images_Pixel_4918E0": 48,
+    "RA2Images_Pixel_491970": 52,
+    "RA2Images_Pixel_499DE0": 12,
+    "RA2Images_Pixel_4919B0": 48,
+    "RA2Images_Pixel_491A30": 52,
+    "RA2Images_Pixel_499E00": 12,
+    "RA2Images_Pixel_491A70": 48,
+    "RA2Images_Pixel_491B00": 52,
+    "RA2Images_Pixel_499E20": 12,
+    "RA2Images_Pixel_491B40": 48,
+    "RA2Images_Pixel_491C10": 52,
+    "RA2Images_Pixel_499E40": 12,
+    "RA2Images_Pixel_491C50": 48,
+    "RA2Images_Pixel_491D50": 52,
+    "RA2Images_Pixel_499E60": 12,
+    "RA2Images_Pixel_491D90": 48,
+    "RA2Images_Pixel_491E60": 52,
+    "RA2Images_Pixel_499E80": 12,
+    "RA2Images_Pixel_491EA0": 48,
+    "RA2Images_Pixel_491F90": 52,
+    "RA2Images_Pixel_499EA0": 12,
+    "RA2Images_Pixel_491FD0": 48,
+    "RA2Images_Pixel_4920C0": 52,
+    "RA2Images_Pixel_499EC0": 12,
+    "RA2Images_Pixel_492100": 48,
+    "RA2Images_Pixel_492210": 52,
+    "RA2Images_Pixel_499EE0": 12,
+    "RA2Images_Pixel_492250": 48,
+    "RA2Images_Pixel_492330": 52,
+    "RA2Images_Pixel_499F00": 12,
+    "RA2Images_Pixel_492370": 48,
+    "RA2Images_Pixel_492480": 52,
+    "RA2Images_Pixel_499F20": 12,
+    "RA2Images_Pixel_4924C0": 40,
+    "RA2Images_Pixel_492530": 44,
+    "RA2Images_Pixel_492500": 36,
+    "RA2Images_Pixel_492560": 40,
+    "RA2Images_Pixel_499CA0": 12,
+    "RA2Images_Pixel_4912B0": 40,
+    "RA2Images_Pixel_491330": 44,
+    "RA2Images_Pixel_491300": 36,
+    "RA2Images_Pixel_491360": 40,
+    "RA2Images_Pixel_499F40": 12,
+    "RA2Images_Pixel_492590": 40,
+    "RA2Images_Pixel_492610": 44,
+    "RA2Images_Pixel_4925E0": 36,
+    "RA2Images_Pixel_492640": 40,
+    "RA2Images_Pixel_499F60": 12,
+    "RA2Images_Pixel_492670": 40,
+    "RA2Images_Pixel_4926E0": 44,
+    "RA2Images_Pixel_4926B0": 36,
+    "RA2Images_Pixel_492710": 40,
+    "RA2Images_Pixel_499F80": 12,
+    "RA2Images_Pixel_492740": 40,
+    "RA2Images_Pixel_4927D0": 44,
+    "RA2Images_Pixel_4927A0": 36,
+    "RA2Images_Pixel_492800": 40,
+    "RA2Images_Pixel_499FA0": 12,
+    "RA2Images_Pixel_492830": 40,
+    "RA2Images_Pixel_4928C0": 44,
+    "RA2Images_Pixel_492890": 36,
+    "RA2Images_Pixel_4928F0": 40,
+    "RA2Images_Pixel_499FC0": 12,
+    "RA2Images_Pixel_492920": 40,
+    "RA2Images_Pixel_4929B0": 44,
+    "RA2Images_Pixel_492980": 36,
+    "RA2Images_Pixel_4929E0": 40,
+    "RA2Images_Pixel_499FE0": 12,
+    "RA2Images_Pixel_492A10": 40,
+    "RA2Images_Pixel_492AA0": 44,
+    "RA2Images_Pixel_492A70": 36,
+    "RA2Images_Pixel_492AD0": 40,
+    "RA2Images_Pixel_49A000": 12,
+    "RA2Images_Pixel_492B00": 40,
+    "RA2Images_Pixel_492BA0": 44,
+    "RA2Images_Pixel_492B70": 36,
+    "RA2Images_Pixel_492BD0": 40,
+    "RA2Images_Pixel_49A020": 12,
+    "RA2Images_Pixel_492C00": 40,
+    "RA2Images_Pixel_492CC0": 44,
+    "RA2Images_Pixel_492C90": 36,
+    "RA2Images_Pixel_492CF0": 40,
+    "RA2Images_Pixel_49A040": 12,
+    "RA2Images_Pixel_492D20": 40,
+    "RA2Images_Pixel_492DB0": 44,
+    "RA2Images_Pixel_492D80": 36,
+    "RA2Images_Pixel_492DE0": 40,
+    "RA2Images_Pixel_49A060": 12,
+    "RA2Images_Pixel_492E10": 40,
+    "RA2Images_Pixel_492ED0": 44,
+    "RA2Images_Pixel_492EA0": 36,
+    "RA2Images_Pixel_492F00": 40,
+    "RA2Images_Pixel_49A080": 12,
+    "RA2Images_Pixel_492F30": 40,
+    "RA2Images_Pixel_492FF0": 44,
+    "RA2Images_Pixel_492FC0": 36,
+    "RA2Images_Pixel_493020": 40,
+    "RA2Images_Pixel_49A0A0": 12,
+    "RA2Images_Pixel_493050": 40,
+    "RA2Images_Pixel_493110": 44,
+    "RA2Images_Pixel_4930E0": 36,
+    "RA2Images_Pixel_493140": 40,
+    "RA2Images_Pixel_49A0C0": 12,
+    "RA2Images_Pixel_493170": 40,
+    "RA2Images_Pixel_493240": 44,
+    "RA2Images_Pixel_493210": 36,
+    "RA2Images_Pixel_493270": 40,
+    "RA2Images_Pixel_49A0E0": 12,
+    "RA2Images_Pixel_4932A0": 40,
+    "RA2Images_Pixel_493370": 44,
+    "RA2Images_Pixel_493340": 36,
+    "RA2Images_Pixel_4933A0": 40,
+    "RA2Images_Pixel_49A100": 12,
+    "RA2Images_Pixel_4933D0": 40,
+    "RA2Images_Pixel_4934A0": 44,
+    "RA2Images_Pixel_493470": 36,
+    "RA2Images_Pixel_4934D0": 40,
+    "RA2Images_Pixel_49A120": 12,
+    "RA2Images_Pixel_493500": 40,
+    "RA2Images_Pixel_4935A0": 44,
+    "RA2Images_Pixel_493570": 36,
+    "RA2Images_Pixel_4935D0": 40,
+    "RA2Images_Pixel_49A140": 12,
+    "RA2Images_Pixel_493600": 40,
+    "RA2Images_Pixel_4936B0": 44,
+    "RA2Images_Pixel_493680": 36,
+    "RA2Images_Pixel_4936E0": 40,
+    "RA2Images_Pixel_49A160": 12,
+    "RA2Images_Pixel_493710": 40,
+    "RA2Images_Pixel_4937D0": 44,
+    "RA2Images_Pixel_4937A0": 36,
+    "RA2Images_Pixel_493800": 40,
+    "RA2Images_Pixel_49A180": 12,
+    "RA2Images_Pixel_493830": 40,
+    "RA2Images_Pixel_4938D0": 44,
+    "RA2Images_Pixel_4938A0": 36,
+    "RA2Images_Pixel_493900": 40,
+    "RA2Images_Pixel_49A1A0": 12,
+    "RA2Images_Pixel_493930": 40,
+    "RA2Images_Pixel_493A00": 44,
+    "RA2Images_Pixel_4939D0": 36,
+    "RA2Images_Pixel_493A30": 40,
+    "RA2Images_Pixel_49A1C0": 12,
+    "RA2Images_Pixel_493A60": 40,
+    "RA2Images_Pixel_493B30": 44,
+    "RA2Images_Pixel_493B00": 36,
+    "RA2Images_Pixel_493B60": 40,
+    "RA2Images_Pixel_49A1E0": 12,
+    "RA2Images_Pixel_493B90": 40,
+    "RA2Images_Pixel_493C60": 44,
+    "RA2Images_Pixel_493C30": 36,
+    "RA2Images_Pixel_493C90": 40,
+    "RA2Images_Pixel_49A200": 12,
+    "RA2Images_Pixel_493CC0": 40,
+    "RA2Images_Pixel_493D90": 44,
+    "RA2Images_Pixel_493D60": 36,
+    "RA2Images_Pixel_493DC0": 40,
+    "RA2Images_Pixel_49A240": 12,
+    "RA2Images_Pixel_493DF0": 40,
+    "RA2Images_Pixel_493ED0": 44,
+    "RA2Images_Pixel_493EA0": 36,
+    "RA2Images_Pixel_493F00": 40,
+    "RA2Images_Pixel_49A280": 12,
+    "RA2Images_Pixel_493F30": 40,
+    "RA2Images_Pixel_494020": 44,
+    "RA2Images_Pixel_493FF0": 36,
+    "RA2Images_Pixel_494050": 40,
+    "RA2Images_Pixel_49A2C0": 12,
+    "RA2Images_Pixel_494080": 40,
+    "RA2Images_Pixel_494180": 44,
+    "RA2Images_Pixel_494150": 36,
+    "RA2Images_Pixel_4941B0": 40,
+    "RA2Images_Pixel_49A300": 12,
+    "RA2Images_Pixel_4941E0": 40,
+    "RA2Images_Pixel_4942D0": 44,
+    "RA2Images_Pixel_4942A0": 36,
+    "RA2Images_Pixel_494300": 40,
+    "RA2Images_Pixel_49A340": 12,
+    "RA2Images_Pixel_494330": 40,
+    "RA2Images_Pixel_494430": 44,
+    "RA2Images_Pixel_494400": 36,
+    "RA2Images_Pixel_494460": 40,
+    "RA2Images_Pixel_49A380": 12,
+    "RA2Images_Pixel_494490": 40,
+    "RA2Images_Pixel_494530": 44,
+    "RA2Images_Pixel_494500": 36,
+    "RA2Images_Pixel_494560": 40,
+    "RA2Images_Pixel_49A3A0": 12,
+    "RA2Images_Pixel_494590": 40,
+    "RA2Images_Pixel_494630": 44,
+    "RA2Images_Pixel_494600": 36,
+    "RA2Images_Pixel_494660": 40,
+    "RA2Images_Pixel_49A3C0": 12,
+    "RA2Images_Pixel_494690": 40,
+    "RA2Images_Pixel_4948C0": 44,
+    "RA2Images_Pixel_494890": 36,
+    "RA2Images_Pixel_4948F0": 40,
+    "RA2Images_Pixel_49A3E0": 12,
+    "RA2Images_Pixel_494920": 40,
+    "RA2Images_Pixel_4949E0": 44,
+    "RA2Images_Pixel_4949B0": 36,
+    "RA2Images_Pixel_494A10": 40,
+    "RA2Images_Pixel_49A400": 12,
+    "RA2Images_Pixel_494A40": 40,
+    "RA2Images_Pixel_494B00": 44,
+    "RA2Images_Pixel_494AD0": 36,
+    "RA2Images_Pixel_494B30": 40,
+    "RA2Images_Pixel_49A420": 12,
+    "RA2Images_Pixel_494B60": 40,
+    "RA2Images_Pixel_494C40": 44,
+    "RA2Images_Pixel_494D20": 36,
+    "RA2Images_Pixel_494D50": 40,
+    "RA2Images_Pixel_49A460": 12,
+    "RA2Images_Pixel_494D90": 40,
+    "RA2Images_Pixel_494EC0": 44,
+    "RA2Images_Pixel_494E90": 36,
+    "RA2Images_Pixel_494EF0": 40,
+    "RA2Images_Pixel_49A4A0": 12,
+    "RA2Images_Pixel_494F20": 40,
+    "RA2Images_Pixel_495060": 44,
+    "RA2Images_Pixel_495030": 36,
+    "RA2Images_Pixel_495090": 40,
+    "RA2Images_Pixel_49A4E0": 12,
+    "RA2Images_Pixel_4950C0": 40,
+    "RA2Images_Pixel_4951F0": 44,
+    "RA2Images_Pixel_4951C0": 36,
+    "RA2Images_Pixel_495220": 40,
+    "RA2Images_Pixel_49A520": 12,
+    "RA2Images_Pixel_495250": 40,
+    "RA2Images_Pixel_495390": 44,
+    "RA2Images_Pixel_495360": 36,
+    "RA2Images_Pixel_4953C0": 40,
+    "RA2Images_Pixel_49A560": 12,
+    "RA2Images_Pixel_4953F0": 40,
+    "RA2Images_Pixel_495530": 44,
+    "RA2Images_Pixel_495500": 36,
+    "RA2Images_Pixel_495560": 40,
+    "RA2Images_Pixel_49A5A0": 12,
+    "RA2Images_Pixel_495590": 40,
+    "RA2Images_Pixel_4956D0": 44,
+    "RA2Images_Pixel_4956A0": 36,
+    "RA2Images_Pixel_495700": 40,
+    "RA2Images_Pixel_49A5E0": 12,
+    "RA2Images_Pixel_495730": 40,
+    "RA2Images_Pixel_495870": 44,
+    "RA2Images_Pixel_495840": 36,
+    "RA2Images_Pixel_4958A0": 40,
+    "RA2Images_Pixel_49A620": 12,
+    "RA2Images_Pixel_4958D0": 40,
+    "RA2Images_Pixel_4959F0": 44,
+    "RA2Images_Pixel_4959C0": 36,
+    "RA2Images_Pixel_495A20": 40,
+    "RA2Images_Pixel_49A660": 12,
+    "RA2Images_Pixel_495A50": 40,
+    "RA2Images_Pixel_495B60": 44,
+    "RA2Images_Pixel_495B30": 36,
+    "RA2Images_Pixel_495B90": 40,
+    "RA2Images_Pixel_49A6A0": 12,
+    "RA2Images_Pixel_495BC0": 40,
+    "RA2Images_Pixel_495D00": 44,
+    "RA2Images_Pixel_495CD0": 36,
+    "RA2Images_Pixel_495D30": 40,
+    "RA2Images_Pixel_49A6E0": 12,
+    "RA2Images_Pixel_495D60": 40,
+    "RA2Images_Pixel_495EA0": 44,
+    "RA2Images_Pixel_495E70": 36,
+    "RA2Images_Pixel_495ED0": 40,
+    "RA2Images_Pixel_49A720": 12,
+    "RA2Images_Pixel_495F00": 40,
+    "RA2Images_Pixel_496040": 44,
+    "RA2Images_Pixel_496010": 36,
+    "RA2Images_Pixel_496070": 40,
+    "RA2Images_Pixel_49A760": 12,
+    "RA2Images_Pixel_4960A0": 48,
+    "RA2Images_Pixel_496130": 52,
+    "RA2Images_Pixel_49A780": 12,
+    "RA2Images_Pixel_496170": 48,
+    "RA2Images_Pixel_496210": 52,
+    "RA2Images_Pixel_49A7A0": 12,
+    "RA2Images_Pixel_496250": 48,
+    "RA2Images_Pixel_4962D0": 52,
+    "RA2Images_Pixel_49A7C0": 12,
+    "RA2Images_Pixel_496310": 48,
+    "RA2Images_Pixel_4963B0": 52,
+    "RA2Images_Pixel_49A7E0": 12,
+    "RA2Images_Pixel_4963F0": 48,
+    "RA2Images_Pixel_496490": 52,
+    "RA2Images_Pixel_49A800": 12,
+    "RA2Images_Pixel_4964D0": 48,
+    "RA2Images_Pixel_496570": 52,
+    "RA2Images_Pixel_49A820": 12,
+    "RA2Images_Pixel_4965B0": 48,
+    "RA2Images_Pixel_496690": 52,
+    "RA2Images_Pixel_49A840": 12,
+    "RA2Images_Pixel_4966D0": 48,
+    "RA2Images_Pixel_4967E0": 52,
+    "RA2Images_Pixel_49A860": 12,
+    "RA2Images_Pixel_496820": 48,
+    "RA2Images_Pixel_4968F0": 52,
+    "RA2Images_Pixel_49A880": 12,
+    "RA2Images_Pixel_496930": 48,
+    "RA2Images_Pixel_496A40": 52,
+    "RA2Images_Pixel_49A8A0": 12,
+    "RA2Images_Pixel_496A80": 48,
+    "RA2Images_Pixel_496B80": 52,
+    "RA2Images_Pixel_49A8C0": 12,
+    "RA2Images_Pixel_496BC0": 48,
+    "RA2Images_Pixel_496CD0": 52,
+    "RA2Images_Pixel_49A8E0": 12,
+    "RA2Images_Pixel_496D10": 48,
+    "RA2Images_Pixel_496E20": 52,
+    "RA2Images_Pixel_49A900": 12,
+    "RA2Images_Pixel_496E60": 48,
+    "RA2Images_Pixel_496F70": 52,
+    "RA2Images_Pixel_49A920": 12,
+    "RA2Images_Pixel_496FB0": 48,
+    "RA2Images_Pixel_4970C0": 52,
+    "RA2Images_Pixel_49A940": 12,
+    "RA2Images_Pixel_497100": 48,
+    "RA2Images_Pixel_4971F0": 52,
+    "RA2Images_Pixel_49A960": 12,
+    "RA2Images_Pixel_497230": 48,
+    "RA2Images_Pixel_497350": 52,
+    "RA2Images_Pixel_49A980": 12,
+    "RA2Images_Pixel_497390": 48,
+    "RA2Images_Pixel_497470": 52,
+    "RA2Images_Pixel_49A9A0": 12,
+    "RA2Images_Pixel_4974B0": 48,
+    "RA2Images_Pixel_4975D0": 52,
+    "RA2Images_Pixel_49A9C0": 12,
+    "RA2Images_Pixel_497610": 48,
+    "RA2Images_Pixel_497720": 52,
+    "RA2Images_Pixel_49A9E0": 12,
+    "RA2Images_Pixel_497760": 48,
+    "RA2Images_Pixel_497880": 52,
+    "RA2Images_Pixel_49AA00": 12,
+    "RA2Images_Pixel_4978C0": 48,
+    "RA2Images_Pixel_4979D0": 52,
+    "RA2Images_Pixel_49AA40": 12,
+    "RA2Images_Pixel_497A10": 48,
+    "RA2Images_Pixel_497B40": 52,
+    "RA2Images_Pixel_49AA80": 12,
+    "RA2Images_Pixel_497B80": 48,
+    "RA2Images_Pixel_497CB0": 52,
+    "RA2Images_Pixel_49AAC0": 12,
+    "RA2Images_Pixel_497CF0": 48,
+    "RA2Images_Pixel_497E20": 52,
+    "RA2Images_Pixel_49AB00": 12,
+    "RA2Images_Pixel_497E60": 48,
+    "RA2Images_Pixel_497F90": 52,
+    "RA2Images_Pixel_49AB40": 12,
+    "RA2Images_Pixel_497FD0": 48,
+    "RA2Images_Pixel_498150": 52,
+    "RA2Images_Pixel_49AB80": 12,
+    "RA2Images_Pixel_4982E0": 48,
+    "RA2Images_Pixel_498490": 52,
+    "RA2Images_Pixel_49ABC0": 12,
+    "RA2Images_Pixel_4984D0": 48,
+    "RA2Images_Pixel_498690": 52,
+    "RA2Images_Pixel_49AC00": 12,
+    "RA2Images_Pixel_4986D0": 48,
+    "RA2Images_Pixel_498880": 52,
+    "RA2Images_Pixel_49AC40": 12,
+    "RA2Images_Pixel_4988C0": 48,
+    "RA2Images_Pixel_498A80": 52,
+    "RA2Images_Pixel_49AC80": 12,
+    "RA2Images_Pixel_498AC0": 48,
+    "RA2Images_Pixel_498C90": 52,
+    "RA2Images_Pixel_49ACC0": 12,
+    "RA2Images_Pixel_498CD0": 48,
+    "RA2Images_Pixel_498E90": 52,
+    "RA2Images_Pixel_49AD00": 12,
+    "RA2Images_Pixel_498ED0": 48,
+    "RA2Images_Pixel_4990A0": 52,
+    "RA2Images_Pixel_49AD40": 12,
+    "RA2Images_Pixel_4990E0": 48,
+    "RA2Images_Pixel_499280": 52,
+    "RA2Images_Pixel_49AD80": 12,
+    "RA2Images_Pixel_499430": 48,
+    "RA2Images_Pixel_499610": 52,
+    "RA2Images_Pixel_49ADC0": 12,
+    "RA2Images_Pixel_499650": 48,
+    "RA2Images_Pixel_499820": 52,
+    "RA2Images_Pixel_49AE00": 12,
+    "RA2Images_Pixel_499860": 48,
+    "RA2Images_Pixel_499A50": 52,
+    "RA2Images_Pixel_49AE40": 12,
+    "RA2Images_Pixel_499A90": 48,
+    "RA2Images_Pixel_499C60": 52
+  },
+  "vtables": [
+    {
+      "address": "0x7e5b70",
+      "name": "??_7?$BlitPlainXlat@E@@6B@",
+      "slots": [
+        "0x499ce0",
+        "0x4913f0",
+        "0x491460",
+        "0x491430",
+        "0x491490"
+      ]
+    },
+    {
+      "address": "0x7e5b58",
+      "name": "??_7?$BlitTransXlat@E@@6B@",
+      "slots": [
+        "0x499d00",
+        "0x4914c0",
+        "0x491530",
+        "0x491500",
+        "0x491560"
+      ]
+    },
+    {
+      "address": "0x7e5b40",
+      "name": "??_7?$BlitTransZRemapXlat@E@@6B@",
+      "slots": [
+        "0x499d20",
+        "0x491590",
+        "0x491610",
+        "0x4915e0",
+        "0x491640"
+      ]
+    },
+    {
+      "address": "0x7e5b28",
+      "name": "??_7?$BlitTransRemapDest@E@@6B@",
+      "slots": [
+        "0x499d40",
+        "0x491670",
+        "0x4916e0",
+        "0x4916b0",
+        "0x491710"
+      ]
+    },
+    {
+      "address": "0x7e5b10",
+      "name": "??_7?$BlitTransRemapXlat@E@@6B@",
+      "slots": [
+        "0x499d60",
+        "0x491740",
+        "0x4917c0",
+        "0x491790",
+        "0x4917f0"
+      ]
+    },
+    {
+      "address": "0x7e5b00",
+      "name": "??_7?$RLEBlitTransXlat@E@@6B@",
+      "slots": [
+        "0x499d80",
+        "0x491820",
+        "0x4918a0"
+      ]
+    },
+    {
+      "address": "0x7e5af0",
+      "name": "??_7?$RLEBlitTransZRemapXlat@E@@6B@",
+      "slots": [
+        "0x499dc0",
+        "0x4918e0",
+        "0x491970"
+      ]
+    },
+    {
+      "address": "0x7e5ae0",
+      "name": "??_7?$RLEBlitTransRemapDest@E@@6B@",
+      "slots": [
+        "0x499de0",
+        "0x4919b0",
+        "0x491a30"
+      ]
+    },
+    {
+      "address": "0x7e5ad0",
+      "name": "??_7?$RLEBlitTransRemapXlat@E@@6B@",
+      "slots": [
+        "0x499e00",
+        "0x491a70",
+        "0x491b00"
+      ]
+    },
+    {
+      "address": "0x7e5ac0",
+      "name": "??_7?$RLEBlitTransXlatZRead@E@@6B@",
+      "slots": [
+        "0x499e20",
+        "0x491b40",
+        "0x491c10"
+      ]
+    },
+    {
+      "address": "0x7e5ab0",
+      "name": "??_7?$RLEBlitTransZRemapXlatZRead@E@@6B@",
+      "slots": [
+        "0x499e40",
+        "0x491c50",
+        "0x491d50"
+      ]
+    },
+    {
+      "address": "0x7e5aa0",
+      "name": "??_7?$RLEBlitTransRemapDestZRead@E@@6B@",
+      "slots": [
+        "0x499e60",
+        "0x491d90",
+        "0x491e60"
+      ]
+    },
+    {
+      "address": "0x7e5a90",
+      "name": "??_7?$RLEBlitTransRemapXlatZRead@E@@6B@",
+      "slots": [
+        "0x499e80",
+        "0x491ea0",
+        "0x491f90"
+      ]
+    },
+    {
+      "address": "0x7e5a80",
+      "name": "??_7?$RLEBlitTransXlatZReadWrite@E@@6B@",
+      "slots": [
+        "0x499ea0",
+        "0x491fd0",
+        "0x4920c0"
+      ]
+    },
+    {
+      "address": "0x7e5a70",
+      "name": "??_7?$RLEBlitTransZRemapXlatZReadWrite@E@@6B@",
+      "slots": [
+        "0x499ec0",
+        "0x492100",
+        "0x492210"
+      ]
+    },
+    {
+      "address": "0x7e5a60",
+      "name": "??_7?$RLEBlitTransRemapDestZReadWrite@E@@6B@",
+      "slots": [
+        "0x499ee0",
+        "0x492250",
+        "0x492330"
+      ]
+    },
+    {
+      "address": "0x7e5a50",
+      "name": "??_7?$RLEBlitTransRemapXlatZReadWrite@E@@6B@",
+      "slots": [
+        "0x499f00",
+        "0x492370",
+        "0x492480"
+      ]
+    },
+    {
+      "address": "0x7e5a38",
+      "name": "??_7?$BlitPlainXlat@G@@6B@",
+      "slots": [
+        "0x499f20",
+        "0x4924c0",
+        "0x492530",
+        "0x492500",
+        "0x492560"
+      ]
+    },
+    {
+      "address": "0x7e5a20",
+      "name": "??_7?$BlitTransXlat@G@@6B@",
+      "slots": [
+        "0x499ca0",
+        "0x4912b0",
+        "0x491330",
+        "0x491300",
+        "0x491360"
+      ]
+    },
+    {
+      "address": "0x7e5a08",
+      "name": "??_7?$BlitTransZRemapXlat@G@@6B@",
+      "slots": [
+        "0x499f40",
+        "0x492590",
+        "0x492610",
+        "0x4925e0",
+        "0x492640"
+      ]
+    },
+    {
+      "address": "0x7e59f0",
+      "name": "??_7?$BlitTransDarken@G@@6B@",
+      "slots": [
+        "0x499f60",
+        "0x492670",
+        "0x4926e0",
+        "0x4926b0",
+        "0x492710"
+      ]
+    },
+    {
+      "address": "0x7e59d8",
+      "name": "??_7?$BlitTransLucent75@G@@6B@",
+      "slots": [
+        "0x499f80",
+        "0x492740",
+        "0x4927d0",
+        "0x4927a0",
+        "0x492800"
+      ]
+    },
+    {
+      "address": "0x7e59c0",
+      "name": "??_7?$BlitTransLucent50@G@@6B@",
+      "slots": [
+        "0x499fa0",
+        "0x492830",
+        "0x4928c0",
+        "0x492890",
+        "0x4928f0"
+      ]
+    },
+    {
+      "address": "0x7e59a8",
+      "name": "??_7?$BlitTransLucent25@G@@6B@",
+      "slots": [
+        "0x499fc0",
+        "0x492920",
+        "0x4929b0",
+        "0x492980",
+        "0x4929e0"
+      ]
+    },
+    {
+      "address": "0x7e5990",
+      "name": "??_7?$BlitPlainXlatZRead@G@@6B@",
+      "slots": [
+        "0x499fe0",
+        "0x492a10",
+        "0x492aa0",
+        "0x492a70",
+        "0x492ad0"
+      ]
+    },
+    {
+      "address": "0x7e5978",
+      "name": "??_7?$BlitTransXlatZRead@G@@6B@",
+      "slots": [
+        "0x49a000",
+        "0x492b00",
+        "0x492ba0",
+        "0x492b70",
+        "0x492bd0"
+      ]
+    },
+    {
+      "address": "0x7e5960",
+      "name": "??_7?$BlitTransZRemapXlatZRead@G@@6B@",
+      "slots": [
+        "0x49a020",
+        "0x492c00",
+        "0x492cc0",
+        "0x492c90",
+        "0x492cf0"
+      ]
+    },
+    {
+      "address": "0x7e5948",
+      "name": "??_7?$BlitTransDarkenZRead@G@@6B@",
+      "slots": [
+        "0x49a040",
+        "0x492d20",
+        "0x492db0",
+        "0x492d80",
+        "0x492de0"
+      ]
+    },
+    {
+      "address": "0x7e5930",
+      "name": "??_7?$BlitTransLucent75ZRead@G@@6B@",
+      "slots": [
+        "0x49a060",
+        "0x492e10",
+        "0x492ed0",
+        "0x492ea0",
+        "0x492f00"
+      ]
+    },
+    {
+      "address": "0x7e5918",
+      "name": "??_7?$BlitTransLucent50ZRead@G@@6B@",
+      "slots": [
+        "0x49a080",
+        "0x492f30",
+        "0x492ff0",
+        "0x492fc0",
+        "0x493020"
+      ]
+    },
+    {
+      "address": "0x7e5900",
+      "name": "??_7?$BlitTransLucent25ZRead@G@@6B@",
+      "slots": [
+        "0x49a0a0",
+        "0x493050",
+        "0x493110",
+        "0x4930e0",
+        "0x493140"
+      ]
+    },
+    {
+      "address": "0x7e58e8",
+      "name": "??_7?$BlitTransLucent75ZReadWarp@G@@6B@",
+      "slots": [
+        "0x49a0c0",
+        "0x493170",
+        "0x493240",
+        "0x493210",
+        "0x493270"
+      ]
+    },
+    {
+      "address": "0x7e58d0",
+      "name": "??_7?$BlitTransLucent50ZReadWarp@G@@6B@",
+      "slots": [
+        "0x49a0e0",
+        "0x4932a0",
+        "0x493370",
+        "0x493340",
+        "0x4933a0"
+      ]
+    },
+    {
+      "address": "0x7e58b8",
+      "name": "??_7?$BlitTransLucent25ZReadWarp@G@@6B@",
+      "slots": [
+        "0x49a100",
+        "0x4933d0",
+        "0x4934a0",
+        "0x493470",
+        "0x4934d0"
+      ]
+    },
+    {
+      "address": "0x7e58a0",
+      "name": "??_7?$BlitPlainXlatZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a120",
+        "0x493500",
+        "0x4935a0",
+        "0x493570",
+        "0x4935d0"
+      ]
+    },
+    {
+      "address": "0x7e5888",
+      "name": "??_7?$BlitTransXlatZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a140",
+        "0x493600",
+        "0x4936b0",
+        "0x493680",
+        "0x4936e0"
+      ]
+    },
+    {
+      "address": "0x7e5870",
+      "name": "??_7?$BlitTransZRemapXlatZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a160",
+        "0x493710",
+        "0x4937d0",
+        "0x4937a0",
+        "0x493800"
+      ]
+    },
+    {
+      "address": "0x7e5858",
+      "name": "??_7?$BlitTransDarkenZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a180",
+        "0x493830",
+        "0x4938d0",
+        "0x4938a0",
+        "0x493900"
+      ]
+    },
+    {
+      "address": "0x7e5840",
+      "name": "??_7?$BlitTransLucent75ZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a1a0",
+        "0x493930",
+        "0x493a00",
+        "0x4939d0",
+        "0x493a30"
+      ]
+    },
+    {
+      "address": "0x7e5828",
+      "name": "??_7?$BlitTransLucent50ZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a1c0",
+        "0x493a60",
+        "0x493b30",
+        "0x493b00",
+        "0x493b60"
+      ]
+    },
+    {
+      "address": "0x7e5810",
+      "name": "??_7?$BlitTransLucent25ZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a1e0",
+        "0x493b90",
+        "0x493c60",
+        "0x493c30",
+        "0x493c90"
+      ]
+    },
+    {
+      "address": "0x7e57f8",
+      "name": "??_7?$BlitPlainXlatAlpha@G@@6B@",
+      "slots": [
+        "0x49a200",
+        "0x493cc0",
+        "0x493d90",
+        "0x493d60",
+        "0x493dc0"
+      ]
+    },
+    {
+      "address": "0x7e57e0",
+      "name": "??_7?$BlitTransXlatAlpha@G@@6B@",
+      "slots": [
+        "0x49a240",
+        "0x493df0",
+        "0x493ed0",
+        "0x493ea0",
+        "0x493f00"
+      ]
+    },
+    {
+      "address": "0x7e57c8",
+      "name": "??_7?$BlitTransZRemapXlatAlpha@G@@6B@",
+      "slots": [
+        "0x49a280",
+        "0x493f30",
+        "0x494020",
+        "0x493ff0",
+        "0x494050"
+      ]
+    },
+    {
+      "address": "0x7e57b0",
+      "name": "??_7?$BlitTransLucent75Alpha@G@@6B@",
+      "slots": [
+        "0x49a2c0",
+        "0x494080",
+        "0x494180",
+        "0x494150",
+        "0x4941b0"
+      ]
+    },
+    {
+      "address": "0x7e5798",
+      "name": "??_7?$BlitTransLucent50Alpha@G@@6B@",
+      "slots": [
+        "0x49a300",
+        "0x4941e0",
+        "0x4942d0",
+        "0x4942a0",
+        "0x494300"
+      ]
+    },
+    {
+      "address": "0x7e5780",
+      "name": "??_7?$BlitTransLucent25Alpha@G@@6B@",
+      "slots": [
+        "0x49a340",
+        "0x494330",
+        "0x494430",
+        "0x494400",
+        "0x494460"
+      ]
+    },
+    {
+      "address": "0x7e5768",
+      "name": "??_7?$BlitTransXlatWriteAlpha@G@@6B@",
+      "slots": [
+        "0x49a380",
+        "0x494490",
+        "0x494530",
+        "0x494500",
+        "0x494560"
+      ]
+    },
+    {
+      "address": "0x7e5750",
+      "name": "??_7?$BlitTransXlatMultWriteAlpha@G@@6B@",
+      "slots": [
+        "0x49a3a0",
+        "0x494590",
+        "0x494630",
+        "0x494600",
+        "0x494660"
+      ]
+    },
+    {
+      "address": "0x7e5738",
+      "name": "??_7?$BlitTranslucentWriteAlpha@G@@6B@",
+      "slots": [
+        "0x49a3c0",
+        "0x494690",
+        "0x4948c0",
+        "0x494890",
+        "0x4948f0"
+      ]
+    },
+    {
+      "address": "0x7e5720",
+      "name": "??_7?$BlitTranslucent50NonzeroAlpha@G@@6B@",
+      "slots": [
+        "0x49a3e0",
+        "0x494920",
+        "0x4949e0",
+        "0x4949b0",
+        "0x494a10"
+      ]
+    },
+    {
+      "address": "0x7e5708",
+      "name": "??_7?$BlitTranslucent50ZeroAlpha@G@@6B@",
+      "slots": [
+        "0x49a400",
+        "0x494a40",
+        "0x494b00",
+        "0x494ad0",
+        "0x494b30"
+      ]
+    },
+    {
+      "address": "0x7e56f0",
+      "name": "??_7?$BlitTransXlatAlphaZRead@G@@6B@",
+      "slots": [
+        "0x49a420",
+        "0x494b60",
+        "0x494c40",
+        "0x494d20",
+        "0x494d50"
+      ]
+    },
+    {
+      "address": "0x7e56d8",
+      "name": "??_7?$BlitTransZRemapXlatAlphaZRead@G@@6B@",
+      "slots": [
+        "0x49a460",
+        "0x494d90",
+        "0x494ec0",
+        "0x494e90",
+        "0x494ef0"
+      ]
+    },
+    {
+      "address": "0x7e56c0",
+      "name": "??_7?$BlitTransLucent75AlphaZRead@G@@6B@",
+      "slots": [
+        "0x49a4a0",
+        "0x494f20",
+        "0x495060",
+        "0x495030",
+        "0x495090"
+      ]
+    },
+    {
+      "address": "0x7e56a8",
+      "name": "??_7?$BlitTransLucent50AlphaZRead@G@@6B@",
+      "slots": [
+        "0x49a4e0",
+        "0x4950c0",
+        "0x4951f0",
+        "0x4951c0",
+        "0x495220"
+      ]
+    },
+    {
+      "address": "0x7e5690",
+      "name": "??_7?$BlitTransLucent25AlphaZRead@G@@6B@",
+      "slots": [
+        "0x49a520",
+        "0x495250",
+        "0x495390",
+        "0x495360",
+        "0x4953c0"
+      ]
+    },
+    {
+      "address": "0x7e5678",
+      "name": "??_7?$BlitTransLucent75AlphaZReadWarp@G@@6B@",
+      "slots": [
+        "0x49a560",
+        "0x4953f0",
+        "0x495530",
+        "0x495500",
+        "0x495560"
+      ]
+    },
+    {
+      "address": "0x7e5660",
+      "name": "??_7?$BlitTransLucent50AlphaZReadWarp@G@@6B@",
+      "slots": [
+        "0x49a5a0",
+        "0x495590",
+        "0x4956d0",
+        "0x4956a0",
+        "0x495700"
+      ]
+    },
+    {
+      "address": "0x7e5648",
+      "name": "??_7?$BlitTransLucent25AlphaZReadWarp@G@@6B@",
+      "slots": [
+        "0x49a5e0",
+        "0x495730",
+        "0x495870",
+        "0x495840",
+        "0x4958a0"
+      ]
+    },
+    {
+      "address": "0x7e5630",
+      "name": "??_7?$BlitTransXlatAlphaZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a620",
+        "0x4958d0",
+        "0x4959f0",
+        "0x4959c0",
+        "0x495a20"
+      ]
+    },
+    {
+      "address": "0x7e5618",
+      "name": "??_7?$BlitTransZRemapXlatAlphaZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a660",
+        "0x495a50",
+        "0x495b60",
+        "0x495b30",
+        "0x495b90"
+      ]
+    },
+    {
+      "address": "0x7e5600",
+      "name": "??_7?$BlitTransLucent75AlphaZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a6a0",
+        "0x495bc0",
+        "0x495d00",
+        "0x495cd0",
+        "0x495d30"
+      ]
+    },
+    {
+      "address": "0x7e55e8",
+      "name": "??_7?$BlitTransLucent50AlphaZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a6e0",
+        "0x495d60",
+        "0x495ea0",
+        "0x495e70",
+        "0x495ed0"
+      ]
+    },
+    {
+      "address": "0x7e55d0",
+      "name": "??_7?$BlitTransLucent25AlphaZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a720",
+        "0x495f00",
+        "0x496040",
+        "0x496010",
+        "0x496070"
+      ]
+    },
+    {
+      "address": "0x7e55c0",
+      "name": "??_7?$RLEBlitTransXlat@G@@6B@",
+      "slots": [
+        "0x49a760",
+        "0x4960a0",
+        "0x496130"
+      ]
+    },
+    {
+      "address": "0x7e55b0",
+      "name": "??_7?$RLEBlitTransZRemapXlat@G@@6B@",
+      "slots": [
+        "0x49a780",
+        "0x496170",
+        "0x496210"
+      ]
+    },
+    {
+      "address": "0x7e55a0",
+      "name": "??_7?$RLEBlitTransDarken@G@@6B@",
+      "slots": [
+        "0x49a7a0",
+        "0x496250",
+        "0x4962d0"
+      ]
+    },
+    {
+      "address": "0x7e5590",
+      "name": "??_7?$RLEBlitTransLucent75@G@@6B@",
+      "slots": [
+        "0x49a7c0",
+        "0x496310",
+        "0x4963b0"
+      ]
+    },
+    {
+      "address": "0x7e5580",
+      "name": "??_7?$RLEBlitTransLucent50@G@@6B@",
+      "slots": [
+        "0x49a7e0",
+        "0x4963f0",
+        "0x496490"
+      ]
+    },
+    {
+      "address": "0x7e5570",
+      "name": "??_7?$RLEBlitTransLucent25@G@@6B@",
+      "slots": [
+        "0x49a800",
+        "0x4964d0",
+        "0x496570"
+      ]
+    },
+    {
+      "address": "0x7e5560",
+      "name": "??_7?$RLEBlitTransXlatZRead@G@@6B@",
+      "slots": [
+        "0x49a820",
+        "0x4965b0",
+        "0x496690"
+      ]
+    },
+    {
+      "address": "0x7e5550",
+      "name": "??_7?$RLEBlitTransZRemapXlatZRead@G@@6B@",
+      "slots": [
+        "0x49a840",
+        "0x4966d0",
+        "0x4967e0"
+      ]
+    },
+    {
+      "address": "0x7e5540",
+      "name": "??_7?$RLEBlitTransDarkenZRead@G@@6B@",
+      "slots": [
+        "0x49a860",
+        "0x496820",
+        "0x4968f0"
+      ]
+    },
+    {
+      "address": "0x7e5530",
+      "name": "??_7?$RLEBlitTransLucent75ZRead@G@@6B@",
+      "slots": [
+        "0x49a880",
+        "0x496930",
+        "0x496a40"
+      ]
+    },
+    {
+      "address": "0x7e5520",
+      "name": "??_7?$RLEBlitTransLucent50ZRead@G@@6B@",
+      "slots": [
+        "0x49a8a0",
+        "0x496a80",
+        "0x496b80"
+      ]
+    },
+    {
+      "address": "0x7e5510",
+      "name": "??_7?$RLEBlitTransLucent25ZRead@G@@6B@",
+      "slots": [
+        "0x49a8c0",
+        "0x496bc0",
+        "0x496cd0"
+      ]
+    },
+    {
+      "address": "0x7e5500",
+      "name": "??_7?$RLEBlitTransLucent75ZReadWarp@G@@6B@",
+      "slots": [
+        "0x49a8e0",
+        "0x496d10",
+        "0x496e20"
+      ]
+    },
+    {
+      "address": "0x7e54f0",
+      "name": "??_7?$RLEBlitTransLucent50ZReadWarp@G@@6B@",
+      "slots": [
+        "0x49a900",
+        "0x496e60",
+        "0x496f70"
+      ]
+    },
+    {
+      "address": "0x7e54e0",
+      "name": "??_7?$RLEBlitTransLucent25ZReadWarp@G@@6B@",
+      "slots": [
+        "0x49a920",
+        "0x496fb0",
+        "0x4970c0"
+      ]
+    },
+    {
+      "address": "0x7e54d0",
+      "name": "??_7?$RLEBlitTransXlatZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a940",
+        "0x497100",
+        "0x4971f0"
+      ]
+    },
+    {
+      "address": "0x7e54c0",
+      "name": "??_7?$RLEBlitTransZRemapXlatZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a960",
+        "0x497230",
+        "0x497350"
+      ]
+    },
+    {
+      "address": "0x7e54b0",
+      "name": "??_7?$RLEBlitTransDarkenZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a980",
+        "0x497390",
+        "0x497470"
+      ]
+    },
+    {
+      "address": "0x7e54a0",
+      "name": "??_7?$RLEBlitTransLucent75ZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a9a0",
+        "0x4974b0",
+        "0x4975d0"
+      ]
+    },
+    {
+      "address": "0x7e5490",
+      "name": "??_7?$RLEBlitTransLucent50ZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a9c0",
+        "0x497610",
+        "0x497720"
+      ]
+    },
+    {
+      "address": "0x7e5480",
+      "name": "??_7?$RLEBlitTransLucent25ZReadWrite@G@@6B@",
+      "slots": [
+        "0x49a9e0",
+        "0x497760",
+        "0x497880"
+      ]
+    },
+    {
+      "address": "0x7e5470",
+      "name": "??_7?$RLEBlitTransXlatAlpha@G@@6B@",
+      "slots": [
+        "0x49aa00",
+        "0x4978c0",
+        "0x4979d0"
+      ]
+    },
+    {
+      "address": "0x7e5460",
+      "name": "??_7?$RLEBlitTransZRemapXlatAlpha@G@@6B@",
+      "slots": [
+        "0x49aa40",
+        "0x497a10",
+        "0x497b40"
+      ]
+    },
+    {
+      "address": "0x7e5450",
+      "name": "??_7?$RLEBlitTransLucent75Alpha@G@@6B@",
+      "slots": [
+        "0x49aa80",
+        "0x497b80",
+        "0x497cb0"
+      ]
+    },
+    {
+      "address": "0x7e5440",
+      "name": "??_7?$RLEBlitTransLucent50Alpha@G@@6B@",
+      "slots": [
+        "0x49aac0",
+        "0x497cf0",
+        "0x497e20"
+      ]
+    },
+    {
+      "address": "0x7e5430",
+      "name": "??_7?$RLEBlitTransLucent25Alpha@G@@6B@",
+      "slots": [
+        "0x49ab00",
+        "0x497e60",
+        "0x497f90"
+      ]
+    },
+    {
+      "address": "0x7e5420",
+      "name": "??_7?$RLEBlitTransXlatAlphaZRead@G@@6B@",
+      "slots": [
+        "0x49ab40",
+        "0x497fd0",
+        "0x498150"
+      ]
+    },
+    {
+      "address": "0x7e5410",
+      "name": "??_7?$RLEBlitTransZRemapXlatAlphaZRead@G@@6B@",
+      "slots": [
+        "0x49ab80",
+        "0x4982e0",
+        "0x498490"
+      ]
+    },
+    {
+      "address": "0x7e5400",
+      "name": "??_7?$RLEBlitTransLucent75AlphaZRead@G@@6B@",
+      "slots": [
+        "0x49abc0",
+        "0x4984d0",
+        "0x498690"
+      ]
+    },
+    {
+      "address": "0x7e53f0",
+      "name": "??_7?$RLEBlitTransLucent50AlphaZRead@G@@6B@",
+      "slots": [
+        "0x49ac00",
+        "0x4986d0",
+        "0x498880"
+      ]
+    },
+    {
+      "address": "0x7e53e0",
+      "name": "??_7?$RLEBlitTransLucent25AlphaZRead@G@@6B@",
+      "slots": [
+        "0x49ac40",
+        "0x4988c0",
+        "0x498a80"
+      ]
+    },
+    {
+      "address": "0x7e53d0",
+      "name": "??_7?$RLEBlitTransLucent75AlphaZReadWarp@G@@6B@",
+      "slots": [
+        "0x49ac80",
+        "0x498ac0",
+        "0x498c90"
+      ]
+    },
+    {
+      "address": "0x7e53c0",
+      "name": "??_7?$RLEBlitTransLucent50AlphaZReadWarp@G@@6B@",
+      "slots": [
+        "0x49acc0",
+        "0x498cd0",
+        "0x498e90"
+      ]
+    },
+    {
+      "address": "0x7e53b0",
+      "name": "??_7?$RLEBlitTransLucent25AlphaZReadWarp@G@@6B@",
+      "slots": [
+        "0x49ad00",
+        "0x498ed0",
+        "0x4990a0"
+      ]
+    },
+    {
+      "address": "0x7e53a0",
+      "name": "??_7?$RLEBlitTransXlatAlphaZReadWrite@G@@6B@",
+      "slots": [
+        "0x49ad40",
+        "0x4990e0",
+        "0x499280"
+      ]
+    },
+    {
+      "address": "0x7e5390",
+      "name": "??_7?$RLEBlitTransZRemapXlatAlphaZReadWrite@G@@6B@",
+      "slots": [
+        "0x49ad80",
+        "0x499430",
+        "0x499610"
+      ]
+    },
+    {
+      "address": "0x7e5380",
+      "name": "??_7?$RLEBlitTransLucent75AlphaZReadWrite@G@@6B@",
+      "slots": [
+        "0x49adc0",
+        "0x499650",
+        "0x499820"
+      ]
+    },
+    {
+      "address": "0x7e5370",
+      "name": "??_7?$RLEBlitTransLucent50AlphaZReadWrite@G@@6B@",
+      "slots": [
+        "0x49ae00",
+        "0x499860",
+        "0x499a50"
+      ]
+    },
+    {
+      "address": "0x7e5360",
+      "name": "??_7?$RLEBlitTransLucent25AlphaZReadWrite@G@@6B@",
+      "slots": [
+        "0x49ae40",
+        "0x499a90",
+        "0x499c60"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "bpp": 1,
+      "rows": [
+        {
+          "slot": 8,
+          "vtable": "0x7e5b70"
+        },
+        {
+          "slot": 12,
+          "vtable": "0x7e5b58"
+        },
+        {
+          "slot": 20,
+          "vtable": "0x7e5b40"
+        },
+        {
+          "slot": 16,
+          "vtable": "0x7e5b28"
+        },
+        {
+          "slot": 24,
+          "vtable": "0x7e5b10"
+        },
+        {
+          "slot": 28,
+          "vtable": "0x7e5b10"
+        },
+        {
+          "slot": 32,
+          "vtable": "0x7e5b10"
+        },
+        {
+          "slot": 208,
+          "vtable": "0x7e5b00"
+        },
+        {
+          "slot": 216,
+          "vtable": "0x7e5af0"
+        },
+        {
+          "slot": 212,
+          "vtable": "0x7e5ae0"
+        },
+        {
+          "slot": 220,
+          "vtable": "0x7e5ad0"
+        },
+        {
+          "slot": 224,
+          "vtable": "0x7e5ad0"
+        },
+        {
+          "slot": 228,
+          "vtable": "0x7e5ad0"
+        },
+        {
+          "slot": 232,
+          "vtable": "0x7e5ac0"
+        },
+        {
+          "slot": 236,
+          "vtable": "0x7e5ab0"
+        },
+        {
+          "slot": 240,
+          "vtable": "0x7e5aa0"
+        },
+        {
+          "slot": 244,
+          "vtable": "0x7e5a90"
+        },
+        {
+          "slot": 248,
+          "vtable": "0x7e5a90"
+        },
+        {
+          "slot": 252,
+          "vtable": "0x7e5a90"
+        },
+        {
+          "slot": 268,
+          "vtable": "0x7e5a80"
+        },
+        {
+          "slot": 272,
+          "vtable": "0x7e5a70"
+        },
+        {
+          "slot": 276,
+          "vtable": "0x7e5a60"
+        },
+        {
+          "slot": 280,
+          "vtable": "0x7e5a50"
+        },
+        {
+          "slot": 284,
+          "vtable": "0x7e5a50"
+        },
+        {
+          "slot": 288,
+          "vtable": "0x7e5a50"
+        }
+      ]
+    },
+    {
+      "bpp": 2,
+      "rows": [
+        {
+          "slot": 8,
+          "vtable": "0x7e5a38"
+        },
+        {
+          "slot": 12,
+          "vtable": "0x7e5a20"
+        },
+        {
+          "slot": 20,
+          "vtable": "0x7e5a08"
+        },
+        {
+          "slot": 16,
+          "vtable": "0x7e59f0"
+        },
+        {
+          "slot": 24,
+          "vtable": "0x7e59d8"
+        },
+        {
+          "slot": 28,
+          "vtable": "0x7e59c0"
+        },
+        {
+          "slot": 32,
+          "vtable": "0x7e59a8"
+        },
+        {
+          "slot": 36,
+          "vtable": "0x7e5990"
+        },
+        {
+          "slot": 40,
+          "vtable": "0x7e5978"
+        },
+        {
+          "slot": 48,
+          "vtable": "0x7e5960"
+        },
+        {
+          "slot": 44,
+          "vtable": "0x7e5948"
+        },
+        {
+          "slot": 52,
+          "vtable": "0x7e5930"
+        },
+        {
+          "slot": 56,
+          "vtable": "0x7e5918"
+        },
+        {
+          "slot": 60,
+          "vtable": "0x7e5900"
+        },
+        {
+          "slot": 64,
+          "vtable": "0x7e58e8"
+        },
+        {
+          "slot": 68,
+          "vtable": "0x7e58d0"
+        },
+        {
+          "slot": 72,
+          "vtable": "0x7e58b8"
+        },
+        {
+          "slot": 76,
+          "vtable": "0x7e58a0"
+        },
+        {
+          "slot": 80,
+          "vtable": "0x7e5888"
+        },
+        {
+          "slot": 88,
+          "vtable": "0x7e5870"
+        },
+        {
+          "slot": 84,
+          "vtable": "0x7e5858"
+        },
+        {
+          "slot": 92,
+          "vtable": "0x7e5840"
+        },
+        {
+          "slot": 96,
+          "vtable": "0x7e5828"
+        },
+        {
+          "slot": 100,
+          "vtable": "0x7e5810"
+        },
+        {
+          "slot": 104,
+          "vtable": "0x7e57f8"
+        },
+        {
+          "slot": 108,
+          "vtable": "0x7e57e0"
+        },
+        {
+          "slot": 112,
+          "vtable": "0x7e57c8"
+        },
+        {
+          "slot": 116,
+          "vtable": "0x7e57b0"
+        },
+        {
+          "slot": 120,
+          "vtable": "0x7e5798"
+        },
+        {
+          "slot": 124,
+          "vtable": "0x7e5780"
+        },
+        {
+          "slot": 128,
+          "vtable": "0x7e5768"
+        },
+        {
+          "slot": 132,
+          "vtable": "0x7e5750"
+        },
+        {
+          "slot": 136,
+          "vtable": "0x7e5738"
+        },
+        {
+          "slot": 140,
+          "vtable": "0x7e5720"
+        },
+        {
+          "slot": 144,
+          "vtable": "0x7e5708"
+        },
+        {
+          "slot": 148,
+          "vtable": "0x7e57f8"
+        },
+        {
+          "slot": 152,
+          "vtable": "0x7e56f0"
+        },
+        {
+          "slot": 156,
+          "vtable": "0x7e56d8"
+        },
+        {
+          "slot": 160,
+          "vtable": "0x7e56c0"
+        },
+        {
+          "slot": 164,
+          "vtable": "0x7e56a8"
+        },
+        {
+          "slot": 168,
+          "vtable": "0x7e5690"
+        },
+        {
+          "slot": 172,
+          "vtable": "0x7e5678"
+        },
+        {
+          "slot": 176,
+          "vtable": "0x7e5660"
+        },
+        {
+          "slot": 180,
+          "vtable": "0x7e5648"
+        },
+        {
+          "slot": 184,
+          "vtable": "0x7e57f8"
+        },
+        {
+          "slot": 188,
+          "vtable": "0x7e5630"
+        },
+        {
+          "slot": 192,
+          "vtable": "0x7e5618"
+        },
+        {
+          "slot": 196,
+          "vtable": "0x7e5600"
+        },
+        {
+          "slot": 200,
+          "vtable": "0x7e55e8"
+        },
+        {
+          "slot": 204,
+          "vtable": "0x7e55d0"
+        },
+        {
+          "slot": 208,
+          "vtable": "0x7e55c0"
+        },
+        {
+          "slot": 216,
+          "vtable": "0x7e55b0"
+        },
+        {
+          "slot": 212,
+          "vtable": "0x7e55a0"
+        },
+        {
+          "slot": 220,
+          "vtable": "0x7e5590"
+        },
+        {
+          "slot": 224,
+          "vtable": "0x7e5580"
+        },
+        {
+          "slot": 228,
+          "vtable": "0x7e5570"
+        },
+        {
+          "slot": 232,
+          "vtable": "0x7e5560"
+        },
+        {
+          "slot": 236,
+          "vtable": "0x7e5550"
+        },
+        {
+          "slot": 240,
+          "vtable": "0x7e5540"
+        },
+        {
+          "slot": 244,
+          "vtable": "0x7e5530"
+        },
+        {
+          "slot": 248,
+          "vtable": "0x7e5520"
+        },
+        {
+          "slot": 252,
+          "vtable": "0x7e5510"
+        },
+        {
+          "slot": 256,
+          "vtable": "0x7e5500"
+        },
+        {
+          "slot": 260,
+          "vtable": "0x7e54f0"
+        },
+        {
+          "slot": 264,
+          "vtable": "0x7e54e0"
+        },
+        {
+          "slot": 268,
+          "vtable": "0x7e54d0"
+        },
+        {
+          "slot": 272,
+          "vtable": "0x7e54c0"
+        },
+        {
+          "slot": 276,
+          "vtable": "0x7e54b0"
+        },
+        {
+          "slot": 280,
+          "vtable": "0x7e54a0"
+        },
+        {
+          "slot": 284,
+          "vtable": "0x7e5490"
+        },
+        {
+          "slot": 288,
+          "vtable": "0x7e5480"
+        },
+        {
+          "slot": 292,
+          "vtable": "0x7e5470"
+        },
+        {
+          "slot": 296,
+          "vtable": "0x7e5460"
+        },
+        {
+          "slot": 300,
+          "vtable": "0x7e5450"
+        },
+        {
+          "slot": 304,
+          "vtable": "0x7e5440"
+        },
+        {
+          "slot": 308,
+          "vtable": "0x7e5430"
+        },
+        {
+          "slot": 312,
+          "vtable": "0x7e5420"
+        },
+        {
+          "slot": 316,
+          "vtable": "0x7e5410"
+        },
+        {
+          "slot": 320,
+          "vtable": "0x7e5400"
+        },
+        {
+          "slot": 324,
+          "vtable": "0x7e53f0"
+        },
+        {
+          "slot": 328,
+          "vtable": "0x7e53e0"
+        },
+        {
+          "slot": 332,
+          "vtable": "0x7e53d0"
+        },
+        {
+          "slot": 336,
+          "vtable": "0x7e53c0"
+        },
+        {
+          "slot": 340,
+          "vtable": "0x7e53b0"
+        },
+        {
+          "slot": 344,
+          "vtable": "0x7e53a0"
+        },
+        {
+          "slot": 348,
+          "vtable": "0x7e5390"
+        },
+        {
+          "slot": 352,
+          "vtable": "0x7e5380"
+        },
+        {
+          "slot": 356,
+          "vtable": "0x7e5370"
+        },
+        {
+          "slot": 360,
+          "vtable": "0x7e5360"
+        }
+      ]
+    }
+  ]
+}

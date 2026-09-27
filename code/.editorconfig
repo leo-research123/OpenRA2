@@ -1,0 +1,16 @@
+# Formatting for project-owned C++ declarations and implementations.
+[core/include/yrpp/**.{h,hpp}]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+[core/src/yrpp/*.{cpp,h,hpp}]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true

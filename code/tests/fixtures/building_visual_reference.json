@@ -1,0 +1,132 @@
+{
+  "version": 2,
+  "target_sha256": "7b8a068535d6af06845edf95ae829b113d00c02909330e16f197426cd7db94b6",
+  "scope": "Static binary/source provenance only. Not execution, ABI or whole-frame pixel equality.",
+  "original_functions": [
+    {
+      "file": "0045FA90.c",
+      "va": "0x0045FA90",
+      "role": "Building VXL/HVA name resolution and load",
+      "sha256": "2cb3d28c78ae63c270f422e67829b330bf6cfffd11e473f421774af1151ebe93"
+    },
+    {
+      "file": "0043DA80.c",
+      "va": "0x0043DA80",
+      "role": "Building turret/barrel transforms and order",
+      "sha256": "47b97b1f53a2cf33668138276f55c0de863397a5b508e8e4f8fb75bfccdacafe"
+    },
+    {
+      "file": "00458810.c",
+      "va": "0x00458810",
+      "role": "Mixed SHP/VXL barrel pivot transforms",
+      "sha256": "997624261bc67e1a6deb7df62a382a3a90ae1f4f58a0b5de3409ec0e6cc687db"
+    },
+    {
+      "file": "00464AF0.c",
+      "va": "0x00464AF0",
+      "role": "Building dimensions",
+      "sha256": "4816ed8c2b2a361e83dcb1bec835ff3855d0fcde358825fcb770cd98dea3a8d5"
+    },
+    {
+      "file": "006F5190.c",
+      "va": "0x006F5190",
+      "role": "Selected building world edges",
+      "sha256": "8296059f7c974683cebf75e9f41e2f0f8170fd4a2f9b4890056806d5ebf4c037"
+    },
+    {
+      "file": "006F5EF0.c",
+      "va": "0x006F5EF0",
+      "role": "Quarter endpoints",
+      "sha256": "3a96103f4d40b3ff60b3026c5f34f9ff0c1cfb650d2a00e06199221829a0c8dc"
+    },
+    {
+      "file": "006F6030.c",
+      "va": "0x006F6030",
+      "role": "Single quarter edge",
+      "sha256": "2643e95b577560f7914a427096d13eeac0aa4487e0b2806d32929cf6b0f06310"
+    },
+    {
+      "file": "00754BE0.c",
+      "va": "0x00754BE0",
+      "role": "Voxel camera",
+      "sha256": "4aa140f04f11348f8579209466215ac9463f5948abeb47d686a47f4ac74055a7"
+    }
+  ],
+  "binary_witnesses": [
+    {
+      "va": "0x006DBB60",
+      "role": "Native world line projection",
+      "bytes": "83ec2053558b6c242c56578bf98b4d048b450051508d4c2420e83263ffff8bc88b01998b59048b4d0881e2ff00000003c28bf0c1fe08e84565ffff8bc88bc399"
+    },
+    {
+      "va": "0x004BFD30",
+      "role": "DSurface DrawLineColor depth/brightness line",
+      "bytes": "83ec648b015355568d5424405752894c2444ff50788b5424786a006a00508d4c243ce8091ef6ff8bc88b31897424648b7904897c24688b41088944246c8b490c"
+    },
+    {
+      "va": "0x00753D00",
+      "role": "Voxel image render entry",
+      "bytes": "81ecc000000053558bda8be98b9424d000000056578d8c24a0000000e8ffbee5ff8b9424dc000000b90c0000008bf08d7c2470f3a58d8c24a0000000e8dfbee5"
+    },
+    {
+      "va": "0x005AFC20",
+      "role": "Orthogonal inverse basis",
+      "bytes": "83ec308bc1568b0a57894c24088b4a10d9442408d84a0c894c240c8b4a20894c24108b4a04d9442410d84a2c894c24188b4a14894c241c8b4a24dec1d944240c"
+    },
+    {
+      "va": "0x00754C00",
+      "role": "World light initialization",
+      "bytes": "83ec488d4c2418e8549ce5ff8b44244c8bc8a36c748800518d4c241ce85fa4e5ff8d5424008d4c240c528d54241cc7442404e60435bfc7442408e60435bfc744"
+    },
+    {
+      "va": "0x007586F0",
+      "role": "Normal lighting",
+      "bytes": "83ec2453558be98b5c24345657d94500d8028b349de069840083ec08d95c2418d94204d84504d95c241cd94208d84508d9542420d84c2420d9442418d84c2418"
+    },
+    {
+      "va": "0x00756590",
+      "role": "Voxel section traversal",
+      "bytes": "83ec448b4424485355568b50048b71108b4914578d14528b14968b700803d68d34928d14f28b700c8d1c918d34f6c1e6028a93a10000008a8ba0000000885424"
+    },
+    {
+      "va": "0x00757980",
+      "role": "Default lit depth span",
+      "bytes": "8b4c240483ec3866c7059055b400000066c7059255b40000008a413255563c0157be010000007629b89255b400668b50fe83c0046603512a668950fe668b50fc"
+    },
+    {
+      "va": "0x0052BF21",
+      "role": "Selection palette initialization",
+      "bytes": "b994608200e885810800508d84248003000050e857e1290083c40c33ff8bc725ff0000807907480d00ffffff408d04408a8c047a0300008a9404790300008db4"
+    }
+  ],
+  "normal_tables": [
+    {
+      "mode": 1,
+      "va": "0x00846A08",
+      "vectors": 16,
+      "sha256": "f9d164482f74ecb3e0c223b6be56143a6bf4aa721083bb45129569d3abbfc51b"
+    },
+    {
+      "mode": 2,
+      "va": "0x00846AC8",
+      "vectors": 36,
+      "sha256": "cba0081341de3e8bfec486b570d18bbcc529341ba33362fa09d9ae75de18b9f0"
+    },
+    {
+      "mode": 3,
+      "va": "0x00846C78",
+      "vectors": 64,
+      "sha256": "6085a4b5b8171366834b55d10d4a7e2ec6184177db14588cdbcd1242b6f2b149"
+    },
+    {
+      "mode": 4,
+      "va": "0x00846F78",
+      "vectors": 245,
+      "sha256": "83146b5631c7deb9a57110470b65f27205b6c86301013a3adcce3b080ef0dc38"
+    }
+  ],
+  "files": {
+    "tests/fixtures/building_selection_reference.txt": "b563fee93a2d124f15ea5cfe9033a2c7345f15fd31600e63875adfab048ac854",
+    "core/src/building_voxel_normals.inc": "e42a6c7dba65f2f0e5182ebfc3c75780d546017988e589aa905722fe2823c1e8"
+  }
+}

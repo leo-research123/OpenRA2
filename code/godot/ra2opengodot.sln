@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ra2opengodot", "ra2opengodot.csproj", "{C9015181-B4A5-499A-9C65-0B5AE644B450}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9015181-B4A5-499A-9C65-0B5AE644B450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9015181-B4A5-499A-9C65-0B5AE644B450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9015181-B4A5-499A-9C65-0B5AE644B450}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{C9015181-B4A5-499A-9C65-0B5AE644B450}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{C9015181-B4A5-499A-9C65-0B5AE644B450}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{C9015181-B4A5-499A-9C65-0B5AE644B450}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
