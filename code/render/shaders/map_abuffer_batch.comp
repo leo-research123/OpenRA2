@@ -1,0 +1,108 @@
+#version 450
+
+// Ordered ABuffer producers for the native nonrotating target (row origin 0).
+// Each invocation owns one destination pixel and applies its spatial bin's
+// requests in submission order. This preserves every overlapping integer
+// operation without one dispatch and barrier per request. The host places a
+// barrier before any consumer. map_abuffer.comp documents the same operations
+// one request at a time.
+layout(local_size_x = 8, local_size_y = 8, local_size_z = 1) in;
+
+// 20-word packets; word 17 is the source word offset in the arena.
+layout(set = 0, binding = 0, std430) readonly buffer Parameters {
+    int words[];
+};
+#ifdef RESIDENT_RESOURCES
+layout(set = 0, binding = 1) uniform usampler2DArray resource_pages;
+uint resource_word(int at) { return texelFetch(resource_pages, ivec3(at & 1023, (at >> 10) & 1023, at >> 20), 0).r; }
+#else
+layout(set = 0, binding = 1, std430) readonly buffer Arena {
+    uint texels[];
+};
+uint resource_word(int at) { return texels[at]; }
+#endif
+layout(set = 0, binding = 2, std430) buffer Lighting {
+    uint lights[];
+};
+// Spatial bins.
+layout(set = 0, binding = 3, std430) readonly buffer Bins {
+    int bins[];
+};
+
+layout(push_constant, std430) uniform Batch {
+    int width;
+    int height;
+    int columns;
+    int bin_offset;
+    int reserved0;
+    int reserved1;
+    int reserved2;
+    int reserved3;
+} batch;
+
+const int PACKET_WORD_COUNT = 20;
+int packet_base(int index) { return words[0] == -0x524132 ? words[2 + index] : index * PACKET_WORD_COUNT; }
+const int BIN_SIZE = 32;  // Must match the CPU lighting/pixel bin size (32).
+const uint SOURCE_PIXEL_COVERED = 0x10000u;
+const uint WORD_MASK = 0xFFFFu;
+const uint NEUTRAL_LIGHT = 127u;
+
+const int OPERATION_SHROUD = 1;
+const int OPERATION_FOG = 2;
+const int OPERATION_ALPHA_SHAPE = 3;
+
+// Returns false when the request does not cover this pixel.
+bool request_sample(int packet, ivec2 pixel, out uint source) {
+    int p = packet_base(packet);
+    ivec2 local = pixel - ivec2(words[p + 4], words[p + 5]);
+    ivec2 clip = ivec2(words[p + 6], words[p + 7]);
+    if (local.x < 0 || local.y < 0 || local.x >= words[p + 2] || local.y >= words[p + 3] || pixel.x < clip.x ||
+        pixel.y < clip.y || pixel.x >= clip.x + words[p + 8] || pixel.y >= clip.y + words[p + 9]) {
+        return false;
+    }
+    uint sample_value = resource_word(words[p + 17] + local.y * words[p + 2] + local.x);
+    // Covered zero is a valid intensity; uncovered pixels leave the word as is.
+    source = sample_value & 0xFFu;
+    return (sample_value & SOURCE_PIXEL_COVERED) != 0u;
+}
+
+uint apply_operation(int operation, uint value, uint source) {
+    if (operation == OPERATION_SHROUD) {
+        // 0x47EFE0: copy shroud except sentinel 254; zero is covered.
+        return source != 254u ? source : value;
+    }
+    if (operation == OPERATION_FOG) {
+        // 0x47F250: sources > 127 skip without modifying the old word.
+        return source <= NEUTRAL_LIGHT ? uint(max(0, int(value & WORD_MASK) + int(source) - int(NEUTRAL_LIGHT)))
+                                       : value;
+    }
+    if (operation == OPERATION_ALPHA_SHAPE) {
+        // 0x420F40 / 0x421350 use 0x420960's table. Truncate and clamp EACH
+        // multiplication; combining overlapping AlphaShapes changes it.
+        return min(255u, (value & WORD_MASK) * source / NEUTRAL_LIGHT);
+    }
+    return value;
+}
+
+void main() {
+    ivec2 pixel = ivec2(gl_GlobalInvocationID.xy);
+    if (pixel.x >= batch.width || pixel.y >= batch.height) {
+        return;
+    }
+    int bin = (pixel.y / BIN_SIZE) * batch.columns + pixel.x / BIN_SIZE;
+    int first = bins[batch.bin_offset + bin * 2];
+    int count = bins[batch.bin_offset + bin * 2 + 1];
+    if (count == 0) {
+        return;
+    }
+    int index = pixel.y * batch.width + pixel.x;
+    uint value = lights[index];
+    for (int n = 0; n < count; ++n) {
+        int packet = bins[first + n];
+        uint source;
+        if (request_sample(packet, pixel, source)) {
+            value = apply_operation(words[packet_base(packet) + 19], value, source);
+        }
+    }
+    lights[index] = value;
+}

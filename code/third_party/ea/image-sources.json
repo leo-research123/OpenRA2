@@ -1,0 +1,2908 @@
+{
+  "schema_version": 2,
+  "scope": "Complete upstream directories selected for the R2 image baseline, plus repository README/license. Unmodified bytes; no build integration.",
+  "sources": [
+    {
+      "repository": "https://github.com/electronicarts/CnC_Renegade",
+      "revision": "3e00c3a1b97381bb28be89a35b856375e0629a08",
+      "complete_directories": [
+        "Code/wwlib"
+      ],
+      "root_files": [
+        "README.md",
+        "LICENSE.md"
+      ],
+      "files": [
+        {
+          "path": "Code/wwlib/CallbackHook.h",
+          "mode": "100644",
+          "bytes": 1817,
+          "git_blob_sha1": "959606cfcfaff13d72a856e4914963616cf7127d",
+          "sha256": "7688aec3b44157a328e7511b8fa355bc8e21d3acfa218175e7c284b18371c6bc",
+          "local_path": "wwlib/CallbackHook.h"
+        },
+        {
+          "path": "Code/wwlib/Except.cpp",
+          "mode": "100644",
+          "bytes": 52885,
+          "git_blob_sha1": "edc9eee2ff5fc6d43493c180f7f1c16d68d7c963",
+          "sha256": "a50b1309d79cfc51656d146c7c81535ea330bcbeec981b94166427def2b9a2b3",
+          "local_path": "wwlib/Except.cpp"
+        },
+        {
+          "path": "Code/wwlib/Except.h",
+          "mode": "100644",
+          "bytes": 3883,
+          "git_blob_sha1": "3cff3ef05308df4ef9df822997d868041920968b",
+          "sha256": "14d87711b4c79de0bd06549ada8285048d99c55085efb454dd00f24416347300",
+          "local_path": "wwlib/Except.h"
+        },
+        {
+          "path": "Code/wwlib/FastAllocator.cpp",
+          "mode": "100644",
+          "bytes": 1429,
+          "git_blob_sha1": "8286c485ad013a5175d0cc32909c01b22088a8f6",
+          "sha256": "6b785f21be9c67ec71b1c2b149db03adc6fb69991d2eb96710a89c535d9f0426",
+          "local_path": "wwlib/FastAllocator.cpp"
+        },
+        {
+          "path": "Code/wwlib/FastAllocator.h",
+          "mode": "100644",
+          "bytes": 25120,
+          "git_blob_sha1": "eb1324b3848222d54b169da63cfc40f7bc262f21",
+          "sha256": "37f42bbf7ce0635e6d508348127f640cd184bf4971b8ece8743e9e3f93dd1b75",
+          "local_path": "wwlib/FastAllocator.h"
+        },
+        {
+          "path": "Code/wwlib/LaunchWeb.cpp",
+          "mode": "100644",
+          "bytes": 3352,
+          "git_blob_sha1": "7179e76a2b50a75d0dda193556facb4610b8372d",
+          "sha256": "94e4eddff0ca8578117f72038367bced966430d7a5835755fb6ddd283a4e63b3",
+          "local_path": "wwlib/LaunchWeb.cpp"
+        },
+        {
+          "path": "Code/wwlib/LaunchWeb.h",
+          "mode": "100644",
+          "bytes": 1275,
+          "git_blob_sha1": "2ec7945eef06079df520b22f6ae79e85ac6a810c",
+          "sha256": "5ae8ef79e231c9a3d86a1ce68bb947953f2a900883c4aa1de1afa6b4c21ba625",
+          "local_path": "wwlib/LaunchWeb.h"
+        },
+        {
+          "path": "Code/wwlib/Notify.h",
+          "mode": "100644",
+          "bytes": 6157,
+          "git_blob_sha1": "5f17d4d1c193ab590609684d6093fb90a1b3e328",
+          "sha256": "63401db093afcea2f9836509ea0cf2eaf68540a4ef4135951269cde0bae67f93",
+          "local_path": "wwlib/Notify.h"
+        },
+        {
+          "path": "Code/wwlib/Signaler.h",
+          "mode": "100644",
+          "bytes": 2347,
+          "git_blob_sha1": "0c077411bb4343e8f03407884ce7c49947877e8b",
+          "sha256": "8dacd43ed274ad7df884c3a2d32b98c53bd691209fe1d922bfceb539236c6e02",
+          "local_path": "wwlib/Signaler.h"
+        },
+        {
+          "path": "Code/wwlib/TARGA.CPP",
+          "mode": "100644",
+          "bytes": 30445,
+          "git_blob_sha1": "001b97f0e71af86b7a8c61bb4a178642deb69ea9",
+          "sha256": "0d6fd62a873a1488e70f11be9fe06137a0a0002b95eb67dd0f119efd967728ab",
+          "local_path": "wwlib/TARGA.CPP"
+        },
+        {
+          "path": "Code/wwlib/TARGA.H",
+          "mode": "100644",
+          "bytes": 9417,
+          "git_blob_sha1": "c9708edb3a08dcb2fe080cfa2bee13e8432c00ff",
+          "sha256": "605e2f964d4982dc189074c61bfb1b794871a8ba05026661a6627a2c320a14d1",
+          "local_path": "wwlib/TARGA.H"
+        },
+        {
+          "path": "Code/wwlib/WWCOMUtil.cpp",
+          "mode": "100644",
+          "bytes": 5469,
+          "git_blob_sha1": "76c25c0e136cbdd0fa9c16fe3f800a08b1146a99",
+          "sha256": "a70ab60a09977209778c61fcb1321874ccdf72874dcfa007e9b7ad4eb04c4695",
+          "local_path": "wwlib/WWCOMUtil.cpp"
+        },
+        {
+          "path": "Code/wwlib/WWCOMUtil.h",
+          "mode": "100644",
+          "bytes": 1911,
+          "git_blob_sha1": "54912ce9185fb06df010e6ffee5ac4409d45d31c",
+          "sha256": "f255c79051ebc2d908c9d2adc9fae2d99d5e370331c4b0815e4ecbe7470bb286",
+          "local_path": "wwlib/WWCOMUtil.h"
+        },
+        {
+          "path": "Code/wwlib/_convert.cpp",
+          "mode": "100644",
+          "bytes": 2639,
+          "git_blob_sha1": "38e7afd25ba897ca3f6d0ad3632b6eff3e3f83a3",
+          "sha256": "48bd6ee94f2c066ee4686df3453df95c0d2f6f377595d6236686b49d309722ff",
+          "local_path": "wwlib/_convert.cpp"
+        },
+        {
+          "path": "Code/wwlib/_convert.h",
+          "mode": "100644",
+          "bytes": 2664,
+          "git_blob_sha1": "3624cd72e6427549186253520caad6491c523ec2",
+          "sha256": "8c023949bbf0a0eb63beae4ee4c305646705c52d1f7937325ead30883ba917f5",
+          "local_path": "wwlib/_convert.h"
+        },
+        {
+          "path": "Code/wwlib/_mono.cpp",
+          "mode": "100644",
+          "bytes": 2581,
+          "git_blob_sha1": "4c3808c864278328a34e1dc04c928d6bb2280ef1",
+          "sha256": "f1e58787ee0b5d92de711c916c8552f6a76c107a485b4be1100513b464de857b",
+          "local_path": "wwlib/_mono.cpp"
+        },
+        {
+          "path": "Code/wwlib/_mono.h",
+          "mode": "100644",
+          "bytes": 2607,
+          "git_blob_sha1": "a7bb07344f5c807981d299124c50bce702eb33aa",
+          "sha256": "37e6fe7eb59600b2eaf43e189f265e3f11ebe5e4325f0125add6550a6ec76eec",
+          "local_path": "wwlib/_mono.h"
+        },
+        {
+          "path": "Code/wwlib/_timer.cpp",
+          "mode": "100644",
+          "bytes": 2764,
+          "git_blob_sha1": "8c11f1955499c332dfa858712c57bbf272fc66c5",
+          "sha256": "1cc3ce1d4605a4adfb0059933a65ba8074ffac350cf10310d0545c8bf0fd00ba",
+          "local_path": "wwlib/_timer.cpp"
+        },
+        {
+          "path": "Code/wwlib/_timer.h",
+          "mode": "100644",
+          "bytes": 2573,
+          "git_blob_sha1": "f6f313d7c0de255d1209fbf74d3ab5baea0138ba",
+          "sha256": "08830a908f9e8478ac62f830e596b8bf8484b3d9aee7ecf65f9c4c88eb0542ac",
+          "local_path": "wwlib/_timer.h"
+        },
+        {
+          "path": "Code/wwlib/_xmouse.h",
+          "mode": "100644",
+          "bytes": 3127,
+          "git_blob_sha1": "c93e6254d0f9be0c021ce2026b6e5ab83c98cc5a",
+          "sha256": "bb86e5b4e1871cb39425eb9887ec700c065ce03b2c3cc44d6a72dd17caac0f28",
+          "local_path": "wwlib/_xmouse.h"
+        },
+        {
+          "path": "Code/wwlib/always.h",
+          "mode": "100644",
+          "bytes": 5789,
+          "git_blob_sha1": "ecf40173a0402fed1fd35377d9f0b7294b13da79",
+          "sha256": "3bee6f54eafcc35b84f2eb66d7155057014c57cb1102d2089ecec8a6782f63f3",
+          "local_path": "wwlib/always.h"
+        },
+        {
+          "path": "Code/wwlib/argv.cpp",
+          "mode": "100644",
+          "bytes": 23033,
+          "git_blob_sha1": "f3970c74b883c68d736c41c4f14f7e37be19c300",
+          "sha256": "61f8f1fed7f5d7f6b0430614bf5f6cbccc158b12b1ccab772440dbec725c93e3",
+          "local_path": "wwlib/argv.cpp"
+        },
+        {
+          "path": "Code/wwlib/argv.h",
+          "mode": "100644",
+          "bytes": 6189,
+          "git_blob_sha1": "38d40caace13a47dcda67689c83ebf252d48993f",
+          "sha256": "360b93444daa08391e796e3d0de8d133ade436b133a0205228df444619c78481",
+          "local_path": "wwlib/argv.h"
+        },
+        {
+          "path": "Code/wwlib/b64pipe.cpp",
+          "mode": "100644",
+          "bytes": 7734,
+          "git_blob_sha1": "176dff221903559858315af679367480fe3a6ef0",
+          "sha256": "1c51ffd55822ea5d8765c03525451042703bd69b0a2248e375c3ef502f8694c1",
+          "local_path": "wwlib/b64pipe.cpp"
+        },
+        {
+          "path": "Code/wwlib/b64pipe.h",
+          "mode": "100644",
+          "bytes": 3732,
+          "git_blob_sha1": "82e31a589539bff769d0a027b569443494beee6d",
+          "sha256": "b9149ef56dcdc6ede902cd4c889db62bb5cfb6df43af32443f46f2be96c0d77c",
+          "local_path": "wwlib/b64pipe.h"
+        },
+        {
+          "path": "Code/wwlib/b64straw.cpp",
+          "mode": "100644",
+          "bytes": 5563,
+          "git_blob_sha1": "d4004f4438844ca827aa39059165af8e7a53c16f",
+          "sha256": "e301225c87932b3fcd32a0c82485125e1ff02f9a225015195e2712247ccbb272",
+          "local_path": "wwlib/b64straw.cpp"
+        },
+        {
+          "path": "Code/wwlib/b64straw.h",
+          "mode": "100644",
+          "bytes": 3711,
+          "git_blob_sha1": "397eb0f697d0a4d5294e6f2d4b656891ef39f04c",
+          "sha256": "eaac9ff17b8337540dbbe1f09f03eab5ea94d781d01f9b0414de4bcc8d50f1f9",
+          "local_path": "wwlib/b64straw.h"
+        },
+        {
+          "path": "Code/wwlib/base64.cpp",
+          "mode": "100644",
+          "bytes": 18824,
+          "git_blob_sha1": "0609201b662bcae9ec11405f83e0b74ad9238aec",
+          "sha256": "5349ecc7d63f36396737c7573e84ec1e986bd83be50125a122ef39af10419fc1",
+          "local_path": "wwlib/base64.cpp"
+        },
+        {
+          "path": "Code/wwlib/base64.h",
+          "mode": "100644",
+          "bytes": 2599,
+          "git_blob_sha1": "26bc58e1f2281f7dedb72fdc2b73ef935408b9ff",
+          "sha256": "9c48517bd31ab9ba28f8f256e4cafeeb2f94a8c92e7801ee142ef15d723a05ec",
+          "local_path": "wwlib/base64.h"
+        },
+        {
+          "path": "Code/wwlib/binheap.h",
+          "mode": "100644",
+          "bytes": 9279,
+          "git_blob_sha1": "2d64feb252220b2a6186a32c729f9d8ca03bb74a",
+          "sha256": "5bbb20c0d2e67db30dfc48445ca8447018d2b8f09ab203247e775d2f12c41b54",
+          "local_path": "wwlib/binheap.h"
+        },
+        {
+          "path": "Code/wwlib/bittype.h",
+          "mode": "100644",
+          "bytes": 2772,
+          "git_blob_sha1": "ad87988211cef0b841e00c8bf846d750310c367f",
+          "sha256": "ebb1e5d15de6d5fdb8f695cb811c7ada8bc1e2ed7db11a4110098c178a3f28eb",
+          "local_path": "wwlib/bittype.h"
+        },
+        {
+          "path": "Code/wwlib/blit.cpp",
+          "mode": "100644",
+          "bytes": 26737,
+          "git_blob_sha1": "a4f90893fa80e81abb0ea46f83738e393cac4089",
+          "sha256": "884c1b384bc9c237f299c4a19cc71d7b1a038b9a181b21db097307f925b64ab8",
+          "local_path": "wwlib/blit.cpp"
+        },
+        {
+          "path": "Code/wwlib/blit.h",
+          "mode": "100644",
+          "bytes": 3601,
+          "git_blob_sha1": "faafdea41d383c45d14d2feeea79ccf19eb5c979",
+          "sha256": "42c7a1cbb145ad08be7267328a326c82ef2b877e9baff4612ee753d995ab97fe",
+          "local_path": "wwlib/blit.h"
+        },
+        {
+          "path": "Code/wwlib/blitblit.h",
+          "mode": "100644",
+          "bytes": 19857,
+          "git_blob_sha1": "caea84c53258c8ecbcb694b5e5ada336ce3275d4",
+          "sha256": "6391bce6e5eb043216da8a0539302232ebb358f560f914e38be6b4b93c6b225f",
+          "local_path": "wwlib/blitblit.h"
+        },
+        {
+          "path": "Code/wwlib/blitter.h",
+          "mode": "100644",
+          "bytes": 4531,
+          "git_blob_sha1": "2cec3dc6e85f13669d2d7515a403919c7b322485",
+          "sha256": "a65434f3e911541fb6893c7f671e17ae0d706967bd592f250c4c3ee6ed5c4142",
+          "local_path": "wwlib/blitter.h"
+        },
+        {
+          "path": "Code/wwlib/blowfish.cpp",
+          "mode": "100644",
+          "bytes": 36039,
+          "git_blob_sha1": "b09c74492884393a641b579baffe679872fab138",
+          "sha256": "9ebd806f7a0fafa4ab787837aaa142545ec15a9d4a2b119b9ebdc3cb4421437d",
+          "local_path": "wwlib/blowfish.cpp"
+        },
+        {
+          "path": "Code/wwlib/blowfish.h",
+          "mode": "100644",
+          "bytes": 4577,
+          "git_blob_sha1": "d42ed65d7d938fd78721659389e6be25131c3829",
+          "sha256": "9bb308862d5385ea79f270e8b9e0f54376f3f4e84cac4620a8c8371472c8fc96",
+          "local_path": "wwlib/blowfish.h"
+        },
+        {
+          "path": "Code/wwlib/blowpipe.cpp",
+          "mode": "100644",
+          "bytes": 10201,
+          "git_blob_sha1": "b5b88d76046af768183a2c86e3e8fe82c4fc522b",
+          "sha256": "484c51d20e886bb546e6374552d1925ebe1b56137c98cc9e9ee85dd9d1dfe048",
+          "local_path": "wwlib/blowpipe.cpp"
+        },
+        {
+          "path": "Code/wwlib/blowpipe.h",
+          "mode": "100644",
+          "bytes": 3429,
+          "git_blob_sha1": "b8193d996609b7337ebebb3e2738f1f3f0543153",
+          "sha256": "37be9345071267996778cb9883951eddfbc2523a1ddd969f019ac2b85a161b2a",
+          "local_path": "wwlib/blowpipe.h"
+        },
+        {
+          "path": "Code/wwlib/blwstraw.cpp",
+          "mode": "100644",
+          "bytes": 7810,
+          "git_blob_sha1": "d878d2940620c677ed3f282c9aea269d03fa59f3",
+          "sha256": "cff4e9ebe304dd6044637bf7a659726f1847045c1b8baac199378dacddea5680",
+          "local_path": "wwlib/blwstraw.cpp"
+        },
+        {
+          "path": "Code/wwlib/blwstraw.h",
+          "mode": "100644",
+          "bytes": 3622,
+          "git_blob_sha1": "1ca8c246be16a28b3194892fce99416367257e0c",
+          "sha256": "f54f753486c5cd14ec5b6e1f8a7cc65a77cea096ee485fb6292cd2148e6b6680",
+          "local_path": "wwlib/blwstraw.h"
+        },
+        {
+          "path": "Code/wwlib/bool.h",
+          "mode": "100644",
+          "bytes": 3012,
+          "git_blob_sha1": "4e208c4a6e310a0682e2b67612fc3a9f3fab8cb7",
+          "sha256": "26a63c9c13e366057aef75ecd5024d89943c3952c8cde158c64c95fa85848d4a",
+          "local_path": "wwlib/bool.h"
+        },
+        {
+          "path": "Code/wwlib/borlandc.h",
+          "mode": "100644",
+          "bytes": 2714,
+          "git_blob_sha1": "c2945ebbc99a35c8e15cd159239e3a2ecacce9da",
+          "sha256": "8a8cdf7d76f624f5c6020a3c3e345a1824c5fb8e7f578d3a3ab282770df19f12",
+          "local_path": "wwlib/borlandc.h"
+        },
+        {
+          "path": "Code/wwlib/bound.h",
+          "mode": "100644",
+          "bytes": 2937,
+          "git_blob_sha1": "a2c3f5b9caa77e6126bd3afbe1b36b80ba5ca3f0",
+          "sha256": "8dda2f9df48c3e92fc6fd237cebb06410c116cb613ec43fd3ebda740921df76a",
+          "local_path": "wwlib/bound.h"
+        },
+        {
+          "path": "Code/wwlib/bsearch.h",
+          "mode": "100644",
+          "bytes": 2271,
+          "git_blob_sha1": "681218386881901a53bbc34773d5590bb05a5b75",
+          "sha256": "572f1799f18d9127779161cf6579014e231a35e164c2ce99e44af3620324a263",
+          "local_path": "wwlib/bsearch.h"
+        },
+        {
+          "path": "Code/wwlib/bsurface.h",
+          "mode": "100644",
+          "bytes": 3418,
+          "git_blob_sha1": "5bc9b9de49befff05f4eb2325702615c55ac07ed",
+          "sha256": "8f4ca92c9a8078a62fd426e99ce85c6ad13a25fe2093c70215fdc820422680df",
+          "local_path": "wwlib/bsurface.h"
+        },
+        {
+          "path": "Code/wwlib/buff.cpp",
+          "mode": "100644",
+          "bytes": 13803,
+          "git_blob_sha1": "e28f41946d61e02c701225d7a604140b47ee0ef8",
+          "sha256": "272688e1a5cb0bb3860f0b101d229de4570b9e1d1e3658d76e06fc6dbfeb05b7",
+          "local_path": "wwlib/buff.cpp"
+        },
+        {
+          "path": "Code/wwlib/buff.h",
+          "mode": "100644",
+          "bytes": 3777,
+          "git_blob_sha1": "65d3f0efe4e8f1f1a3e0577df3516f1d0db2ecb3",
+          "sha256": "72fb3b9b75b761ef15146897880c9c864f8b310a093ca85f16e7895cd97b36de",
+          "local_path": "wwlib/buff.h"
+        },
+        {
+          "path": "Code/wwlib/bufffile.cpp",
+          "mode": "100644",
+          "bytes": 12357,
+          "git_blob_sha1": "a4860ae59bd8fcb708ee1679635b0ca5aa094326",
+          "sha256": "2aaab2e8a05745b6003b0514fa991b6d293b2910c2ed9bd422a5fe8c01c1053b",
+          "local_path": "wwlib/bufffile.cpp"
+        },
+        {
+          "path": "Code/wwlib/bufffile.h",
+          "mode": "100644",
+          "bytes": 3882,
+          "git_blob_sha1": "e470f268c3b4096a6e72594469583322e5f389ba",
+          "sha256": "714a37acfbfb8e53f35aca212f863fd4fcf3c94376e63bd6cb4e998ca532a880",
+          "local_path": "wwlib/bufffile.h"
+        },
+        {
+          "path": "Code/wwlib/chunkio.cpp",
+          "mode": "100644",
+          "bytes": 48004,
+          "git_blob_sha1": "86f506325e89aaae4f332303c1b9abae79744797",
+          "sha256": "d1ce4ebd2bd0d98b91cfe9681c591971bdc09c09bc3348e9590bbae9d3c94263",
+          "local_path": "wwlib/chunkio.cpp"
+        },
+        {
+          "path": "Code/wwlib/chunkio.h",
+          "mode": "100644",
+          "bytes": 13692,
+          "git_blob_sha1": "3fcd54f18ed1a446d3211f87e1f2b460af5720ff",
+          "sha256": "43c3607534e98f822d311a095bb80f86f25fa7c36502a3ee9b1283d8e907e151",
+          "local_path": "wwlib/chunkio.h"
+        },
+        {
+          "path": "Code/wwlib/convert.cpp",
+          "mode": "100644",
+          "bytes": 10211,
+          "git_blob_sha1": "311c9917124798130e2a4c0564dc4ea04ee3439b",
+          "sha256": "abfe21071e23abedd727645c3884b271cb261b4445360d22f7dc9b07f2b82c90",
+          "local_path": "wwlib/convert.cpp"
+        },
+        {
+          "path": "Code/wwlib/convert.h",
+          "mode": "100644",
+          "bytes": 7272,
+          "git_blob_sha1": "fe89291835ca0dc93220620d9f1bd9f80e041c34",
+          "sha256": "d87a6bca81bbdf2454a4ffe3429b11a2563838e43cfc215b9a238ba7f5be011f",
+          "local_path": "wwlib/convert.h"
+        },
+        {
+          "path": "Code/wwlib/cpudetect.cpp",
+          "mode": "100644",
+          "bytes": 42042,
+          "git_blob_sha1": "ff40008b2e590ff40e6d7cb45e5e0359a02922cc",
+          "sha256": "8f1e0bc0ea57db6a786c2aa29232b114adfcd16ad6e58e6a14ec4467953a40b3",
+          "local_path": "wwlib/cpudetect.cpp"
+        },
+        {
+          "path": "Code/wwlib/cpudetect.h",
+          "mode": "100644",
+          "bytes": 11771,
+          "git_blob_sha1": "f2513ea0aa4787022f9994976be4f38e8d9e54d9",
+          "sha256": "dbd856af3b09f55232574518400fbbbfc3bf068b560d8649bb25aa12197278ef",
+          "local_path": "wwlib/cpudetect.h"
+        },
+        {
+          "path": "Code/wwlib/crc.cpp",
+          "mode": "100644",
+          "bytes": 11493,
+          "git_blob_sha1": "cff6d44e17bbbafb4b02037b866d22a91b3a4707",
+          "sha256": "64657c906dbf3b291ba53d1b4c11887d4f4c093d9c9ccb39b96af459f58a98f1",
+          "local_path": "wwlib/crc.cpp"
+        },
+        {
+          "path": "Code/wwlib/crc.h",
+          "mode": "100644",
+          "bytes": 5283,
+          "git_blob_sha1": "61080f2dffa8ac50b6846056594b8ce56ae923ac",
+          "sha256": "198ef62761fb2bfd86a197d0454b5f8027e7adc40d48bc95cc82de34e455fdaf",
+          "local_path": "wwlib/crc.h"
+        },
+        {
+          "path": "Code/wwlib/crcpipe.cpp",
+          "mode": "100644",
+          "bytes": 6188,
+          "git_blob_sha1": "8a9a2b6b2ab3fadb86ea333c1ff7316c88279b3d",
+          "sha256": "4b422a96f735a1b74e3a69b3bfcb2c655b679cadcc1140c02030eb7739832fe8",
+          "local_path": "wwlib/crcpipe.cpp"
+        },
+        {
+          "path": "Code/wwlib/crcpipe.h",
+          "mode": "100644",
+          "bytes": 2883,
+          "git_blob_sha1": "c82efdc26baa4e1ec9d4db725376a40051fd3e7a",
+          "sha256": "5667e764c1b135ea88bf614dfeb7af9815fc43e358e02095c55a6bbae774c671",
+          "local_path": "wwlib/crcpipe.h"
+        },
+        {
+          "path": "Code/wwlib/crcstraw.cpp",
+          "mode": "100644",
+          "bytes": 6264,
+          "git_blob_sha1": "a2266fcbdef3581b26c6759ce7907f0ce68084e1",
+          "sha256": "d11a806116f42efa1001b855a365d6f6ffd0528fa7b9d76aa43439429fd7ac58",
+          "local_path": "wwlib/crcstraw.cpp"
+        },
+        {
+          "path": "Code/wwlib/crcstraw.h",
+          "mode": "100644",
+          "bytes": 2943,
+          "git_blob_sha1": "27ea347e6258aca660c4bf4450aa5be5508e5593",
+          "sha256": "8400a667521efcb4e471d645b627b323cae67bdc2a3ab86d1a408ae19e3e0efe",
+          "local_path": "wwlib/crcstraw.h"
+        },
+        {
+          "path": "Code/wwlib/critsection.cpp",
+          "mode": "100644",
+          "bytes": 3244,
+          "git_blob_sha1": "42d83c8980fcf40c7f6313da6db949a38daf7cc4",
+          "sha256": "fa3bea68a46b647f62b97eccf5cf6f3f0e82c63a7c1c2f1752464143e54d8030",
+          "local_path": "wwlib/critsection.cpp"
+        },
+        {
+          "path": "Code/wwlib/critsection.h",
+          "mode": "100644",
+          "bytes": 3227,
+          "git_blob_sha1": "85264cf4fb35c16691c23725daa590d65e73101f",
+          "sha256": "7dc15afb3421899fe578a2fac25aeec1f09adf39ea7616764c01e45230a8e2cb",
+          "local_path": "wwlib/critsection.h"
+        },
+        {
+          "path": "Code/wwlib/cstraw.cpp",
+          "mode": "100644",
+          "bytes": 5514,
+          "git_blob_sha1": "e1d84ece0fab21650259c425a5c43365c78f2c9b",
+          "sha256": "0e40f4d7f663f0cd5f2efd88100f8300ef165d4370cc30a7947db04cacdb388a",
+          "local_path": "wwlib/cstraw.cpp"
+        },
+        {
+          "path": "Code/wwlib/cstraw.h",
+          "mode": "100644",
+          "bytes": 3299,
+          "git_blob_sha1": "6336f677b4686f142130002cc81121752c25247b",
+          "sha256": "1e60085be3dd8ea45a41a459fc101e57c2f7a646209931615e4e389df5cfeb7e",
+          "local_path": "wwlib/cstraw.h"
+        },
+        {
+          "path": "Code/wwlib/data.cpp",
+          "mode": "100644",
+          "bytes": 14492,
+          "git_blob_sha1": "8f3edf2f0e1bc2178b5f6593a8c6190c74361806",
+          "sha256": "c0fdeac6b976e620a0affa9b700592bf34aa2857ee229e0686e156ce68237799",
+          "local_path": "wwlib/data.cpp"
+        },
+        {
+          "path": "Code/wwlib/data.h",
+          "mode": "100644",
+          "bytes": 2951,
+          "git_blob_sha1": "1dd53eef8061699513e4b908f118ad5094f90b5d",
+          "sha256": "d8c44760f51672a95f7667c2c8e34e002b57004125335a134654bc6bb5119fce",
+          "local_path": "wwlib/data.h"
+        },
+        {
+          "path": "Code/wwlib/ddraw.cpp",
+          "mode": "100644",
+          "bytes": 34844,
+          "git_blob_sha1": "f46602b540091140a638526f578fe909e8cd1a55",
+          "sha256": "7d7b43167bf4afde8630efceeabf0d1fdc2fbaf79e7e70eeff7d61facd176488",
+          "local_path": "wwlib/ddraw.cpp"
+        },
+        {
+          "path": "Code/wwlib/dib.cpp",
+          "mode": "100644",
+          "bytes": 8483,
+          "git_blob_sha1": "02a7e1932ac1e81b8bd168365df3dd5037c6e43a",
+          "sha256": "77045098649ee6a2be419a171afda0be37b9dbe9f8607f3b73a13a38876dbc36",
+          "local_path": "wwlib/dib.cpp"
+        },
+        {
+          "path": "Code/wwlib/dib.h",
+          "mode": "100644",
+          "bytes": 3470,
+          "git_blob_sha1": "c03afb8014bc8d8046869a24aac9fe430d978a4c",
+          "sha256": "f18d6b6ffa76707920d42be1cfc2e8fde5cbbac294fd9215b57872fb69bd55d9",
+          "local_path": "wwlib/dib.h"
+        },
+        {
+          "path": "Code/wwlib/draw.cpp",
+          "mode": "100644",
+          "bytes": 11491,
+          "git_blob_sha1": "a90f60b7aaa098feade214453b6e1d2fe58c7915",
+          "sha256": "56195a2fa9500f962cb53cf0888e6e82a724e746a971f3815acb83bb3f2c69fe",
+          "local_path": "wwlib/draw.cpp"
+        },
+        {
+          "path": "Code/wwlib/draw.h",
+          "mode": "100644",
+          "bytes": 2938,
+          "git_blob_sha1": "de09e64658ba9c936fe82ad1383d8c9eb18fc1f0",
+          "sha256": "130973e882904362294caecee61874288419ebb3e948c54da9c8fcb39a661c1f",
+          "local_path": "wwlib/draw.h"
+        },
+        {
+          "path": "Code/wwlib/dspmake.cfg",
+          "mode": "100644",
+          "bytes": 231,
+          "git_blob_sha1": "757251f3c6421ac33eea8f593d1da0a864d9745a",
+          "sha256": "e499f27e7a7edfe849695aac0aeb5fa02eefab35207d5705def9269e71a2ebd4",
+          "local_path": "wwlib/dspmake.cfg"
+        },
+        {
+          "path": "Code/wwlib/dsurface.cpp",
+          "mode": "100644",
+          "bytes": 49266,
+          "git_blob_sha1": "c0699688f592b614ace0443356bf8b4b39b3d565",
+          "sha256": "03db44846b4c5297fa579fdd8726e5ac65ac2939ce9768ed3bc9eef8b70629a2",
+          "local_path": "wwlib/dsurface.cpp"
+        },
+        {
+          "path": "Code/wwlib/dsurface.h",
+          "mode": "100644",
+          "bytes": 6798,
+          "git_blob_sha1": "d7499245b34eff569f9c42d33cc71b0596871c0d",
+          "sha256": "26f336a34e3b8878d86be3415fed0799bc3abb18a72bbf54f3f16982797bd2bf",
+          "local_path": "wwlib/dsurface.h"
+        },
+        {
+          "path": "Code/wwlib/ffactory.cpp",
+          "mode": "100644",
+          "bytes": 8963,
+          "git_blob_sha1": "ae0587d3d1ebcec0e58f4ca871187306467c2386",
+          "sha256": "03022f5dfec6370e9ffabd4cafdfe4dcfbb65778be410acc19062ac7fd50507b",
+          "local_path": "wwlib/ffactory.cpp"
+        },
+        {
+          "path": "Code/wwlib/ffactory.h",
+          "mode": "100644",
+          "bytes": 5661,
+          "git_blob_sha1": "2eb5f1db0410219f05bd8161d5b3d35bdfd66f3c",
+          "sha256": "1a30ce5ab30094b7c2590b0d61da7665c685563cbe431f327ae4fa1bce87620c",
+          "local_path": "wwlib/ffactory.h"
+        },
+        {
+          "path": "Code/wwlib/fixed.cpp",
+          "mode": "100644",
+          "bytes": 11489,
+          "git_blob_sha1": "f999a85cf3f72dd595090e0bef2924a46845d266",
+          "sha256": "cbbc0f56143fdd6d3e0e46723653c070e5e37bb69b89913ef4d62df3833e0d37",
+          "local_path": "wwlib/fixed.cpp"
+        },
+        {
+          "path": "Code/wwlib/fixed.h",
+          "mode": "100644",
+          "bytes": 13368,
+          "git_blob_sha1": "b353ff0721355b9336f931812c2ff35518a179bd",
+          "sha256": "8bcb7b034467f2fa7d186a9f786a9d9986bbf263acdad16a745f42979d7e09ad",
+          "local_path": "wwlib/fixed.h"
+        },
+        {
+          "path": "Code/wwlib/font.h",
+          "mode": "100644",
+          "bytes": 3332,
+          "git_blob_sha1": "3444fbfa8b7d47bb4fa4722fd74cdd3412ea7f00",
+          "sha256": "9a206b9391b10c33e0af415b4677839085bd12e0e949fe67a10551b9761904f0",
+          "local_path": "wwlib/font.h"
+        },
+        {
+          "path": "Code/wwlib/gcd_lcm.cpp",
+          "mode": "100644",
+          "bytes": 2713,
+          "git_blob_sha1": "262dc12d658e63e2793909b8b4787f254b071a95",
+          "sha256": "33638fe43af133e7ab814945575f80bf54825e6a518a1efc7ed0b0a53eab9308",
+          "local_path": "wwlib/gcd_lcm.cpp"
+        },
+        {
+          "path": "Code/wwlib/gcd_lcm.h",
+          "mode": "100644",
+          "bytes": 2844,
+          "git_blob_sha1": "53c019e57ec36273ca961674e5a810fe56344ee5",
+          "sha256": "b2919dff6bcd9cf916671a6edaf032c4e6be2fb800b606e59dada4276d02f3b5",
+          "local_path": "wwlib/gcd_lcm.h"
+        },
+        {
+          "path": "Code/wwlib/global.h",
+          "mode": "100644",
+          "bytes": 1510,
+          "git_blob_sha1": "f7b254f906e05010fe4364274f52d80954de69c1",
+          "sha256": "6f3b7209afef98378fdb955edf1b2e5bb98f663985b679477c3a44018009bf55",
+          "local_path": "wwlib/global.h"
+        },
+        {
+          "path": "Code/wwlib/hash.cpp",
+          "mode": "100644",
+          "bytes": 4938,
+          "git_blob_sha1": "0919674ed8bbdd10caabe9f8d243c1f9cb15d26f",
+          "sha256": "ce80e17a33e769a96cb6d0eb3ce86d1ef3e19abf5542fb19e5dfbb46c253d43a",
+          "local_path": "wwlib/hash.cpp"
+        },
+        {
+          "path": "Code/wwlib/hash.h",
+          "mode": "100644",
+          "bytes": 3883,
+          "git_blob_sha1": "0ad01455dc71e8e4f6cd7cd069169e977f56271a",
+          "sha256": "2e2124364362ea1b1e14390d7e33207aacb59dfbec4b3a7e817c974d752701f6",
+          "local_path": "wwlib/hash.h"
+        },
+        {
+          "path": "Code/wwlib/hashcalc.h",
+          "mode": "100644",
+          "bytes": 3858,
+          "git_blob_sha1": "1e79c008591e48186f20ccf061658a863c45f03a",
+          "sha256": "9eff1c340b9e1ee3f2abb0d21dd8a9400ba9659d5d152d332d62e209ed816143",
+          "local_path": "wwlib/hashcalc.h"
+        },
+        {
+          "path": "Code/wwlib/hashlist.h",
+          "mode": "100644",
+          "bytes": 27742,
+          "git_blob_sha1": "ea23a7727af2d73bf4e13259dcd43ae20394f1f3",
+          "sha256": "006f598a6da4a26473a5bf75a4369c5597ccf6867533cb7708d6b21185d90f1c",
+          "local_path": "wwlib/hashlist.h"
+        },
+        {
+          "path": "Code/wwlib/hashtab.h",
+          "mode": "100644",
+          "bytes": 4274,
+          "git_blob_sha1": "d86e8ba56894e348b05d88f35320e66eacbe4396",
+          "sha256": "6743ea4ca39952acd82d0efe9e60cc9d311a73c1cdb72bf9b36484acf30c73aa",
+          "local_path": "wwlib/hashtab.h"
+        },
+        {
+          "path": "Code/wwlib/hashtemplate.h",
+          "mode": "100644",
+          "bytes": 11971,
+          "git_blob_sha1": "2b84afe37877bb1052ec23d05a2e727e2bc4390b",
+          "sha256": "8631c3e630cdb8da74dd4407378a4017dc7783cd7a6f4a9c3a9ad36d7a8b1427",
+          "local_path": "wwlib/hashtemplate.h"
+        },
+        {
+          "path": "Code/wwlib/hsv.cpp",
+          "mode": "100644",
+          "bytes": 9963,
+          "git_blob_sha1": "89754d7433b304472097a268cc096c0a685aeeb7",
+          "sha256": "58f08c4e906ae4c7bf42e16cdf94e89bb28810ea2a311bd2517062a606cd2900",
+          "local_path": "wwlib/hsv.cpp"
+        },
+        {
+          "path": "Code/wwlib/hsv.h",
+          "mode": "100644",
+          "bytes": 3482,
+          "git_blob_sha1": "1c0037c58f640eba8d481261686963def4b907bd",
+          "sha256": "330074fe51a6cf17e23322df3c9856b7f7aa27c4dd89b30e1aa4652ee30224a1",
+          "local_path": "wwlib/hsv.h"
+        },
+        {
+          "path": "Code/wwlib/iff.h",
+          "mode": "100644",
+          "bytes": 7301,
+          "git_blob_sha1": "d929ab585c2dc52887485cbf3373aa173c673d30",
+          "sha256": "c5b61a942e2e3518e470876e90d4443d9f1885a0f37d400a7b93c40b16eb3bb7",
+          "local_path": "wwlib/iff.h"
+        },
+        {
+          "path": "Code/wwlib/incdec.h",
+          "mode": "100644",
+          "bytes": 2993,
+          "git_blob_sha1": "f4aeb148c7d1cf75d64e423084f3bc75faa6d627",
+          "sha256": "a706e83db45891a194c7a17df4af5dbc6bfd5a25744a67c3b1dd913da623439c",
+          "local_path": "wwlib/incdec.h"
+        },
+        {
+          "path": "Code/wwlib/index.h",
+          "mode": "100644",
+          "bytes": 35969,
+          "git_blob_sha1": "6495b7f6e8a8fda2f4606fbe956677f5eb53ea1d",
+          "sha256": "935ef486d6163952deacefc8779744a8526b4864979e64b945aa68d67ba4ec2b",
+          "local_path": "wwlib/index.h"
+        },
+        {
+          "path": "Code/wwlib/ini.cpp",
+          "mode": "100644",
+          "bytes": 129460,
+          "git_blob_sha1": "203f6c82625e882853d856b09f44c87c7547eb32",
+          "sha256": "883de0ad34a126fc6e9cc27f84997a9dbf1d0baea6c7f1aa69d498d57a00b78b",
+          "local_path": "wwlib/ini.cpp"
+        },
+        {
+          "path": "Code/wwlib/ini.h",
+          "mode": "100644",
+          "bytes": 10257,
+          "git_blob_sha1": "85744a790f40aae4320c53e3d2a26672ebfbfc3d",
+          "sha256": "f58f73c245d8f9bc53e86299ede9a5becc221e2d0e94df2b1ee6335de8ac3403",
+          "local_path": "wwlib/ini.h"
+        },
+        {
+          "path": "Code/wwlib/inisup.h",
+          "mode": "100644",
+          "bytes": 3970,
+          "git_blob_sha1": "3171775d06d8d5be052cc315985b413fac75284e",
+          "sha256": "3d5893b36aa33a0d6c1742d1d02f6ae398754ef9ff6e66efaa8f0a7ac3d4fab1",
+          "local_path": "wwlib/inisup.h"
+        },
+        {
+          "path": "Code/wwlib/int.cpp",
+          "mode": "100644",
+          "bytes": 2735,
+          "git_blob_sha1": "5bf7621a1d88e7f881e236a1ae01c78c9f5c4c74",
+          "sha256": "7b905e30b0acec9622ba3bdab0779642eaf4dce7516b4ed6af80955028688bfd",
+          "local_path": "wwlib/int.cpp"
+        },
+        {
+          "path": "Code/wwlib/int.h",
+          "mode": "100644",
+          "bytes": 12662,
+          "git_blob_sha1": "7a3fe53cdedb48850e1179fb5ac4c80c06aa3231",
+          "sha256": "11b158bb1b65d82beb08d22738b73724e79242fb83cc7f4eafd2166683f1a128",
+          "local_path": "wwlib/int.h"
+        },
+        {
+          "path": "Code/wwlib/iostruct.h",
+          "mode": "100644",
+          "bytes": 3001,
+          "git_blob_sha1": "5f590542a35caaf89221c569dd2ff3d3b2234696",
+          "sha256": "e84ebb1a9e02a6a6e91d61c2aee912894a7883b87d96f2f556b6fba47a53db3e",
+          "local_path": "wwlib/iostruct.h"
+        },
+        {
+          "path": "Code/wwlib/jshell.cpp",
+          "mode": "100644",
+          "bytes": 10676,
+          "git_blob_sha1": "dac03b138ee51438bab3e43aa9ab3f8880de35d5",
+          "sha256": "c40aa9984956ab3af52b32064cfc67f3f8a86dd987af1bf7dfada4d06c97e673",
+          "local_path": "wwlib/jshell.cpp"
+        },
+        {
+          "path": "Code/wwlib/keyboard.cpp",
+          "mode": "100644",
+          "bytes": 40610,
+          "git_blob_sha1": "67a01b2b737ec8bedff519e6cf2e054fac84e714",
+          "sha256": "3451092de9a9a21b813e78e0b7f677c75e3994f0d618e133270349054775b7f3",
+          "local_path": "wwlib/keyboard.cpp"
+        },
+        {
+          "path": "Code/wwlib/keyboard.h",
+          "mode": "100644",
+          "bytes": 19739,
+          "git_blob_sha1": "4746ef508d32734ad9123f38c84a51dcff5f47d7",
+          "sha256": "aa1b115e1569a86612324e3cd843fdcfcc39fb2bc0bf74f3f45c65bec0d55e98",
+          "local_path": "wwlib/keyboard.h"
+        },
+        {
+          "path": "Code/wwlib/lcw.cpp",
+          "mode": "100644",
+          "bytes": 16344,
+          "git_blob_sha1": "0671f41afd14c085d57a5edbd0bd68d0148d1f15",
+          "sha256": "fe2a9ed1a9df42cad81438b30e17a9b36578ea6191def7f72340b2c0805c313e",
+          "local_path": "wwlib/lcw.cpp"
+        },
+        {
+          "path": "Code/wwlib/lcw.h",
+          "mode": "100644",
+          "bytes": 2777,
+          "git_blob_sha1": "e12bb964e12b8ff2c1ec272c8471581aab599d74",
+          "sha256": "0d7fdb41f16d9ef76c671d29409ca9eaf18dc77e05b8eea90009bb312ac97cdf",
+          "local_path": "wwlib/lcw.h"
+        },
+        {
+          "path": "Code/wwlib/lcwpipe.cpp",
+          "mode": "100644",
+          "bytes": 14529,
+          "git_blob_sha1": "2ca8dd2abe3d0797407de651a4d0939f50fcf6bb",
+          "sha256": "7773051758850d2a93616b0bb041d48769bd7366a217eb04c778122f84d2b905",
+          "local_path": "wwlib/lcwpipe.cpp"
+        },
+        {
+          "path": "Code/wwlib/lcwpipe.h",
+          "mode": "100644",
+          "bytes": 3893,
+          "git_blob_sha1": "2d5d535f1f3ce3d7a1cb6d2d785aeb7943440208",
+          "sha256": "ab4947627ea59f78b5250ded53ca753aa88d0ef0b4f061083a5559d482922152",
+          "local_path": "wwlib/lcwpipe.h"
+        },
+        {
+          "path": "Code/wwlib/listnode.h",
+          "mode": "100644",
+          "bytes": 10913,
+          "git_blob_sha1": "c61f1d0436c27f629bc8c828aa7b2421be4a74fa",
+          "sha256": "b2dc9f1b77484d224e8104d24603708a654b495efb70fa80e249a540ca3362ed",
+          "local_path": "wwlib/listnode.h"
+        },
+        {
+          "path": "Code/wwlib/load.cpp",
+          "mode": "100644",
+          "bytes": 5457,
+          "git_blob_sha1": "87fa30efbb0e518e4b9f3c68a813e775ee9c3917",
+          "sha256": "81d07a772342856dc5d2bd4722aa3b3633915052505e6b7e141595d9322b3232",
+          "local_path": "wwlib/load.cpp"
+        },
+        {
+          "path": "Code/wwlib/lzo.cpp",
+          "mode": "100644",
+          "bytes": 5938,
+          "git_blob_sha1": "cf1e84361d041ff55acf80a1bbc44218278268cc",
+          "sha256": "29e3e17d05d21d897ae6ae1838edffb9a577d900504480e8bad6c46d2c4ea9f1",
+          "local_path": "wwlib/lzo.cpp"
+        },
+        {
+          "path": "Code/wwlib/lzo.h",
+          "mode": "100644",
+          "bytes": 4001,
+          "git_blob_sha1": "5779bf85ae11737db940851078c02bbd5267d7eb",
+          "sha256": "77cf92e33be5cf71ae8191553ab52739a54b19e15bf5034480b80f953810fae9",
+          "local_path": "wwlib/lzo.h"
+        },
+        {
+          "path": "Code/wwlib/lzo1x.h",
+          "mode": "100644",
+          "bytes": 5345,
+          "git_blob_sha1": "5547991faee8c12cccc1e24cec17d7e760a7ec28",
+          "sha256": "aaee4aae6e723b0949970b85a35ffa0f696e58687e56fcbd4d77400097a04197",
+          "local_path": "wwlib/lzo1x.h"
+        },
+        {
+          "path": "Code/wwlib/lzo1x_c.cpp",
+          "mode": "100644",
+          "bytes": 9952,
+          "git_blob_sha1": "324812dddef026fc0d62c26c5dd7f3a316430ac5",
+          "sha256": "8bde6f9c402386522549467bb3e3946cf93a5ca1d7817463025711b596a0d4bd",
+          "local_path": "wwlib/lzo1x_c.cpp"
+        },
+        {
+          "path": "Code/wwlib/lzo1x_d.cpp",
+          "mode": "100644",
+          "bytes": 6551,
+          "git_blob_sha1": "bcc43733cf3e5aeca94b52e9b546dfdeab2a88a9",
+          "sha256": "2094ed53b605336c09fa794e094669111d80c2e41ba16dccabbc82b30e7dfd00",
+          "local_path": "wwlib/lzo1x_d.cpp"
+        },
+        {
+          "path": "Code/wwlib/lzo_conf.h",
+          "mode": "100644",
+          "bytes": 10224,
+          "git_blob_sha1": "314a90ce491e5ce427bef77328163397869e30aa",
+          "sha256": "5c5dd4222317a2c09d0f1dba963812d19d5aaba93cf780574ea741780e7fbe19",
+          "local_path": "wwlib/lzo_conf.h"
+        },
+        {
+          "path": "Code/wwlib/lzoconf.h",
+          "mode": "100644",
+          "bytes": 8558,
+          "git_blob_sha1": "7794bd928996f76080e16ab9f2b02e7b8d2ea6dd",
+          "sha256": "badc63b84cf41f6cf44356ae7284174ce231919ac88d563669c6cd216550999a",
+          "local_path": "wwlib/lzoconf.h"
+        },
+        {
+          "path": "Code/wwlib/lzopipe.cpp",
+          "mode": "100644",
+          "bytes": 15132,
+          "git_blob_sha1": "fea1a6189adaff2e4a0d82204a46b8c83d1b9a15",
+          "sha256": "3a6e031dfeb081d9d6e5697dc7857143633cd109c2ddf745ca21556ca82f49c9",
+          "local_path": "wwlib/lzopipe.cpp"
+        },
+        {
+          "path": "Code/wwlib/lzopipe.h",
+          "mode": "100644",
+          "bytes": 3828,
+          "git_blob_sha1": "3929ae74ff6fcbda9a0e907d2b187835ba1a0642",
+          "sha256": "96ef9ff3ea25b8ef7909ef1920f964ea1904bdb520a0cc77abc3bcffe9ed4cef",
+          "local_path": "wwlib/lzopipe.h"
+        },
+        {
+          "path": "Code/wwlib/lzostraw.cpp",
+          "mode": "100644",
+          "bytes": 10264,
+          "git_blob_sha1": "52fd1f59d6ea5d3a3e9bb3152cb4372973fbf4cb",
+          "sha256": "a14428e60d2bb443a4ac860fccf7e9f04422807edf4263ed8e640e0f86507167",
+          "local_path": "wwlib/lzostraw.cpp"
+        },
+        {
+          "path": "Code/wwlib/lzostraw.h",
+          "mode": "100644",
+          "bytes": 3882,
+          "git_blob_sha1": "09540f2079326573426f6d73397cd479f930aab5",
+          "sha256": "e782e3b55a6ff7b9b88d17c70719976e9751aed691d4ffd77c7f79e8fef2099c",
+          "local_path": "wwlib/lzostraw.h"
+        },
+        {
+          "path": "Code/wwlib/md5.cpp",
+          "mode": "100644",
+          "bytes": 10791,
+          "git_blob_sha1": "9c56817e0f95929e579b16456f36fec444e99282",
+          "sha256": "a261992be83b6505a3ff807d4df7075e6df4ca944cf4a3c386f0502931572a32",
+          "local_path": "wwlib/md5.cpp"
+        },
+        {
+          "path": "Code/wwlib/md5.h",
+          "mode": "100644",
+          "bytes": 2226,
+          "git_blob_sha1": "04f516e3281853080b7676829503d37da354a9d9",
+          "sha256": "0bcb081826c8b1097f9749c08022e94e7c4bc15a3ec50a596a9408c4dc26b04d",
+          "local_path": "wwlib/md5.h"
+        },
+        {
+          "path": "Code/wwlib/mempool.h",
+          "mode": "100644",
+          "bytes": 18725,
+          "git_blob_sha1": "6f2740dcf7d91038e382cdec79f7ced2a9c6ffc4",
+          "sha256": "56faf8255c98481713a39b0fbf0a09e34f5697a631f66c8014820fd0e30ec333",
+          "local_path": "wwlib/mempool.h"
+        },
+        {
+          "path": "Code/wwlib/misc.h",
+          "mode": "100644",
+          "bytes": 6932,
+          "git_blob_sha1": "c049d3b4e1063bd4ff4ff96755674e17a6a97386",
+          "sha256": "ca07cabc9d74dd17b74ad334ca19cebb77e5fbc2e163992241a7507d9482435e",
+          "local_path": "wwlib/misc.h"
+        },
+        {
+          "path": "Code/wwlib/mixfile.cpp",
+          "mode": "100644",
+          "bytes": 16065,
+          "git_blob_sha1": "14b4d5250862e4493356b0be93eea10d5f756a52",
+          "sha256": "0fc03da703b7fa8156c392d796470c05fb3c3a41e60f3f0ae179d5eacaece5f5",
+          "local_path": "wwlib/mixfile.cpp"
+        },
+        {
+          "path": "Code/wwlib/mixfile.h",
+          "mode": "100644",
+          "bytes": 5333,
+          "git_blob_sha1": "6c128574de4229f0f8b81af23f0242f9af6ed5a8",
+          "sha256": "9e15f9902e908389d3ee0d6b4b4a1acfb22a28dc319d335390cb8efe2af29453",
+          "local_path": "wwlib/mixfile.h"
+        },
+        {
+          "path": "Code/wwlib/mmsys.h",
+          "mode": "100644",
+          "bytes": 2661,
+          "git_blob_sha1": "51c003f2b5f227d22b8dd2302991304bf347a522",
+          "sha256": "1db189e630f962803df125207ca93cf1b3addd2c017c6f8abec05d0daeddd28e",
+          "local_path": "wwlib/mmsys.h"
+        },
+        {
+          "path": "Code/wwlib/mono.cpp",
+          "mode": "100644",
+          "bytes": 37130,
+          "git_blob_sha1": "53f7bcdc5512323853a7846a355218a8abbd7c0f",
+          "sha256": "0eeca8ee56471a59644b872ec8299ab6a6a3c6bf5ef3c71b4fbf6b8798021a44",
+          "local_path": "wwlib/mono.cpp"
+        },
+        {
+          "path": "Code/wwlib/mono.h",
+          "mode": "100644",
+          "bytes": 4026,
+          "git_blob_sha1": "44a77e836255bd6c9a78273fb01013d5cb8cba41",
+          "sha256": "24b97d74f4d7a8020f29d920ad59c06202126297ce57b1e1925788719391bc1c",
+          "local_path": "wwlib/mono.h"
+        },
+        {
+          "path": "Code/wwlib/monodrvr.h",
+          "mode": "100644",
+          "bytes": 5867,
+          "git_blob_sha1": "760576c0ffa80b496b97daeac18ca084bfcc4d53",
+          "sha256": "82578121c87bf095335b6b11ce94d0d94c68a43984f31281d68118b20e00489a",
+          "local_path": "wwlib/monodrvr.h"
+        },
+        {
+          "path": "Code/wwlib/mpmath.cpp",
+          "mode": "100644",
+          "bytes": 168615,
+          "git_blob_sha1": "fcd5d09e0baa1144dc18e6c242f561a3a2197228",
+          "sha256": "642c99317775e1d462f68619b1a1a83ea0b6c48171f1ff6f944c6b72c0e3c8ba",
+          "local_path": "wwlib/mpmath.cpp"
+        },
+        {
+          "path": "Code/wwlib/mpmath.h",
+          "mode": "100644",
+          "bytes": 8467,
+          "git_blob_sha1": "ac943f43c3ce4999c6ca49878d7a03137720d393",
+          "sha256": "0e15ef8a947f53a529427f37e566740c0add4f36bfe2c1471f2c50225f16f1d3",
+          "local_path": "wwlib/mpmath.h"
+        },
+        {
+          "path": "Code/wwlib/mpu.cpp",
+          "mode": "100644",
+          "bytes": 9077,
+          "git_blob_sha1": "96abdbcf07287b0fae17f0e5212252527e9b35f6",
+          "sha256": "eec7a043494c12359816fcc2f0bf81a0107886e4b50b784cafed5c2b3fd4bed6",
+          "local_path": "wwlib/mpu.cpp"
+        },
+        {
+          "path": "Code/wwlib/mpu.h",
+          "mode": "100644",
+          "bytes": 2563,
+          "git_blob_sha1": "6814d6344293246d345786734ded503fd30af421",
+          "sha256": "bc1f03a5809516e3ff8f1d83fc033fe9976cc9c898462350c41904ee59c844c7",
+          "local_path": "wwlib/mpu.h"
+        },
+        {
+          "path": "Code/wwlib/msgloop.cpp",
+          "mode": "100644",
+          "bytes": 14853,
+          "git_blob_sha1": "a76faa0985a616dc13261a1988bce10c9661ba33",
+          "sha256": "87f509548f256f844dd7c3cd19f70861193e74f26fc991183523298c048bf309",
+          "local_path": "wwlib/msgloop.cpp"
+        },
+        {
+          "path": "Code/wwlib/msgloop.h",
+          "mode": "100644",
+          "bytes": 2942,
+          "git_blob_sha1": "fd2e603b322b69dc4c1a459e3813371a60ecea62",
+          "sha256": "a768f8b7d9e39114f8dd2a12af3e8a956f15e121756ffbb3d18912b14419368b",
+          "local_path": "wwlib/msgloop.h"
+        },
+        {
+          "path": "Code/wwlib/multilist.cpp",
+          "mode": "100644",
+          "bytes": 7556,
+          "git_blob_sha1": "7af0728851817725051c91ce588821551f36d6e1",
+          "sha256": "d1b44c128ceeb3c84fccf0ab6e5733e4b50f33346075f20222fb98dee19b2738",
+          "local_path": "wwlib/multilist.cpp"
+        },
+        {
+          "path": "Code/wwlib/multilist.h",
+          "mode": "100644",
+          "bytes": 15650,
+          "git_blob_sha1": "54d118d7f0700ed1e62c99d5f63949a70ad7c489",
+          "sha256": "cded5cf520029f2f8d6649f2a3f8faa28d739f9d3f26dcf89bea6188b9097137",
+          "local_path": "wwlib/multilist.h"
+        },
+        {
+          "path": "Code/wwlib/mutex.cpp",
+          "mode": "100644",
+          "bytes": 3013,
+          "git_blob_sha1": "01be66997880c62770b7e9e2afbd4901fd80d62a",
+          "sha256": "ae5fe11e0ca631341fcc1bc06072f8495758ef60702ff64af8d5abfdc5bf81ec",
+          "local_path": "wwlib/mutex.cpp"
+        },
+        {
+          "path": "Code/wwlib/mutex.h",
+          "mode": "100644",
+          "bytes": 4605,
+          "git_blob_sha1": "c7c4d1b0b09abd77271ecd11b52f7eb38c3b4bdc",
+          "sha256": "4e55d3874b488903c41eb48eb32d25b25c07e5fb59d445d4825c17637c249e0b",
+          "local_path": "wwlib/mutex.h"
+        },
+        {
+          "path": "Code/wwlib/noinit.h",
+          "mode": "100644",
+          "bytes": 3113,
+          "git_blob_sha1": "5f28a0e74acf46293a583fcc684dcb3d4f1a461c",
+          "sha256": "c27f4fbf40312c6678e44e51d11396b949fe084dc46f9a2f50a7c4bc0fbd876d",
+          "local_path": "wwlib/noinit.h"
+        },
+        {
+          "path": "Code/wwlib/nstrdup.cpp",
+          "mode": "100644",
+          "bytes": 3353,
+          "git_blob_sha1": "8594eaa178c195ddeb525b881ce4706bbbfbfa6a",
+          "sha256": "9dba2fede4cea7865d4ee361bfb93290a588de2733c27d23bfdc487d99f579a4",
+          "local_path": "wwlib/nstrdup.cpp"
+        },
+        {
+          "path": "Code/wwlib/nstrdup.h",
+          "mode": "100644",
+          "bytes": 2245,
+          "git_blob_sha1": "04cfc6a88e81e6ec1d43bd62571667d365cfb887",
+          "sha256": "39a311651e311df75f353cb0c0405b4932c5a20d2a350eb5b4f135745fbcf878",
+          "local_path": "wwlib/nstrdup.h"
+        },
+        {
+          "path": "Code/wwlib/ntree.h",
+          "mode": "100644",
+          "bytes": 15731,
+          "git_blob_sha1": "75999e059560455eb1f3aa50de6043087a2ef996",
+          "sha256": "392e1c43c45167ee985efe476b7971f81eb21243e9b98c25f67d0d3fff1421f0",
+          "local_path": "wwlib/ntree.h"
+        },
+        {
+          "path": "Code/wwlib/obscure.cpp",
+          "mode": "100644",
+          "bytes": 9977,
+          "git_blob_sha1": "248b329245d90072320b2ac8d3c2e5e37c54b098",
+          "sha256": "9af3c19f75a6283bbed47e5b4d82c64a3f550537f4233ce982e0a5cf9657deda",
+          "local_path": "wwlib/obscure.cpp"
+        },
+        {
+          "path": "Code/wwlib/obscure.h",
+          "mode": "100644",
+          "bytes": 2474,
+          "git_blob_sha1": "3991b5ffc9733c89f68ba18cac04c7f96fbdeed0",
+          "sha256": "6de077a9498aa05ec32a57155723dc97270d00fcc8e211a12ffd24b147010b57",
+          "local_path": "wwlib/obscure.h"
+        },
+        {
+          "path": "Code/wwlib/palette.cpp",
+          "mode": "100644",
+          "bytes": 18420,
+          "git_blob_sha1": "924fe0f775c5d670fe25d65e4c785b1e87a5feba",
+          "sha256": "89a8c439eddc42b04d683567819b3818f40b9b6e456631592695a035ae36066a",
+          "local_path": "wwlib/palette.cpp"
+        },
+        {
+          "path": "Code/wwlib/palette.h",
+          "mode": "100644",
+          "bytes": 3875,
+          "git_blob_sha1": "6c5a7c70e23e71b4f40e7c95e62bcfec160f6208",
+          "sha256": "787336c27136702f755ce17d0783825e385d6e5f3142a5fa02b5bcfee8ae29c6",
+          "local_path": "wwlib/palette.h"
+        },
+        {
+          "path": "Code/wwlib/pcx.cpp",
+          "mode": "100644",
+          "bytes": 6631,
+          "git_blob_sha1": "5566418ea848410b202bd18715aee7894f8bc5cc",
+          "sha256": "c997aef160edb005edb22f4e9c8c946a0b883496519fd8007b31851404e15f05",
+          "local_path": "wwlib/pcx.cpp"
+        },
+        {
+          "path": "Code/wwlib/pcx.h",
+          "mode": "100644",
+          "bytes": 3155,
+          "git_blob_sha1": "c0a8481e0fc2757846d33d5575dfc7c4b30a5e19",
+          "sha256": "b34fd437e058d0453c34eaffa33f912b11dd59f53609c59cf2e304f54f758719",
+          "local_path": "wwlib/pcx.h"
+        },
+        {
+          "path": "Code/wwlib/pipe.cpp",
+          "mode": "100644",
+          "bytes": 10019,
+          "git_blob_sha1": "5aaa154d91f57b61ebaa5a276bf57c26d2ccd50d",
+          "sha256": "dff525d9cf9508e9864911ff1907223518801c5a31c8fe58ef6740ad1de841b9",
+          "local_path": "wwlib/pipe.cpp"
+        },
+        {
+          "path": "Code/wwlib/pipe.h",
+          "mode": "100644",
+          "bytes": 3438,
+          "git_blob_sha1": "6a20de3c8e5fe5be717ee785a33be6c5db9035ee",
+          "sha256": "8a74e7ba78c8df0be8c78189e7ff6ae0e56959bafbbd290b24e8239b12b5e5d9",
+          "local_path": "wwlib/pipe.h"
+        },
+        {
+          "path": "Code/wwlib/pk.cpp",
+          "mode": "100644",
+          "bytes": 21798,
+          "git_blob_sha1": "2817fe2fbf111dc8fcc28edbdbb8e00d4c33f0d6",
+          "sha256": "22c5e2e3be6bb4c2d9cd4a2f543cecfe2af168358f8caf119b8661124702eae9",
+          "local_path": "wwlib/pk.cpp"
+        },
+        {
+          "path": "Code/wwlib/pk.h",
+          "mode": "100644",
+          "bytes": 4360,
+          "git_blob_sha1": "3c3d9c432a853881673aafd7a941d262743900a7",
+          "sha256": "73f2b4812c1e0df826089a9dbc0e307f97fcf9ab7737c4b79fde3f7cf2e3b898",
+          "local_path": "wwlib/pk.h"
+        },
+        {
+          "path": "Code/wwlib/pkpipe.cpp",
+          "mode": "100644",
+          "bytes": 16049,
+          "git_blob_sha1": "6504ba9086a4205af45f9b5fb65a3344ee04defa",
+          "sha256": "f52ab23bb9b36b6636d2bbbeca2664fb0181eef70a351c1073abd5860081ffcf",
+          "local_path": "wwlib/pkpipe.cpp"
+        },
+        {
+          "path": "Code/wwlib/pkpipe.h",
+          "mode": "100644",
+          "bytes": 4921,
+          "git_blob_sha1": "a0ea6930cc3335a40e4241e685ac13016f21e389",
+          "sha256": "65d9d2f452e7ecd10be616f07e890955107212871b38a986d67e19828b2794cb",
+          "local_path": "wwlib/pkpipe.h"
+        },
+        {
+          "path": "Code/wwlib/pkstraw.cpp",
+          "mode": "100644",
+          "bytes": 17075,
+          "git_blob_sha1": "82335ee47f60f5bd9103da49344d4f0738d2b527",
+          "sha256": "d058b2b90dfe41c5eee4210df0afadba2cebf26c0f3088b8666cae34fb5b3408",
+          "local_path": "wwlib/pkstraw.cpp"
+        },
+        {
+          "path": "Code/wwlib/pkstraw.h",
+          "mode": "100644",
+          "bytes": 4480,
+          "git_blob_sha1": "aa06263199a4857c0509674b72d056f555991fcf",
+          "sha256": "7627b943916d895b18218b7b57442490ad474f15ccfe917f46a2413c41b9eb51",
+          "local_path": "wwlib/pkstraw.h"
+        },
+        {
+          "path": "Code/wwlib/point.cpp",
+          "mode": "100644",
+          "bytes": 4344,
+          "git_blob_sha1": "d2b89955c0781d2e34bb8bbe89cb6dd6f8f3ecb5",
+          "sha256": "4dbeaafe92a5ba068bcd2c747a50d7523299539b826a20ecf7d7be8b4fd077b8",
+          "local_path": "wwlib/point.cpp"
+        },
+        {
+          "path": "Code/wwlib/point.h",
+          "mode": "100644",
+          "bytes": 9416,
+          "git_blob_sha1": "a2ab2e3dc73bdc90f6510804a2e22eea8847feb0",
+          "sha256": "4b9af280951093accfb3370a8310dc24f972f4b13f6fe9bf3ed9f40475c9adf7",
+          "local_path": "wwlib/point.h"
+        },
+        {
+          "path": "Code/wwlib/ramfile.cpp",
+          "mode": "100644",
+          "bytes": 29281,
+          "git_blob_sha1": "dd05eb6084bf364b961b6a9d8b153d03cfc8df5a",
+          "sha256": "f090932653962997a2c75e1b8cadfa953e6d8f3d44fc1ba77fa883d78c59e64f",
+          "local_path": "wwlib/ramfile.cpp"
+        },
+        {
+          "path": "Code/wwlib/ramfile.h",
+          "mode": "100644",
+          "bytes": 4067,
+          "git_blob_sha1": "80bf52ee8ba38f85d3b931693f8d113f11315017",
+          "sha256": "828b0226e81a135d6907135377ea7ceac042e5863d82ca9c7563f6f990ad6039",
+          "local_path": "wwlib/ramfile.h"
+        },
+        {
+          "path": "Code/wwlib/random.cpp",
+          "mode": "100644",
+          "bytes": 23827,
+          "git_blob_sha1": "7113053aa304a2f353c0cd5d6fdb9e30918bd901",
+          "sha256": "7cf29e72a3861c30c8f78be07172580d3ffa8bf031d642f4cf2bd439240f5998",
+          "local_path": "wwlib/random.cpp"
+        },
+        {
+          "path": "Code/wwlib/random.h",
+          "mode": "100644",
+          "bytes": 10151,
+          "git_blob_sha1": "119b556870cb6a424a8cb391bafdff107d9828f5",
+          "sha256": "41b60643f16bc07672af64b0750dbc44cd8d26c2929c70f11046056c1dfd28ae",
+          "local_path": "wwlib/random.h"
+        },
+        {
+          "path": "Code/wwlib/rawfile.cpp",
+          "mode": "100644",
+          "bytes": 59234,
+          "git_blob_sha1": "a6673a30bfccf0237fb1aac71bef421e71ece1f9",
+          "sha256": "624656d05bf498dfd900478c69482f5169145879f19670279602c391b82c5442",
+          "local_path": "wwlib/rawfile.cpp"
+        },
+        {
+          "path": "Code/wwlib/rawfile.h",
+          "mode": "100644",
+          "bytes": 8077,
+          "git_blob_sha1": "a03c00236eefaf9fa2dd95f1762da20e3fae298f",
+          "sha256": "8d6e6a39f313e2d0ca6888ae9c8ddecbc1d199a678cd96f9ad3ef7167002c69f",
+          "local_path": "wwlib/rawfile.h"
+        },
+        {
+          "path": "Code/wwlib/rc4.cpp",
+          "mode": "100644",
+          "bytes": 2200,
+          "git_blob_sha1": "62440ecd889a2b718bc60a855be7e08c5ee4abfa",
+          "sha256": "50b30d567c366d8e1aed3887264f2d019eefbc0caad1a5ad4c46f338fd80de3f",
+          "local_path": "wwlib/rc4.cpp"
+        },
+        {
+          "path": "Code/wwlib/rc4.h",
+          "mode": "100644",
+          "bytes": 1816,
+          "git_blob_sha1": "bc3f19f0f935ad1372199ddc58cc2b5269fa5499",
+          "sha256": "aae3fa819c7b41b0dceef8c30fd2c2a640082a82d39d511a7df8fba719e63f20",
+          "local_path": "wwlib/rc4.h"
+        },
+        {
+          "path": "Code/wwlib/rcfile.cpp",
+          "mode": "100644",
+          "bytes": 4076,
+          "git_blob_sha1": "82a928410a553819acb19d7899aaf1dbe9b334bf",
+          "sha256": "e0c2e43409fe71e0d66e809bddd086cfc0aaaa93be40661ed488dbb437360636",
+          "local_path": "wwlib/rcfile.cpp"
+        },
+        {
+          "path": "Code/wwlib/rcfile.h",
+          "mode": "100644",
+          "bytes": 4181,
+          "git_blob_sha1": "e5d5954902acd50507a4f6813aa6ebc3631a6b67",
+          "sha256": "64a1d46a0fa472db3f71f92753ff3865db0fefdb6afb2bc33be0786bb701c215",
+          "local_path": "wwlib/rcfile.h"
+        },
+        {
+          "path": "Code/wwlib/readline.cpp",
+          "mode": "100644",
+          "bytes": 8087,
+          "git_blob_sha1": "c923b850dd32e711202b4fe7ff866bb03bb7fb4f",
+          "sha256": "9492d95f82154295a8f63e82fb2035949db83a0e16e61e852a7ec442cd032f5f",
+          "local_path": "wwlib/readline.cpp"
+        },
+        {
+          "path": "Code/wwlib/readline.h",
+          "mode": "100644",
+          "bytes": 2761,
+          "git_blob_sha1": "b2badd9c1b2bba1e3f005a36c49c7fa04f0f4046",
+          "sha256": "395ce5a7876fcb4531bc69985355c08735b288c4473c30daf54e616914c63588",
+          "local_path": "wwlib/readline.h"
+        },
+        {
+          "path": "Code/wwlib/realcrc.cpp",
+          "mode": "100644",
+          "bytes": 10374,
+          "git_blob_sha1": "717d0606163ea3f118cea0db291292349b6ec4f7",
+          "sha256": "4293b70938163e64e3fb2978632ad248bb117f9687f21fd2d1be35a1fc5c193a",
+          "local_path": "wwlib/realcrc.cpp"
+        },
+        {
+          "path": "Code/wwlib/realcrc.h",
+          "mode": "100644",
+          "bytes": 2731,
+          "git_blob_sha1": "00f42ccd68296fcff3cb09a7e5c675a944eac1b0",
+          "sha256": "86ae072249e4d0ff2288ba7f3a4d196689fb9c3f55aafea06a94e4a37f5d3115",
+          "local_path": "wwlib/realcrc.h"
+        },
+        {
+          "path": "Code/wwlib/ref_ptr.h",
+          "mode": "100644",
+          "bytes": 13018,
+          "git_blob_sha1": "130e06de37ff44723418f2e9f6b35ae5cf2818b8",
+          "sha256": "e284b9bd83137646f6c04bea4d8f59ef3436a8a10df06ead3761fb77c7928af6",
+          "local_path": "wwlib/ref_ptr.h"
+        },
+        {
+          "path": "Code/wwlib/refcount.cpp",
+          "mode": "100644",
+          "bytes": 11827,
+          "git_blob_sha1": "aa92ff828ae46e6c91cd154b31aa81071e161831",
+          "sha256": "62c8976e6a3a3beab2bf13996cc53c673f4117bee8560ef9c22a8be27257d30a",
+          "local_path": "wwlib/refcount.cpp"
+        },
+        {
+          "path": "Code/wwlib/refcount.h",
+          "mode": "100644",
+          "bytes": 7211,
+          "git_blob_sha1": "fa38616117d8b5ef3afa9c4c70c6168a8cd7ff67",
+          "sha256": "3e3d49683243a20a62cfa5c78a7bb0a353a47d8f2f1fbb6321c883c8e3bf3374",
+          "local_path": "wwlib/refcount.h"
+        },
+        {
+          "path": "Code/wwlib/regexpr.cpp",
+          "mode": "100644",
+          "bytes": 6352,
+          "git_blob_sha1": "536b4e1dc386043c3109d388f23145b68fdef88e",
+          "sha256": "0166610d141839bd1b91e08a768a95dff81b50a54b6af55c071e04451ed4daa0",
+          "local_path": "wwlib/regexpr.cpp"
+        },
+        {
+          "path": "Code/wwlib/regexpr.h",
+          "mode": "100644",
+          "bytes": 2853,
+          "git_blob_sha1": "fa0467302e0f57411803b19f80f9332ee16799a7",
+          "sha256": "2ba6792a74b0cc9a49d44ec47158ec10c342076c849f23349116c1ceed3b0bb6",
+          "local_path": "wwlib/regexpr.h"
+        },
+        {
+          "path": "Code/wwlib/registry.cpp",
+          "mode": "100644",
+          "bytes": 24139,
+          "git_blob_sha1": "1518ca047d16917ac8de4e10124504c76b64523c",
+          "sha256": "cb6bde753f22e4e2cc54d1d64fb2abe3cdbb633be1b47ed271f5a5eac55ea37d",
+          "local_path": "wwlib/registry.cpp"
+        },
+        {
+          "path": "Code/wwlib/registry.h",
+          "mode": "100644",
+          "bytes": 4744,
+          "git_blob_sha1": "eb1e97930299f7fe3c5fc7ce1079f218dcdd7be3",
+          "sha256": "448eef4dd0510676d2ace09c2fc29d64015bf97cf726ae378ced5beb00c8d87d",
+          "local_path": "wwlib/registry.h"
+        },
+        {
+          "path": "Code/wwlib/rgb.cpp",
+          "mode": "100644",
+          "bytes": 11191,
+          "git_blob_sha1": "d2a751be5b25097b8591a16912a650c978ba0e79",
+          "sha256": "c9ddea17caf0e8c42ef57145445544266e758581e80ff71561245d8b7aa893e2",
+          "local_path": "wwlib/rgb.cpp"
+        },
+        {
+          "path": "Code/wwlib/rgb.h",
+          "mode": "100644",
+          "bytes": 3816,
+          "git_blob_sha1": "8ad22fa5a16b2cd5878c2f457c1b03cf03f5c390",
+          "sha256": "b00c78f3ff332693a5d4e6bd62a6987b629164d79c38a9a795a43aba6d6066dd",
+          "local_path": "wwlib/rgb.h"
+        },
+        {
+          "path": "Code/wwlib/rle.cpp",
+          "mode": "100644",
+          "bytes": 13499,
+          "git_blob_sha1": "426bc6ea0a5e3f50b64eccf0e76a4b48825b3384",
+          "sha256": "1a8172246c53155e0f75b8ebbd7643ca72430593549acb1ff948255518035014",
+          "local_path": "wwlib/rle.cpp"
+        },
+        {
+          "path": "Code/wwlib/rle.h",
+          "mode": "100644",
+          "bytes": 3057,
+          "git_blob_sha1": "d9b63d52b34b24c4c25de9ee811f70e921a043a3",
+          "sha256": "60fcd09b3e47f9c7898e9a4fad9c4e6368a0bf832284a820e5cf50f671d1fb4d",
+          "local_path": "wwlib/rle.h"
+        },
+        {
+          "path": "Code/wwlib/rlerle.h",
+          "mode": "100644",
+          "bytes": 17828,
+          "git_blob_sha1": "5248ba0e5ac3d291fc6de9f3c2f53ed16afdf669",
+          "sha256": "f693fd077475e993769cdf524dc3272a17de45289e31274c4ecbe588338ea6fa",
+          "local_path": "wwlib/rlerle.h"
+        },
+        {
+          "path": "Code/wwlib/rndstraw.cpp",
+          "mode": "100644",
+          "bytes": 20816,
+          "git_blob_sha1": "028b049c9088aa04817860c916b61018e42a0a46",
+          "sha256": "6591bc459d391d10078cb33e330a22abd364cad861c1c55a67e00add731cd994",
+          "local_path": "wwlib/rndstraw.cpp"
+        },
+        {
+          "path": "Code/wwlib/rndstraw.h",
+          "mode": "100644",
+          "bytes": 3595,
+          "git_blob_sha1": "4fe24337554013ded83381f7563fd415a1e06ba0",
+          "sha256": "0b5fc0af9ad4cb1e30a3966927430d254f2d1e7e73ce1e39e050526d7d8d8aad",
+          "local_path": "wwlib/rndstraw.h"
+        },
+        {
+          "path": "Code/wwlib/rndstrng.cpp",
+          "mode": "100644",
+          "bytes": 2622,
+          "git_blob_sha1": "d67857cf5d888f56828a25f4b3d45f2ec2b456a1",
+          "sha256": "a8fa40966d42d0c3527d7077c47e0fedc461f3130b17bf1d0a61eba038eb22cf",
+          "local_path": "wwlib/rndstrng.cpp"
+        },
+        {
+          "path": "Code/wwlib/rndstrng.h",
+          "mode": "100644",
+          "bytes": 2804,
+          "git_blob_sha1": "475fdc17a7dc318b07ee1ad06fed36c1a1566d4c",
+          "sha256": "a995b7770eae6a2bd0f7fae4bdb6b9fcf69d883183eefc2d0999dc5d02f04098",
+          "local_path": "wwlib/rndstrng.h"
+        },
+        {
+          "path": "Code/wwlib/rng.h",
+          "mode": "100644",
+          "bytes": 2758,
+          "git_blob_sha1": "429db6ea01eb8e846edc79fb5539a68876f0b600",
+          "sha256": "712b0dfdeff24ac8de85fc0945a87426003db01dddc6c5577a03d7d679e97231",
+          "local_path": "wwlib/rng.h"
+        },
+        {
+          "path": "Code/wwlib/rsacrypt.h",
+          "mode": "100644",
+          "bytes": 8181,
+          "git_blob_sha1": "5cb1cac6598a62e88cbd0216c85e461464f6d330",
+          "sha256": "7cd7b45a5b9300da5ad04d587e262d368bdea1c7f159126a8de4ab616a6ad642",
+          "local_path": "wwlib/rsacrypt.h"
+        },
+        {
+          "path": "Code/wwlib/sampler.cpp",
+          "mode": "100644",
+          "bytes": 12294,
+          "git_blob_sha1": "61b962b56e28b94bf181f45f88d9462ff21593e0",
+          "sha256": "b25357da092c8b2e60e1fef8a54a3049d70e6c25d2f2229ccc9ca32d411ff1e0",
+          "local_path": "wwlib/sampler.cpp"
+        },
+        {
+          "path": "Code/wwlib/sampler.h",
+          "mode": "100644",
+          "bytes": 5012,
+          "git_blob_sha1": "ff5d74ef81516638b68c869548a41f607d3ebc10",
+          "sha256": "0b9eabf0f2903f37b0d124af77fdac7568c9925583488af39ee94df42a6f59bd",
+          "local_path": "wwlib/sampler.h"
+        },
+        {
+          "path": "Code/wwlib/search.h",
+          "mode": "100644",
+          "bytes": 34815,
+          "git_blob_sha1": "970dbe7a655e9f6e415192562753425ab852509c",
+          "sha256": "448fe35ec3eca751385f042c09ee989500843a2c7db12744b9b61420d9d9ec73",
+          "local_path": "wwlib/search.h"
+        },
+        {
+          "path": "Code/wwlib/sha.cpp",
+          "mode": "100644",
+          "bytes": 16289,
+          "git_blob_sha1": "213c21e03e8c03ed1d112789c4f76dc97edcd5e2",
+          "sha256": "b474ae262398d1ff6f9ba1c7bbbf49e54daceed8188c887940681be228b0595d",
+          "local_path": "wwlib/sha.cpp"
+        },
+        {
+          "path": "Code/wwlib/sha.h",
+          "mode": "100644",
+          "bytes": 6795,
+          "git_blob_sha1": "e3ace3948b0796b37baf579dfc75d448784f8ccc",
+          "sha256": "aec44424dc9ad68956b3cbe359b142ad060d9188331c8fe32b09bd438595f7b0",
+          "local_path": "wwlib/sha.h"
+        },
+        {
+          "path": "Code/wwlib/shapeset.h",
+          "mode": "100644",
+          "bytes": 11743,
+          "git_blob_sha1": "7c146a385e945c5906f06d09ee1c5d4f724dde04",
+          "sha256": "fc965ab8284d224cd6975f7ee5b061bb8502ed8f4c5f211dea98b6d501a2927e",
+          "local_path": "wwlib/shapeset.h"
+        },
+        {
+          "path": "Code/wwlib/shapipe.cpp",
+          "mode": "100644",
+          "bytes": 6119,
+          "git_blob_sha1": "70bf091dba8f1e590eeb640c2c2c9acd98b2b87a",
+          "sha256": "fe6e116beb2777c27c8a6473e4794afcdd9d065fd8f790d379e24ca9949e0d55",
+          "local_path": "wwlib/shapipe.cpp"
+        },
+        {
+          "path": "Code/wwlib/shapipe.h",
+          "mode": "100644",
+          "bytes": 2974,
+          "git_blob_sha1": "34b1a2f999f3874b65e528838281771a6633c908",
+          "sha256": "a12bd52b0ca763ced33efaff027c82cb7b05421426717ed4cbcb7dea51064fa1",
+          "local_path": "wwlib/shapipe.h"
+        },
+        {
+          "path": "Code/wwlib/sharebuf.h",
+          "mode": "100644",
+          "bytes": 4464,
+          "git_blob_sha1": "835ea9521064c8349ff1ed7555a9f8646ca698fd",
+          "sha256": "2f7a9c25584735e78fafea395c5527630fd66f7b71b98fdfb6fa8b4c785064e4",
+          "local_path": "wwlib/sharebuf.h"
+        },
+        {
+          "path": "Code/wwlib/shastraw.cpp",
+          "mode": "100644",
+          "bytes": 6509,
+          "git_blob_sha1": "8388369d0bf6339fd43af0a76dac8fc65331ef04",
+          "sha256": "4dae0ba64d7693f6a5a01902dc0a93d7f0ce5df925cb271f27f6797357dff93c",
+          "local_path": "wwlib/shastraw.cpp"
+        },
+        {
+          "path": "Code/wwlib/shastraw.h",
+          "mode": "100644",
+          "bytes": 3107,
+          "git_blob_sha1": "60bc569f6ac35424e51c3996df2cd84b48e6fc37",
+          "sha256": "98a635478b54777c070c4343236fce94e2c07dbab08017e1143879357e256f96",
+          "local_path": "wwlib/shastraw.h"
+        },
+        {
+          "path": "Code/wwlib/simplevec.h",
+          "mode": "100644",
+          "bytes": 33612,
+          "git_blob_sha1": "4874b04dd283438ed9b5e6c8c23c5c01a049654f",
+          "sha256": "2a7422fe787357ce49d5067c08dab7adf4d0ba52fffe4858f0484a0f52f48bb7",
+          "local_path": "wwlib/simplevec.h"
+        },
+        {
+          "path": "Code/wwlib/slist.h",
+          "mode": "100644",
+          "bytes": 25397,
+          "git_blob_sha1": "e3e37adc495063ca55fa9af4424dbd7a914e72fb",
+          "sha256": "010141686c15fe54e47104c0745a191715e4c5379ec711928b4dcbcd380f360f",
+          "local_path": "wwlib/slist.h"
+        },
+        {
+          "path": "Code/wwlib/slnode.cpp",
+          "mode": "100644",
+          "bytes": 2428,
+          "git_blob_sha1": "b24a0a797a1a9e38f72d1d9e8de8062de361149a",
+          "sha256": "35e0670094e94d0e6c10bfa7fe6265d65ccd8bf9642492c24aa02f2b2e854be3",
+          "local_path": "wwlib/slnode.cpp"
+        },
+        {
+          "path": "Code/wwlib/slnode.h",
+          "mode": "100644",
+          "bytes": 3673,
+          "git_blob_sha1": "0e341ad6e286e32a70bb48f95f62b92ca34e900e",
+          "sha256": "6fb26b2826f284c6355d6de96a9df8155b79075e8641881f566c6b574d3ff0b1",
+          "local_path": "wwlib/slnode.h"
+        },
+        {
+          "path": "Code/wwlib/smartptr.h",
+          "mode": "100644",
+          "bytes": 3499,
+          "git_blob_sha1": "7de2f223e46e88178e0d0cab637e660b10cc2a67",
+          "sha256": "1942a9759d32855fe954cd0f987a73624157406bb057fadc81003bddd7163c85",
+          "local_path": "wwlib/smartptr.h"
+        },
+        {
+          "path": "Code/wwlib/srandom.cpp",
+          "mode": "100644",
+          "bytes": 4973,
+          "git_blob_sha1": "09a52cad9f4f1c532b28cc85776aaa3c3c549681",
+          "sha256": "0a4f86ceb190cd0853a4c728fa94db775ea46d840a56675f5eacf6fe5bbb84b2",
+          "local_path": "wwlib/srandom.cpp"
+        },
+        {
+          "path": "Code/wwlib/srandom.h",
+          "mode": "100644",
+          "bytes": 2221,
+          "git_blob_sha1": "70c2a49674f4bea9cf41d2ddbf4789a7529a35d7",
+          "sha256": "64afd9276f015913fe4321252b29482bafc2919b26375dc93596c784a5a26abc",
+          "local_path": "wwlib/srandom.h"
+        },
+        {
+          "path": "Code/wwlib/stimer.cpp",
+          "mode": "100644",
+          "bytes": 2711,
+          "git_blob_sha1": "3d894af9911980a1a18880abbbc83c7e80169755",
+          "sha256": "8f0b7867d5126d22d83be257143cd4ec2673c340df5b76f0391e29d98fcaaef7",
+          "local_path": "wwlib/stimer.cpp"
+        },
+        {
+          "path": "Code/wwlib/stimer.h",
+          "mode": "100644",
+          "bytes": 3139,
+          "git_blob_sha1": "dc629d7cf4f8eee50fe1b6cde427db00aeb90304",
+          "sha256": "049e00b6b4621d6e32bc113584228395e7414e64c7e31883d64a910059cbd3ab",
+          "local_path": "wwlib/stimer.h"
+        },
+        {
+          "path": "Code/wwlib/stl.h",
+          "mode": "100644",
+          "bytes": 2720,
+          "git_blob_sha1": "6dc8fc826f88c4d586007358dfa83e2b2f449a0f",
+          "sha256": "36c1f628d40792cf3d9efcb6bab2dfc6e45bbbed89e6dcb4c8aec728843675ff",
+          "local_path": "wwlib/stl.h"
+        },
+        {
+          "path": "Code/wwlib/straw.cpp",
+          "mode": "100644",
+          "bytes": 8450,
+          "git_blob_sha1": "b1e83b712fc83cdf22a1bbf7e952127b46baf037",
+          "sha256": "ebd9f58c76572fd92c00a5fdffb2e990ec02a76596cb27db4e08f74576da761c",
+          "local_path": "wwlib/straw.cpp"
+        },
+        {
+          "path": "Code/wwlib/straw.h",
+          "mode": "100644",
+          "bytes": 3336,
+          "git_blob_sha1": "ae65fcb82ed7282890ddc8316f4096eb9458e18e",
+          "sha256": "eee97c5709d15a63def9c4b9a7dee17e94c24b7db0a083950fbc35f8f2fc6eb5",
+          "local_path": "wwlib/straw.h"
+        },
+        {
+          "path": "Code/wwlib/strtok_r.cpp",
+          "mode": "100644",
+          "bytes": 3476,
+          "git_blob_sha1": "e7ebc8a399fd4cc0b2406cde831833fbaeb711f1",
+          "sha256": "6221efe5826db2ca2af41b5e2e620088143f52960631d6293f2cbf522c6f39c0",
+          "local_path": "wwlib/strtok_r.cpp"
+        },
+        {
+          "path": "Code/wwlib/strtok_r.h",
+          "mode": "100644",
+          "bytes": 2304,
+          "git_blob_sha1": "b5ed091cd62559cdd4c2c69c3c447b2fe017e406",
+          "sha256": "c25c8feb6d399df8d425017fe76b4b84053dacd2bd7ead43295b5efdd67c6ceb",
+          "local_path": "wwlib/strtok_r.h"
+        },
+        {
+          "path": "Code/wwlib/surface.cpp",
+          "mode": "100644",
+          "bytes": 2434,
+          "git_blob_sha1": "370e0617f545c905648670eb32f0af5fe7ff0c73",
+          "sha256": "ae4c4f68b0f6bdb97763a7d0be7a5e716e4420b01bc6e88e3abb7148d3e13260",
+          "local_path": "wwlib/surface.cpp"
+        },
+        {
+          "path": "Code/wwlib/surface.h",
+          "mode": "100644",
+          "bytes": 5202,
+          "git_blob_sha1": "46f50935effa4250c7298cdb6dd42f2e3fa3e38a",
+          "sha256": "6b6d556620acb9ef023ab961778908853917295c4646ddfa19c5f58f9ecbcd23",
+          "local_path": "wwlib/surface.h"
+        },
+        {
+          "path": "Code/wwlib/surfrect.h",
+          "mode": "100644",
+          "bytes": 3810,
+          "git_blob_sha1": "1f10c9e7e2e2bb3c97e8819697ba9da20cffed70",
+          "sha256": "071e7227021c41fd0ee4c3d78ee8f9e6b9cc95af898cc2309f18be9bfc6dd7f9",
+          "local_path": "wwlib/surfrect.h"
+        },
+        {
+          "path": "Code/wwlib/swap.h",
+          "mode": "100644",
+          "bytes": 2634,
+          "git_blob_sha1": "7ed4dfeed874363538e5c4053d679181af023cbb",
+          "sha256": "0bea0154121e32f5ce73f6eb6562078ce70b81f00be6dc7b37f05b6bc8f3fddf",
+          "local_path": "wwlib/swap.h"
+        },
+        {
+          "path": "Code/wwlib/systimer.cpp",
+          "mode": "100644",
+          "bytes": 5551,
+          "git_blob_sha1": "76eb940c54013ede4cc6fd382cc9d035de85deb5",
+          "sha256": "9fa2dd2055a49eb857a30f36713872d06d95c16418eaca6f00a01d34650118ab",
+          "local_path": "wwlib/systimer.cpp"
+        },
+        {
+          "path": "Code/wwlib/systimer.h",
+          "mode": "100644",
+          "bytes": 5222,
+          "git_blob_sha1": "378aba8eb556a4d867f07f81d4371da4d50f1490",
+          "sha256": "654be20921d93a5016ad8f35e349bb4e415101a35d242f0c7b485af2834074b1",
+          "local_path": "wwlib/systimer.h"
+        },
+        {
+          "path": "Code/wwlib/tagblock.cpp",
+          "mode": "100644",
+          "bytes": 33361,
+          "git_blob_sha1": "da81f109ad1e373f76b8392bfdaa900f871f4592",
+          "sha256": "9cffdba7e18e3cc53f331668064051bd64ca8630fa23c9a32d020324d9b8c28a",
+          "local_path": "wwlib/tagblock.cpp"
+        },
+        {
+          "path": "Code/wwlib/tagblock.h",
+          "mode": "100644",
+          "bytes": 10986,
+          "git_blob_sha1": "c05bb6298da28f41d37669c00fe93a5514ef2afd",
+          "sha256": "233ab63da2f97d752e1a27292e8e9b5e4dcb0c9e91134c0598dcb152db22e456",
+          "local_path": "wwlib/tagblock.h"
+        },
+        {
+          "path": "Code/wwlib/textfile.cpp",
+          "mode": "100644",
+          "bytes": 5131,
+          "git_blob_sha1": "5bdccac5898126827c008dc6fa8e70147e665642",
+          "sha256": "ace2fec5c6a082622f1e208826d184b06386b493aeffacf23654b61653da29ba",
+          "local_path": "wwlib/textfile.cpp"
+        },
+        {
+          "path": "Code/wwlib/textfile.h",
+          "mode": "100644",
+          "bytes": 3686,
+          "git_blob_sha1": "3bfc1bf159c4ed78e70df554c92b396b00bfa68a",
+          "sha256": "a115be25bfb3d2a7c72e82c39979dd8e8e242f97fe3522ceade7ef0acaf7e9e9",
+          "local_path": "wwlib/textfile.h"
+        },
+        {
+          "path": "Code/wwlib/thread.cpp",
+          "mode": "100644",
+          "bytes": 3481,
+          "git_blob_sha1": "5b225c5282e8e230d88b9492027c76cb496e0ca9",
+          "sha256": "ddd771d5c5de5f6d41f44d0302f0890e1799cbf49db769af1232c4fb0d299b1a",
+          "local_path": "wwlib/thread.cpp"
+        },
+        {
+          "path": "Code/wwlib/thread.h",
+          "mode": "100644",
+          "bytes": 3382,
+          "git_blob_sha1": "fdcdbe33ffaaef0c7e0a28d9a106a399167677a5",
+          "sha256": "9c7780ec0e54515a0aac8a52e720d05fd6424ce8126086754caefd592df60690",
+          "local_path": "wwlib/thread.h"
+        },
+        {
+          "path": "Code/wwlib/timer.h",
+          "mode": "100644",
+          "bytes": 40033,
+          "git_blob_sha1": "1f61a6146663fcf0f3546cd3e6a80526b18017fa",
+          "sha256": "80235d8a56a972e359d81077c55a60317c6bf38af651816a5e0eab87ea253db0",
+          "local_path": "wwlib/timer.h"
+        },
+        {
+          "path": "Code/wwlib/trackwin.h",
+          "mode": "100644",
+          "bytes": 3604,
+          "git_blob_sha1": "d6f346b0207422ac28b9414ac289b4b09743a0a0",
+          "sha256": "212387f11d31db7de79f87ca7dadefabc49e615cba550478680028d74065a373",
+          "local_path": "wwlib/trackwin.h"
+        },
+        {
+          "path": "Code/wwlib/trackxy.h",
+          "mode": "100644",
+          "bytes": 3172,
+          "git_blob_sha1": "9d8e99c2d1666c36911f6cb2f69092ced47e565f",
+          "sha256": "d00cb0d746625299d1f39e5e241755be2b4edd2c32e8e90fbd283c0fc5078461",
+          "local_path": "wwlib/trackxy.h"
+        },
+        {
+          "path": "Code/wwlib/trect.h",
+          "mode": "100644",
+          "bytes": 7325,
+          "git_blob_sha1": "b16e8ffe49135317e5def10742209ddb23d7ad0e",
+          "sha256": "32f7854f655b4e4a417ff804fb71ba253aedb1abd637abf6ff311f13ad592cb2",
+          "local_path": "wwlib/trect.h"
+        },
+        {
+          "path": "Code/wwlib/trim.cpp",
+          "mode": "100644",
+          "bytes": 5017,
+          "git_blob_sha1": "b66ddb7a9593330c9768a005e44e4c87cb5a4881",
+          "sha256": "01b5ebba0fd3e1cb2531720979578869e62342d0c6879f540a1ba2eddc17f3aa",
+          "local_path": "wwlib/trim.cpp"
+        },
+        {
+          "path": "Code/wwlib/trim.h",
+          "mode": "100644",
+          "bytes": 2580,
+          "git_blob_sha1": "a2a1d995a68e790e9ed589b082dee6e02160ff11",
+          "sha256": "b916083b88bc9a5ce66e66389fd7a8052c5b089af4c196f945900c161a58f22a",
+          "local_path": "wwlib/trim.h"
+        },
+        {
+          "path": "Code/wwlib/uarray.h",
+          "mode": "100644",
+          "bytes": 10010,
+          "git_blob_sha1": "9b0ad13cc27ac034e4c781f4bdbf3e40c70c2c37",
+          "sha256": "3380439937fb693932e5f59babf201e4efe14214788e939c9d7a21620cd8a80f",
+          "local_path": "wwlib/uarray.h"
+        },
+        {
+          "path": "Code/wwlib/vector.cpp",
+          "mode": "100644",
+          "bytes": 24239,
+          "git_blob_sha1": "759990633a8b2a314fd3c723dcfb002f53701b2a",
+          "sha256": "7114937689110612fbf7269389fb088020b5f9ae15307b219bf96e2068b65ff0",
+          "local_path": "wwlib/vector.cpp"
+        },
+        {
+          "path": "Code/wwlib/vector.h",
+          "mode": "100644",
+          "bytes": 51694,
+          "git_blob_sha1": "6da03b4f1d95be51c67ae11c6143ab9f46a48a99",
+          "sha256": "5b55de18f15f7576dec26774026e869c56624e59f8d110a6218cf24863055988",
+          "local_path": "wwlib/vector.h"
+        },
+        {
+          "path": "Code/wwlib/verchk.cpp",
+          "mode": "100644",
+          "bytes": 7015,
+          "git_blob_sha1": "d6828bfb107c71c38d58ff04b8196e67b00cb7ee",
+          "sha256": "de1f90b5bbf8c29c92225232b2a51c80d98456eb6f539af5266477c136454ec8",
+          "local_path": "wwlib/verchk.cpp"
+        },
+        {
+          "path": "Code/wwlib/verchk.h",
+          "mode": "100644",
+          "bytes": 3296,
+          "git_blob_sha1": "80cfdb0a5cdfc47faded64b455af1bbba1d83933",
+          "sha256": "b02a5506fe89244131667c54d446920f73f9fb4fd4f4aca46de5d47c70a8a838",
+          "local_path": "wwlib/verchk.h"
+        },
+        {
+          "path": "Code/wwlib/visualc.h",
+          "mode": "100644",
+          "bytes": 5091,
+          "git_blob_sha1": "7a3435fe790984d7be5a2616838b6238da4b21e3",
+          "sha256": "eed38a5d5ba66323631966f32ae2892bd834a1a5e023a1e3ffd3f49111650209",
+          "local_path": "wwlib/visualc.h"
+        },
+        {
+          "path": "Code/wwlib/watcom.h",
+          "mode": "100644",
+          "bytes": 4946,
+          "git_blob_sha1": "ecdfdbcc3afe721458dd97882789228e0ea4cbc0",
+          "sha256": "b5c585d8f21d120f430db38ac1a2e0f01f9db4f9d2d24c7d2a15a99fc0636dbe",
+          "local_path": "wwlib/watcom.h"
+        },
+        {
+          "path": "Code/wwlib/widestring.cpp",
+          "mode": "100644",
+          "bytes": 9578,
+          "git_blob_sha1": "9220aac7c0360a6f8a1f87dcd5dde6fd9a8dea74",
+          "sha256": "f0692beb9ee756730ad6ed7f8c8c4aeabad2d9a06e73eb829002afd92b073526",
+          "local_path": "wwlib/widestring.cpp"
+        },
+        {
+          "path": "Code/wwlib/widestring.h",
+          "mode": "100644",
+          "bytes": 22671,
+          "git_blob_sha1": "35ac38962d4005968058bfa83b5ea5ab8c28273a",
+          "sha256": "47cfea1499549a539218e78fafc5d6f46b46510c3be8c49c75fc3cd353c1a07f",
+          "local_path": "wwlib/widestring.h"
+        },
+        {
+          "path": "Code/wwlib/win.cpp",
+          "mode": "100644",
+          "bytes": 2413,
+          "git_blob_sha1": "53600c3b9370e0b070bea5888874b32f9bfe8c17",
+          "sha256": "b00146550d18f319ba8a22a434d853416d84d70128d575c8233125e860c11dc1",
+          "local_path": "wwlib/win.cpp"
+        },
+        {
+          "path": "Code/wwlib/win.h",
+          "mode": "100644",
+          "bytes": 3699,
+          "git_blob_sha1": "4e4390b024d1915c74a85bdee571c1e70998066b",
+          "sha256": "2020e78a724d2cfba40704de1c702c737352afc7110c58957eeaaba3152597ff",
+          "local_path": "wwlib/win.h"
+        },
+        {
+          "path": "Code/wwlib/wwfile.cpp",
+          "mode": "100644",
+          "bytes": 3369,
+          "git_blob_sha1": "5877f88b4702eee3c041189020de648c31e9e0bc",
+          "sha256": "d942e00f1a6d46afbf92a685dec775db5cefb37718a3a3ca33b3d55d345273e3",
+          "local_path": "wwlib/wwfile.cpp"
+        },
+        {
+          "path": "Code/wwlib/wwfile.h",
+          "mode": "100644",
+          "bytes": 4630,
+          "git_blob_sha1": "b11263b9d85d127b2d1d5e435f4c95826afbec86",
+          "sha256": "e8d201956bb3fb4f53b908b7c78f1e97920b89e85365796624f507555647f63a",
+          "local_path": "wwlib/wwfile.h"
+        },
+        {
+          "path": "Code/wwlib/wwfont.cpp",
+          "mode": "100644",
+          "bytes": 32612,
+          "git_blob_sha1": "8d1eeb70545cf8c8ad26482f7bf285290421b21f",
+          "sha256": "800255a2b2ac32dd750f2d13e955a3e5adaff38b6e27446380999b012623fa64",
+          "local_path": "wwlib/wwfont.cpp"
+        },
+        {
+          "path": "Code/wwlib/wwfont.h",
+          "mode": "100644",
+          "bytes": 5090,
+          "git_blob_sha1": "ac3850faef365fb5126b9af0c8065b9628377694",
+          "sha256": "9f41cb5fd65bb58be0881b6f7410b9ad27acfea6b14b439738a3ac32d6304811",
+          "local_path": "wwlib/wwfont.h"
+        },
+        {
+          "path": "Code/wwlib/wwlib.dsp",
+          "mode": "100644",
+          "bytes": 15790,
+          "git_blob_sha1": "ccee90eaf70bd7d1a39e0d0ff651dcb67f290f0b",
+          "sha256": "edf146829bc55287d3400a4aafc081e0013bded363a7bad6fea9bce0bf3e997e",
+          "local_path": "wwlib/wwlib.dsp"
+        },
+        {
+          "path": "Code/wwlib/wwmouse.cpp",
+          "mode": "100644",
+          "bytes": 56724,
+          "git_blob_sha1": "86f06b6808f130b8f6cd8973842990d94d7c8caa",
+          "sha256": "27e024caebdef02d54d02c62d8852c9b3b035e52d426aeaa36aeca91a9576042",
+          "local_path": "wwlib/wwmouse.cpp"
+        },
+        {
+          "path": "Code/wwlib/wwmouse.h",
+          "mode": "100644",
+          "bytes": 7967,
+          "git_blob_sha1": "ccbc9ef6732aa929def752881947416a256370d7",
+          "sha256": "232958b14f51ceecf7b7a9b138b65a89edeeab5a671b87792b26612bfeab009f",
+          "local_path": "wwlib/wwmouse.h"
+        },
+        {
+          "path": "Code/wwlib/wwstring.cpp",
+          "mode": "100644",
+          "bytes": 9264,
+          "git_blob_sha1": "73201f53081fed34f23105447897d18d7020740c",
+          "sha256": "61712cc886139e5a0e395367f088dc8b20c5c14d4d9e27eaab50e90c1cdb3fe4",
+          "local_path": "wwlib/wwstring.cpp"
+        },
+        {
+          "path": "Code/wwlib/wwstring.h",
+          "mode": "100644",
+          "bytes": 22654,
+          "git_blob_sha1": "e8b7641dc91ae09f99b1b45787cbcc415ff34496",
+          "sha256": "79d65f03dd1291d44225d2d7d52c44a72f4dea6fc0da51d602191ce75e134bcd",
+          "local_path": "wwlib/wwstring.h"
+        },
+        {
+          "path": "Code/wwlib/xmouse.h",
+          "mode": "100644",
+          "bytes": 5402,
+          "git_blob_sha1": "aa317989f32ca1d7e515acb62d6b7d6df84ad89b",
+          "sha256": "416c09b6644703e3f983c813479de5bf3450c7e6fd2be7a2e1c20e4c0ad33858",
+          "local_path": "wwlib/xmouse.h"
+        },
+        {
+          "path": "Code/wwlib/xpipe.cpp",
+          "mode": "100644",
+          "bytes": 9469,
+          "git_blob_sha1": "8046da04cf16c2f230e126f242a5bae210a14e9f",
+          "sha256": "5fa4e9dc5a31d9ae7e5ebe91eafe71e9bd4da2084b1425ba39ff999c63180a2d",
+          "local_path": "wwlib/xpipe.cpp"
+        },
+        {
+          "path": "Code/wwlib/xpipe.h",
+          "mode": "100644",
+          "bytes": 3874,
+          "git_blob_sha1": "b241c0b113813f72c1c7822eab1c702d505589f6",
+          "sha256": "14d0303459733182b53826e9c2d31db00a9c4678a5149f167591190d6b1998d0",
+          "local_path": "wwlib/xpipe.h"
+        },
+        {
+          "path": "Code/wwlib/xstraw.cpp",
+          "mode": "100644",
+          "bytes": 8988,
+          "git_blob_sha1": "6d79d13ce52fdce9b28b0c91b6f0587cdb872833",
+          "sha256": "7bdd458f72f2f4e0fa3ee63142acc24b2759da6d0bd119d741a74b936737c462",
+          "local_path": "wwlib/xstraw.cpp"
+        },
+        {
+          "path": "Code/wwlib/xstraw.h",
+          "mode": "100644",
+          "bytes": 3788,
+          "git_blob_sha1": "0c61bee4473ec53a04b02522c0f889ebe0146ae0",
+          "sha256": "5bfe0b62ef3833f9945eb44d771d7eca47932b0641968a4ba001af22372ffafb",
+          "local_path": "wwlib/xstraw.h"
+        },
+        {
+          "path": "Code/wwlib/xsurface.cpp",
+          "mode": "100644",
+          "bytes": 53859,
+          "git_blob_sha1": "2c46d58e0900818fa7f17b2256f33568aa2fd518",
+          "sha256": "c5b0a3780dd8f2f453e4faa47b677f0a856c87a0213e3efe528512ee5ef3debb",
+          "local_path": "wwlib/xsurface.cpp"
+        },
+        {
+          "path": "Code/wwlib/xsurface.h",
+          "mode": "100644",
+          "bytes": 5892,
+          "git_blob_sha1": "3f3e35e15ba43f3ffad0f0ede9c0b69e34c2d966",
+          "sha256": "f3a6ce0176a91c5635d5908d3ab4ada0f0763ea011041d27382e6a58063e8363",
+          "local_path": "wwlib/xsurface.h"
+        },
+        {
+          "path": "LICENSE.md",
+          "mode": "100644",
+          "bytes": 37267,
+          "git_blob_sha1": "f0bc280991356cb803f030436ce708739d30968d",
+          "sha256": "c13278f0aa0fc48b06dc6e623ef7349788b9d79eff74fd50fefebd5315846005",
+          "local_path": "RENEGADE_LICENSE.md"
+        },
+        {
+          "path": "README.md",
+          "mode": "100644",
+          "bytes": 3853,
+          "git_blob_sha1": "b5b74cfefb047a919979b9b84184272e79f4aa0b",
+          "sha256": "3d1be16c892f1722f06230376c10421734fef0e4a6afb1c857368d5c2c476336",
+          "local_path": "RENEGADE_README.md"
+        }
+      ],
+      "file_count": 265,
+      "total_bytes": 2914468,
+      "directory_mapping": {
+        "Code/wwlib": "wwlib"
+      },
+      "root_file_mapping": {
+        "README.md": "RENEGADE_README.md",
+        "LICENSE.md": "RENEGADE_LICENSE.md"
+      }
+    },
+    {
+      "repository": "https://github.com/electronicarts/CNC_TS_and_RA2_Mission_Editor",
+      "revision": "6abf0f557469baea73079c6bf6550709e2e3584e",
+      "complete_directories": [
+        "3rdParty/xcc",
+        "MissionEditorPackLib"
+      ],
+      "root_files": [
+        "README.md",
+        "LICENSE.md"
+      ],
+      "files": [
+        {
+          "path": "3rdParty/xcc/.gitignore",
+          "mode": "100644",
+          "bytes": 21,
+          "git_blob_sha1": "962f2c91632388e74ccbe6c263e5a355beb49b71",
+          "sha256": "74ea49c21b282850c693dd90e77fabe2232f74e2f1053c54a1f9847e8bee96f2",
+          "local_path": "xcc/.gitignore"
+        },
+        {
+          "path": "3rdParty/xcc/COPYING",
+          "mode": "100644",
+          "bytes": 35149,
+          "git_blob_sha1": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "local_path": "xcc/COPYING"
+        },
+        {
+          "path": "3rdParty/xcc/Library/StdAfx.cpp",
+          "mode": "100644",
+          "bytes": 777,
+          "git_blob_sha1": "799dfed532e271b2b91ff28067b2d1d157c02aaf",
+          "sha256": "e200772b26cdb58bab47fce84707abbd95912255b1cac7f840b1f11b1079936a",
+          "local_path": "xcc/Library/StdAfx.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/Library/StdAfx.h",
+          "mode": "100644",
+          "bytes": 1263,
+          "git_blob_sha1": "ce373913824c72a8537fc70aaf806476deb5bee1",
+          "sha256": "55fec13e3a0ace7ebed2f54dbeb7534507d3a783f6a5e6d443ea157bb15c8539",
+          "local_path": "xcc/Library/StdAfx.h"
+        },
+        {
+          "path": "3rdParty/xcc/Library/XCC Library.vcxproj",
+          "mode": "100644",
+          "bytes": 30848,
+          "git_blob_sha1": "857d3f808a8aee304bb3fc1a05e08c5aa42154c3",
+          "sha256": "5edac8297bffd8bfc7c9e7dbb71faf31729ea30119f24e9445d64eb1ee7b84cc",
+          "local_path": "xcc/Library/XCC Library.vcxproj"
+        },
+        {
+          "path": "3rdParty/xcc/XCC.props",
+          "mode": "100644",
+          "bytes": 1072,
+          "git_blob_sha1": "1e1a74b15133c32eabb8785a5e71dcf77092b6df",
+          "sha256": "71d2cf1a1bdf5b51278a0dddde3268588a15c8d24486812fd289a4035635eab8",
+          "local_path": "xcc/XCC.props"
+        },
+        {
+          "path": "3rdParty/xcc/misc/blowfish.cpp",
+          "mode": "100644",
+          "bytes": 16355,
+          "git_blob_sha1": "9e1833cfd85324630635e527abd7fbed50cc00d7",
+          "sha256": "41a201f7cebd07a8f1392d1a54813df6b5ebb5e4f7ea5df0d2cc7ed43ca02585",
+          "local_path": "xcc/misc/blowfish.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/blowfish.h",
+          "mode": "100644",
+          "bytes": 1284,
+          "git_blob_sha1": "72a3f3fe61489f65768e96f45e622104b760ccfd",
+          "sha256": "fa7e3d31ad797720e62edc6a62f041e47877237a49db5eefe73e3b759151e342",
+          "local_path": "xcc/misc/blowfish.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/cc_file.cpp",
+          "mode": "100644",
+          "bytes": 11242,
+          "git_blob_sha1": "d9e9e112cec8d4e36b618612d46559ef2ffb7b53",
+          "sha256": "e0d5294042738d0f87dc5d0309487fbbcf4009c478655b34205bd748564982cc",
+          "local_path": "xcc/misc/cc_file.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/cc_file.h",
+          "mode": "100644",
+          "bytes": 3044,
+          "git_blob_sha1": "264e954d1e9de51ab83ae0d2d17886c980c58f71",
+          "sha256": "5801d0fb16cb7a12a69fb8ab1bfd652776369e19bc1af7a9892c79ff8c351a0c",
+          "local_path": "xcc/misc/cc_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/cc_file_sh.h",
+          "mode": "100644",
+          "bytes": 965,
+          "git_blob_sha1": "a304dcf763ff56df0d64a98673794f1d008425b1",
+          "sha256": "58be8f85f0239bb892b398468a07a35c8cd7990f3ed5b4d020ece8e7f293f685",
+          "local_path": "xcc/misc/cc_file_sh.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/cc_file_small.h",
+          "mode": "100644",
+          "bytes": 888,
+          "git_blob_sha1": "3428d7fc948eb5386e76f889c9d592085e3561d1",
+          "sha256": "5971c6d19c021f653c555a53f9c6ab1cc24740e184ca694723e3d2ab927323b8",
+          "local_path": "xcc/misc/cc_file_small.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/cc_structures.cpp",
+          "mode": "100644",
+          "bytes": 1156,
+          "git_blob_sha1": "43fb582a1b7179b98a292479a842ddbaa9f82108",
+          "sha256": "569d5cca3e3d8b2a247a087adfae939f3eb49ad8d3217ea4ea70d57f28079d00",
+          "local_path": "xcc/misc/cc_structures.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/cc_structures.h",
+          "mode": "100644",
+          "bytes": 9251,
+          "git_blob_sha1": "2e93ff560f603712a84b11412ff0fbc960e34212",
+          "sha256": "b4db3a8c47623d2c9e2efed2eece4ca6ac4cc0c4730f294a575deb7da5cc48ca",
+          "local_path": "xcc/misc/cc_structures.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/crc.h",
+          "mode": "100644",
+          "bytes": 918,
+          "git_blob_sha1": "9a68d528dee1480f28a00369c0da6fe4f79db4fb",
+          "sha256": "ad9ed3e83c4f373c42df5998b0d6fbc9acc433ec2a32e804ad536059d579984d",
+          "local_path": "xcc/misc/crc.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/ddpf_conversion.cpp",
+          "mode": "100644",
+          "bytes": 1806,
+          "git_blob_sha1": "6581bdc749226091972e63004076b138ea99f729",
+          "sha256": "574524fce707c2abd428b33421a2e6bd05fc2b63da9a19fa9e4dbfca0cb61160",
+          "local_path": "xcc/misc/ddpf_conversion.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/ddpf_conversion.h",
+          "mode": "100644",
+          "bytes": 1056,
+          "git_blob_sha1": "3aab40656d3338ebc296971ce39ac4979e184389",
+          "sha256": "d7b07341b87394205bbbfa34f17f3a8ba5295ed108e256620fa5daaaf450d97a",
+          "local_path": "xcc/misc/ddpf_conversion.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/file32.cpp",
+          "mode": "100644",
+          "bytes": 3577,
+          "git_blob_sha1": "e895bfef3fefaefcec6f9e4ba44eb3c2bb3bc09e",
+          "sha256": "5bb09a371baf4c49af9697c61e0e9413152ab3910f1daba02d714dac50ae03ab",
+          "local_path": "xcc/misc/file32.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/file32.h",
+          "mode": "100644",
+          "bytes": 1866,
+          "git_blob_sha1": "7e2cbfc85534f7ab887936645b2a09e53c111d9c",
+          "sha256": "ad6e17c1ebb175be6c970de7858fa918412f30b90a31192b4ec56a8f2145e631",
+          "local_path": "xcc/misc/file32.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/fname.cpp",
+          "mode": "100644",
+          "bytes": 4081,
+          "git_blob_sha1": "04654b5401c2c3dd73a2082359c480885be84c90",
+          "sha256": "2c963f09fde662ac8d2fc222169499bcb3df7dfe9acd8561e02428d4c6ae558b",
+          "local_path": "xcc/misc/fname.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/fname.h",
+          "mode": "100644",
+          "bytes": 1833,
+          "git_blob_sha1": "ded5594daf31f2f55c7baeccf660235ca60e4683",
+          "sha256": "f73d13555672b61a2142ef6f3bf869f9c8f8ced473d368059060f4283882cfe7",
+          "local_path": "xcc/misc/fname.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/hva_file.cpp",
+          "mode": "100644",
+          "bytes": 3060,
+          "git_blob_sha1": "fc3b675ac3278c6f42143e9981e52f9ed49f124b",
+          "sha256": "188048e27a04b1915e259da8780aeb982096637cf5e8b4641d7ce7cffeec7553",
+          "local_path": "xcc/misc/hva_file.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/hva_file.h",
+          "mode": "100644",
+          "bytes": 1488,
+          "git_blob_sha1": "63b789d29496b08c901cccc347fda8f8b99e4f57",
+          "sha256": "01576714d26a76b21a21e0434ee84e35f3caecb6f448055ee46b3d03aeae89a3",
+          "local_path": "xcc/misc/hva_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/id_log.cpp",
+          "mode": "100644",
+          "bytes": 3290,
+          "git_blob_sha1": "ff55fcddb5dbd7176b92b0574f476fbca7519cc0",
+          "sha256": "7100fa52851a079d9d909b9152705e8bce2a892ae5b3a8244815ce94d11a0e18",
+          "local_path": "xcc/misc/id_log.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/id_log.h",
+          "mode": "100644",
+          "bytes": 1024,
+          "git_blob_sha1": "c866f8615ed93ee85fe6404c2ce6695799896c5a",
+          "sha256": "579b9d02d151669073858ccfc7709e5b935bccd2d993d3eae9d2c315ec3f9d9d",
+          "local_path": "xcc/misc/id_log.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/image_file.h",
+          "mode": "100644",
+          "bytes": 1650,
+          "git_blob_sha1": "b9e9fb56c0e5bed44c32334c8086a79e38f6c949",
+          "sha256": "0d5db65294327f948dc64180b8f8fa0171f97116125551b1af696da74cfc3962",
+          "local_path": "xcc/misc/image_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/mix_decode.cpp",
+          "mode": "100644",
+          "bytes": 10868,
+          "git_blob_sha1": "5dbfc4ec5c433069b8e97291e68171bcd53e096f",
+          "sha256": "2cdd7a92717f8ddb1c0c97b1d89190082ad267f80496e6d3fb413ee0223297cc",
+          "local_path": "xcc/misc/mix_decode.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/mix_decode.h",
+          "mode": "100644",
+          "bytes": 823,
+          "git_blob_sha1": "388f8ed9e66be6bfdab60b5fd6005fa0b0025829",
+          "sha256": "73d9e34261b8016a6da8ea5d8270a177a032542d1379109a5ec05297d3f12e59",
+          "local_path": "xcc/misc/mix_decode.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/mix_file.cpp",
+          "mode": "100644",
+          "bytes": 10864,
+          "git_blob_sha1": "874ff31a729f21115f2c57120d118e33c29b6e10",
+          "sha256": "667875b0911f05d6879b0579275b46fa30dbace41b1a47c2839afc513cc80a97",
+          "local_path": "xcc/misc/mix_file.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/mix_file.h",
+          "mode": "100644",
+          "bytes": 2360,
+          "git_blob_sha1": "fbf6681717b6436fd44c30ce09866b2dcd01a103",
+          "sha256": "eb0a4228d249ac5ecc7d0b0ab494469b5bc231764c847c8fa3c4cfefaa66ac39",
+          "local_path": "xcc/misc/mix_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/mix_file_write.cpp",
+          "mode": "100644",
+          "bytes": 2145,
+          "git_blob_sha1": "85b750fd49b096fba79655eb025cd1e8ea47f427",
+          "sha256": "0b44adef89a186bc7a4ad7153ca40482195ada309fa3bc8752278e268f679183",
+          "local_path": "xcc/misc/mix_file_write.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/mix_file_write.h",
+          "mode": "100644",
+          "bytes": 1238,
+          "git_blob_sha1": "c1b4fae8a1789d44d03d240bd9cf492d750e5bf0",
+          "sha256": "ddd75cfede32dc64e4ac4acbaec5916ef00d1388d574fd7f400901810312ece9",
+          "local_path": "xcc/misc/mix_file_write.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/null_ini_reader.h",
+          "mode": "100644",
+          "bytes": 1156,
+          "git_blob_sha1": "846b2704802914c98fac1235cffd7bf13c683a90",
+          "sha256": "d3e7e981795e6cc582592d019e62575acf98ae092cd14a782a943725b50c1e8a",
+          "local_path": "xcc/misc/null_ini_reader.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/pal_file.cpp",
+          "mode": "100644",
+          "bytes": 1503,
+          "git_blob_sha1": "801f245d7771ccf83d8ddc739ab82b6e40f47293",
+          "sha256": "567ca390225b34c673b0f40344bf86eab7969711ceb5c7683f73606c2a314f59",
+          "local_path": "xcc/misc/pal_file.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/pal_file.h",
+          "mode": "100644",
+          "bytes": 1158,
+          "git_blob_sha1": "9d5768793dd1b45b21ab6aef2e6c1f800927a1c1",
+          "sha256": "8dbc0dde2756ebd3de7442d713f0029087103357dbf2c2a7fcf51d67d15100eb",
+          "local_path": "xcc/misc/pal_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/palet.cpp",
+          "mode": "100644",
+          "bytes": 4323,
+          "git_blob_sha1": "e24071b6efaf4969da3939e4b88224fcad7db152",
+          "sha256": "9d3af54b8db83b750bedb0f131afd39cff11c7dbdcaa64478f9b4dc53b28758d",
+          "local_path": "xcc/misc/palet.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/palet.h",
+          "mode": "100644",
+          "bytes": 2198,
+          "git_blob_sha1": "539fbabd7234abb3fc50a036dff424f6c71dd915",
+          "sha256": "819daf07da1c3259f73591086e1c6b062d4673862fb58b952334ad478f1438eb",
+          "local_path": "xcc/misc/palet.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/reg_key.cpp",
+          "mode": "100644",
+          "bytes": 2612,
+          "git_blob_sha1": "93401e96aeec57447a982f415f1c671e482160e9",
+          "sha256": "65a2a7a3400c3e7801389d0b4550ab07c50758bf6ce62ebdb84b4247428a7fe3",
+          "local_path": "xcc/misc/reg_key.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/reg_key.h",
+          "mode": "100644",
+          "bytes": 1476,
+          "git_blob_sha1": "d0877665d6159896c6f332f45f9171d5e8ba341f",
+          "sha256": "9068facb6d86249a8f99b77f2313ca1521ef113f504546b052b1de62e9160d0f",
+          "local_path": "xcc/misc/reg_key.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/shp_decode.cpp",
+          "mode": "100644",
+          "bytes": 20468,
+          "git_blob_sha1": "e78be753ec3e5602af6f4688419311b4ac49ab21",
+          "sha256": "187451a91020e06d125b8c0e0e882b45e7071fa9eb25d0517149356c2795da4e",
+          "local_path": "xcc/misc/shp_decode.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/shp_decode.h",
+          "mode": "100644",
+          "bytes": 1709,
+          "git_blob_sha1": "df17b2e4e1ce7bdd9834baf247f90295b7a82b30",
+          "sha256": "54314c9ebb8a9b56559d92a56492df073997739ba901ec4e74222716ff791bf6",
+          "local_path": "xcc/misc/shp_decode.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/shp_ts_file.cpp",
+          "mode": "100644",
+          "bytes": 14818,
+          "git_blob_sha1": "db60a929440a8a321648c23dc46a8a70db9feef8",
+          "sha256": "19ffdea44b521b0d65f8375fabc5fae771a7cfa1f552e4001b0b2fb7025722de",
+          "local_path": "xcc/misc/shp_ts_file.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/shp_ts_file.h",
+          "mode": "100644",
+          "bytes": 2844,
+          "git_blob_sha1": "76261cd98ddcf0b7e0f0a5452aa34d7edb45bf43",
+          "sha256": "c9ef2ec5916c2713f6922b8201d9a504393b0f08f767d0d01713dbd6f8e96255",
+          "local_path": "xcc/misc/shp_ts_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/stdafx.h",
+          "mode": "100644",
+          "bytes": 757,
+          "git_blob_sha1": "de008af3e45cba0cdfa3896217755bf2e075173c",
+          "sha256": "8917b416e0dcac1ed80af2ba4254df8400e3a00ebf2dc8f580e58c6893086a1f",
+          "local_path": "xcc/misc/stdafx.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/string_conversion.cpp",
+          "mode": "100644",
+          "bytes": 4104,
+          "git_blob_sha1": "e1c1eff73f28ce24f0d966284a4013ef5a60d57f",
+          "sha256": "d4e02107453e0e02ed82daced6f06fb91b9b19310b92db87d242232dad43cd99",
+          "local_path": "xcc/misc/string_conversion.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/string_conversion.h",
+          "mode": "100644",
+          "bytes": 1473,
+          "git_blob_sha1": "82712551b3f26be9335d2e26aa3e3096e28360cf",
+          "sha256": "aaa5cc61c9a27d7a7be7f3c7f7248192fb7768aeda224d6b63b2d235b5448a6b",
+          "local_path": "xcc/misc/string_conversion.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/tmp_file.h",
+          "mode": "100644",
+          "bytes": 1422,
+          "git_blob_sha1": "da7334e2a667c6e551b8c0ff47700803699a84ae",
+          "sha256": "f6248845b547102355be46c9ab5cb86cf2050de2a6bbc31698c13f443b8d437d",
+          "local_path": "xcc/misc/tmp_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/tmp_ts_file.cpp",
+          "mode": "100644",
+          "bytes": 3917,
+          "git_blob_sha1": "4347f86d6926dbd288949350926597c2976efd05",
+          "sha256": "19a92c7022156af3bf0a30162acca98f24d7fa58bda5e80c24adde51fb829bee",
+          "local_path": "xcc/misc/tmp_ts_file.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/tmp_ts_file.h",
+          "mode": "100644",
+          "bytes": 4178,
+          "git_blob_sha1": "43958bf406e7a5e15eb296a3b1fdeacce2465a15",
+          "sha256": "8b5254c805e94560ee85ebbde223187da4acae42e72443432ed8c125cb1c1429",
+          "local_path": "xcc/misc/tmp_ts_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/vartypes.h",
+          "mode": "100644",
+          "bytes": 825,
+          "git_blob_sha1": "962112877145aa1d801d792aef76b8367de0b2e3",
+          "sha256": "2cacbc5b160ec7f45c50888dc2c7a011b78364d3afc286f0bc23a4548840a5a0",
+          "local_path": "xcc/misc/vartypes.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/video_decoder.cpp",
+          "mode": "100644",
+          "bytes": 913,
+          "git_blob_sha1": "83668386ecd98ee9e3564720d8193948b9a2892c",
+          "sha256": "e81302138b705d046c5ab932d33a96bcbe65b4ddf5f8c756e7aa99e46b0cd3f2",
+          "local_path": "xcc/misc/video_decoder.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/video_decoder.h",
+          "mode": "100644",
+          "bytes": 1207,
+          "git_blob_sha1": "317f595d98c573a02fd22c1d821ed1367ab4d4df",
+          "sha256": "12f80e1493b84d57f836678c77d326ac1a01af56cb4362f702d0eb48cf59bbfe",
+          "local_path": "xcc/misc/video_decoder.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/video_file.cpp",
+          "mode": "100644",
+          "bytes": 801,
+          "git_blob_sha1": "7f151e0c5866532217ae6036b2f2ad738265cd73",
+          "sha256": "22cf12da8fa1cd2f93bd3daeefe9c5d50e9dce38566d036585b1998c940d1e13",
+          "local_path": "xcc/misc/video_file.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/video_file.h",
+          "mode": "100644",
+          "bytes": 1225,
+          "git_blob_sha1": "a7c28727e5fc6b68a9cdc162029683b540cf9e66",
+          "sha256": "8cef38b080d4de56b3fe1382f2bb0ab8d69aa5eeafb1eee68d16b44989796b0b",
+          "local_path": "xcc/misc/video_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/virtual_audio.cpp",
+          "mode": "100644",
+          "bytes": 2101,
+          "git_blob_sha1": "410ae764e1b19e31d726d01c2a5887ace729e3da",
+          "sha256": "38e9f1364478f22bb1df0f8cdd0c862e0e8eb9d1407b32eccceb13c5a9a160b5",
+          "local_path": "xcc/misc/virtual_audio.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/virtual_audio.h",
+          "mode": "100644",
+          "bytes": 1692,
+          "git_blob_sha1": "6cc6de8bf44c7b85a221cc48ff040d38624fc74d",
+          "sha256": "c28dc20900a8e444c73ab1637cf846dbddaa5bd273c8d30ce4415e42dc62eef7",
+          "local_path": "xcc/misc/virtual_audio.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/virtual_binary.cpp",
+          "mode": "100644",
+          "bytes": 3673,
+          "git_blob_sha1": "7d3ebcb47a994c0ad5fced30bf6c74612476be74",
+          "sha256": "6b8118222ef7dd1a6bb4dcf4ca432b0c6f46cbbabf10b1888c2155b3fe66be59",
+          "local_path": "xcc/misc/virtual_binary.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/virtual_binary.h",
+          "mode": "100644",
+          "bytes": 2987,
+          "git_blob_sha1": "977117530b412b6678e3a91013e8da095cbb87d1",
+          "sha256": "37f872424bf0c99974d24c6571072d32f0e4b3f9a052b520e5c2dd0a084e56b4",
+          "local_path": "xcc/misc/virtual_binary.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/virtual_file.cpp",
+          "mode": "100644",
+          "bytes": 2146,
+          "git_blob_sha1": "ba701838464f89a7b97ff3e29e4f1ad8c850642e",
+          "sha256": "f863f56cac99928a57361d404dc92ea10b45f642d0bbe3143e5c35c9d480f993",
+          "local_path": "xcc/misc/virtual_file.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/virtual_file.h",
+          "mode": "100644",
+          "bytes": 1279,
+          "git_blob_sha1": "2a4637eda5a0d7dabb4f851c51453b97cadd1343",
+          "sha256": "40d07f6cefc60d5dfe20fff85404e13f6dcd22d2f9501f8ea31e95dce0bb610f",
+          "local_path": "xcc/misc/virtual_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/virtual_image.cpp",
+          "mode": "100644",
+          "bytes": 7717,
+          "git_blob_sha1": "456ea2dd8550a5d55130c04c922f4293332e0cca",
+          "sha256": "cfd185faadcc15eed938191cac620123c13ba9b8430d271a0aacc33bfe4f4427",
+          "local_path": "xcc/misc/virtual_image.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/virtual_image.h",
+          "mode": "100644",
+          "bytes": 3147,
+          "git_blob_sha1": "0a2a2d693bb51d58503f7867d5456f668637a210",
+          "sha256": "5e63e170100cb14f68370029a27860bb2c9ffcc629200a40b9a58e51ff121098",
+          "local_path": "xcc/misc/virtual_image.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/virtual_tfile.cpp",
+          "mode": "100644",
+          "bytes": 2237,
+          "git_blob_sha1": "c1965f66cff2b3da0e0eda39242388d8a4642d56",
+          "sha256": "d0eacc6fbba63bac2377062a096e8938d639b9e56753f9e8e82e65e6dfae6d64",
+          "local_path": "xcc/misc/virtual_tfile.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/virtual_tfile.h",
+          "mode": "100644",
+          "bytes": 1226,
+          "git_blob_sha1": "418be44af864e9aefad98f6c854fa80338834c9a",
+          "sha256": "69521da8f6a7b4344eddda9cac53ec040d2adbfe07d592320a720d070600d7df",
+          "local_path": "xcc/misc/virtual_tfile.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/vxl_file.cpp",
+          "mode": "100644",
+          "bytes": 19218,
+          "git_blob_sha1": "a629aa1ae515e637180eb1a010b27d24fad6b2d7",
+          "sha256": "00c733f4266978e5fb74ea0cda9fd554b2433e36233da0fc2147c21f6affb8d3",
+          "local_path": "xcc/misc/vxl_file.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/vxl_file.h",
+          "mode": "100644",
+          "bytes": 3135,
+          "git_blob_sha1": "5dd18577a9f88b8957ddc3677acad2dca88e24bd",
+          "sha256": "e1c6e97eb75d40f0b6e12e5c6f7efabfa672c73c31692b69be4dc310d0a00c72",
+          "local_path": "xcc/misc/vxl_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/win_handle.cpp",
+          "mode": "100644",
+          "bytes": 1352,
+          "git_blob_sha1": "ce6f97d5f4418a129589405bb642c1f5c8fb5709",
+          "sha256": "84a1909a90cae04657d446208f493f8235687bb2a3ee0aa38f7510ae34ed448f",
+          "local_path": "xcc/misc/win_handle.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/win_handle.h",
+          "mode": "100644",
+          "bytes": 1317,
+          "git_blob_sha1": "9d49d925d64ca1dd2f1dcf5e90156631486862f9",
+          "sha256": "b4276ea8e735346bbf90921f5be0135bc400b30d8479743908fb963cf9bbb2b5",
+          "local_path": "xcc/misc/win_handle.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc/data_ref.h",
+          "mode": "100644",
+          "bytes": 1745,
+          "git_blob_sha1": "685d4b5e69d3269ef379f8c9b89b9b9acf502865",
+          "sha256": "9f2ae6f1b0002d672ff7ea2cd47c2eacd561c60667d4a13b2e3c6a0eb782fe29",
+          "local_path": "xcc/misc/xcc/data_ref.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc/find_ptr.h",
+          "mode": "100644",
+          "bytes": 2671,
+          "git_blob_sha1": "0ec2a11928e17142f4296fb3916182ab3fed7c6c",
+          "sha256": "b4cc5877d2e0c7ac74bee5ed13fc48c623952dcc75007a96873d34b2069afbd3",
+          "local_path": "xcc/misc/xcc/find_ptr.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc/string_view.h",
+          "mode": "100644",
+          "bytes": 2022,
+          "git_blob_sha1": "6b6484f8a395c24c267f398016da83e72000cc30",
+          "sha256": "844ac347d0bce148f7d16996585b13de95daae1a1f7c3cda98d771a333fb286b",
+          "local_path": "xcc/misc/xcc/string_view.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc_dirs.cpp",
+          "mode": "100644",
+          "bytes": 9029,
+          "git_blob_sha1": "a8cb29a6e01e42546976b13329fc022a18f322c6",
+          "sha256": "f90bc3e0dfa391573021bdaed39a0b8e81ff443a0a75a46f88e7c1391c007e60",
+          "local_path": "xcc/misc/xcc_dirs.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc_dirs.h",
+          "mode": "100644",
+          "bytes": 1924,
+          "git_blob_sha1": "8f374d1c10b17eda255fd43c9a1c90cc4f348fc1",
+          "sha256": "d9ea2e9d924062e76727d27753739e5d85c43656fbaec0bee30fd45a7df93006",
+          "local_path": "xcc/misc/xcc_dirs.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc_file.h",
+          "mode": "100644",
+          "bytes": 1250,
+          "git_blob_sha1": "d063e38556f2ca217c9b4dea0f400fe778b65cee",
+          "sha256": "b1008f261eeae0f5d990c60c7dac9bf9aa7dea6b41bb9d18ea2ef32cb63f601e",
+          "local_path": "xcc/misc/xcc_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc_file_sh.h",
+          "mode": "100644",
+          "bytes": 964,
+          "git_blob_sha1": "f2fbf69f8e0d14874eebc16c9ba77ea4449763b8",
+          "sha256": "414675ab2aa8b07c43d9bfd683f6ba2e7ba64207d2a6e073f8b37dfd1069e2c3",
+          "local_path": "xcc/misc/xcc_file_sh.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc_lmd_file.h",
+          "mode": "100644",
+          "bytes": 1253,
+          "git_blob_sha1": "b5bde8fba579f44bccdea29c1b6bdbe1ed4ab6fb",
+          "sha256": "6ae30fc6e5178380c046ce2cc80cdf3596a42508bcc9df7e5db22bb213fb2e28",
+          "local_path": "xcc/misc/xcc_lmd_file.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc_lmd_file_write.cpp",
+          "mode": "100644",
+          "bytes": 1671,
+          "git_blob_sha1": "23fda0288497768407751e838fc61de9bfe89883",
+          "sha256": "ae2cf5e12d76b16856470ceaecb6cdf424d7b2a6233e0ac64dddea3803e65e6c",
+          "local_path": "xcc/misc/xcc_lmd_file_write.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc_lmd_file_write.h",
+          "mode": "100644",
+          "bytes": 1049,
+          "git_blob_sha1": "4e02a8ee54809dffb814e350c1b399f19044a77d",
+          "sha256": "7237fdbaeb29e020d29f144aecd4fd1cffd6362eb41ea1af91799040c45034ab",
+          "local_path": "xcc/misc/xcc_lmd_file_write.h"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc_registry.cpp",
+          "mode": "100644",
+          "bytes": 936,
+          "git_blob_sha1": "e14c965692c47a865e85a7d01de07210bc93f23d",
+          "sha256": "cb8d30c0bc9b0eb5d96a4890856df2bba54b35cf6ccdc1898740a4fde28077bc",
+          "local_path": "xcc/misc/xcc_registry.cpp"
+        },
+        {
+          "path": "3rdParty/xcc/misc/xcc_registry.h",
+          "mode": "100644",
+          "bytes": 865,
+          "git_blob_sha1": "48890e6d1acab9c74bc2e28eb05d04bce5d2d03b",
+          "sha256": "4154c3493c9164b579c09791128113ec18a8b87024d974dc4d738b1950c249e5",
+          "local_path": "xcc/misc/xcc_registry.h"
+        },
+        {
+          "path": "3rdParty/xcc/patch.70358b46858973426c1ecf204485cb2a88716217.diff",
+          "mode": "100644",
+          "bytes": 32665,
+          "git_blob_sha1": "497958a886264b3f7001b720ac5397c91a4a9bf1",
+          "sha256": "05bce14a4a30a93aa046238c00807a1224387ae6b7d56e3eeb9e9034566f060f",
+          "local_path": "xcc/patch.70358b46858973426c1ecf204485cb2a88716217.diff"
+        },
+        {
+          "path": "3rdParty/xcc/vcpkg.json",
+          "mode": "100644",
+          "bytes": 211,
+          "git_blob_sha1": "92d46dd95b6e3e31c471a4dd40684052b0b620ca",
+          "sha256": "31061e1b578460752828be1916517ee848eafb541bf815c309526355f40773d3",
+          "local_path": "xcc/vcpkg.json"
+        },
+        {
+          "path": "LICENSE.md",
+          "mode": "100644",
+          "bytes": 35149,
+          "git_blob_sha1": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "local_path": "MISSION_EDITOR_LICENSE.md"
+        },
+        {
+          "path": "MissionEditorPackLib/MissionEditorPackLib.cpp",
+          "mode": "100644",
+          "bytes": 54634,
+          "git_blob_sha1": "d8fc8163b86b0607038dafe6d26f47dcfc12f1e3",
+          "sha256": "590d9ea0cfad0b15284372e5754cc142013e6f4ef6350e2c8e83e787deccddb6",
+          "local_path": "MissionEditorPackLib/MissionEditorPackLib.cpp"
+        },
+        {
+          "path": "MissionEditorPackLib/MissionEditorPackLib.h",
+          "mode": "100644",
+          "bytes": 6524,
+          "git_blob_sha1": "0e7a50a87d34f1bdd360512e2a0e42c0906c73d4",
+          "sha256": "75e99dc0670012a9e797b47e5e8cd83ab096200172f7b44d7681742932cbf7e6",
+          "local_path": "MissionEditorPackLib/MissionEditorPackLib.h"
+        },
+        {
+          "path": "MissionEditorPackLib/MissionEditorPackLib.vcxproj",
+          "mode": "100644",
+          "bytes": 6939,
+          "git_blob_sha1": "a5a559aeaff2ac0fa103bf5baf27be5f1e358bc7",
+          "sha256": "1e0c70538c183fd6fc2bc87970b3bd080e55264136bc881de6578163489dda0f",
+          "local_path": "MissionEditorPackLib/MissionEditorPackLib.vcxproj"
+        },
+        {
+          "path": "MissionEditorPackLib/MissionEditorPackLib.vcxproj.filters",
+          "mode": "100644",
+          "bytes": 1119,
+          "git_blob_sha1": "2e85b83ca70daca6dbe3872a9e5f8f2f291b9f92",
+          "sha256": "c332aa8c3add275b8293d5a4c438b8abca608ead14f46e979944b34c085ffc46",
+          "local_path": "MissionEditorPackLib/MissionEditorPackLib.vcxproj.filters"
+        },
+        {
+          "path": "MissionEditorPackLib/MissionEditorPackLib.vcxproj.user",
+          "mode": "100644",
+          "bytes": 165,
+          "git_blob_sha1": "88a550947edbc3c5003a41726f0749201fdb6822",
+          "sha256": "c65b2b1a71dcd26333d8dc209ffeb90a906ddd8bbab6d45dada8e3bc84c30226",
+          "local_path": "MissionEditorPackLib/MissionEditorPackLib.vcxproj.user"
+        },
+        {
+          "path": "MissionEditorPackLib/Vec3.h",
+          "mode": "100644",
+          "bytes": 6750,
+          "git_blob_sha1": "5c468861e1d23d56a7672c77db0ff2f1a14669ed",
+          "sha256": "e4610e620d2df12a8a82139ffb622c0a9dae7d05b44e284d34b5da6758191d22",
+          "local_path": "MissionEditorPackLib/Vec3.h"
+        },
+        {
+          "path": "MissionEditorPackLib/VoxelNormals.cpp",
+          "mode": "100644",
+          "bytes": 2536,
+          "git_blob_sha1": "97e42814ffe0bbbafed62665414956111bae7c52",
+          "sha256": "4f96519b03814e75d57b730f5dd754c6dada2750fbd050eb6ddb0bc89d69617c",
+          "local_path": "MissionEditorPackLib/VoxelNormals.cpp"
+        },
+        {
+          "path": "MissionEditorPackLib/VoxelNormals.h",
+          "mode": "100644",
+          "bytes": 2132,
+          "git_blob_sha1": "b589cb3d58864a50e71834fec3eb7177945ce025",
+          "sha256": "1f15738f63ae2046bb4624564bf3e55580330da4f78ad7c09f539addf9741a8a",
+          "local_path": "MissionEditorPackLib/VoxelNormals.h"
+        },
+        {
+          "path": "README.md",
+          "mode": "100644",
+          "bytes": 7703,
+          "git_blob_sha1": "b8ad42ee77cc51b9b7e926b7e2b4305d51113093",
+          "sha256": "937e76b18ac7c27a8e8a01dbbbace464914bb2068c987e2b62b2e60d6d7bf3b8",
+          "local_path": "MISSION_EDITOR_README.md"
+        }
+      ],
+      "file_count": 92,
+      "total_bytes": 477482,
+      "directory_mapping": {
+        "3rdParty/xcc": "xcc",
+        "MissionEditorPackLib": "MissionEditorPackLib"
+      },
+      "root_file_mapping": {
+        "README.md": "MISSION_EDITOR_README.md",
+        "LICENSE.md": "MISSION_EDITOR_LICENSE.md"
+      }
+    }
+  ]
+}

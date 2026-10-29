@@ -1,0 +1,18 @@
+<Project Sdk="Godot.NET.Sdk/4.7.2">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Configuration)' != 'Debug'">
+    <Compile Remove="tests/**/*.cs" />
+  </ItemGroup>
+  <!-- Native CMake builds own shader resources and their compiled library contract. -->
+  <Target Name="PrepareTestMaps" BeforeTargets="PrepareForBuild">
+    <ItemGroup>
+      <TestMap Include="$(MSBuildProjectDirectory)/../data/maps/*.map" />
+    </ItemGroup>
+    <Copy SourceFiles="@(TestMap)" DestinationFolder="$(MSBuildProjectDirectory)/maps" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

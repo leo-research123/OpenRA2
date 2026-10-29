@@ -1,0 +1,6 @@
+# Preserve the exact upstream bytes when adding or checking out these modules.
+wwlib/** -text -filter -ident
+xcc/** -text -filter -ident
+MissionEditorPackLib/** -text -filter -ident
+RENEGADE_*.md -text -filter -ident
+MISSION_EDITOR_*.md -text -filter -ident

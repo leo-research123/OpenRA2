@@ -1,0 +1,179 @@
+; Three-faction infantry and ground-vehicle showcase with a mixed production base.
+; Credits use the original house INI unit of 100 dollars.
+[Basic]
+Name=Allied Soviet and Yuri Quick Test
+NewINIFormat=4
+MultiplayerOnly=no
+Player=Americans
+HomeCell=2
+IgnoreGlobalAITriggers=yes
+FreeRadar=no
+
+[Map]
+Theater=TEMPERATE
+Size=0,0,80,80
+LocalSize=2,2,76,72
+Level=0
+Fill=Clear
+
+[Lighting]
+Ambient=1.0
+Red=1.0
+Green=1.0
+Blue=1.0
+Ground=0.0
+Level=0.0
+
+[SpecialFlags]
+FogOfWar=no
+TiberiumGrows=no
+TiberiumSpreads=no
+
+[Waypoints]
+0=66066
+1=97119
+; Start on the unit showcase; pan north to reach the production base.
+2=96096
+
+[Houses]
+0=Americans
+1=Russians
+2=Neutral
+
+[Americans]
+Country=Americans
+Color=DarkRed
+TechLevel=10
+Credits=10000
+IQ=0
+Allies=Americans,Neutral
+
+[Russians]
+Country=Russians
+Color=DarkBlue
+TechLevel=1
+Credits=0
+IQ=0
+Allies=Russians,Neutral
+
+[Neutral]
+Allies=Americans,Russians,Neutral
+
+; Matching two-column bases: Allied on the left, Soviet on the right.
+; Rows align in screen space, with clear factory exits and a central aisle.
+[Structures]
+; Construction and advanced technology.
+0=Americans,GACNST,256,54,68,0,None,1,0,1,0,0,None,None,None,0,0
+1=Americans,GATECH,256,58,64,0,None,1,0,1,0,0,None,None,None,0,0
+2=Americans,NACNST,256,64,58,0,None,1,0,1,0,0,None,None,None,0,0
+3=Americans,NATECH,256,68,54,0,None,1,0,1,0,0,None,None,None,0,0
+; Refining and radar.
+4=Americans,GAREFN,256,59,73,0,None,1,0,1,0,0,None,None,None,0,0
+5=Americans,GAAIRC,256,63,69,0,None,1,0,1,0,0,None,None,None,0,0
+6=Americans,NAREFN,256,69,63,0,None,1,0,1,0,0,None,None,None,0,0
+7=Americans,NARADR,256,73,59,0,None,1,0,1,0,0,None,None,None,0,0
+; Vehicle and infantry production.
+8=Americans,GAWEAP,256,64,78,0,None,1,0,1,0,0,None,None,None,0,0
+9=Americans,GAPILE,256,68,74,0,None,1,0,1,0,0,None,None,None,0,0
+10=Americans,NAWEAP,256,74,68,0,None,1,0,1,0,0,None,None,None,0,0
+11=Americans,NAHAND,256,78,64,0,None,1,0,1,0,0,None,None,None,0,0
+; Two generators per faction, clear of the production exits.
+12=Americans,GAPOWR,256,68,82,0,None,1,0,1,0,0,None,None,None,0,0
+13=Americans,GAPOWR,256,72,78,0,None,1,0,1,0,0,None,None,None,0,0
+14=Americans,NAPOWR,256,78,72,0,None,1,0,1,0,0,None,None,None,0,0
+15=Americans,NAPOWR,256,82,68,0,None,1,0,1,0,0,None,None,None,0,0
+16=Russians,NAPOWR,256,115,93,0,None,0,0,1,0,0,None,None,None,0,0
+17=Russians,NAHAND,256,121,93,0,None,0,0,1,0,0,None,None,None,0,0
+; Keep the preplaced robot tank operational.
+18=Americans,GAROBO,256,59,83,0,None,1,0,1,0,0,None,None,None,0,0
+; Extra power beside the Soviet base.
+19=Americans,NANRCT,256,78,56,0,None,1,0,1,0,0,None,None,None,0,0
+; Closely spaced defense pairs below the base and above the infantry showcase.
+20=Americans,ATESLA,256,76,90,0,None,1,0,1,0,0,None,None,None,0,0
+21=Americans,ATESLA,256,78,88,0,None,1,0,1,0,0,None,None,None,0,0
+22=Americans,TESLA,256,86,80,0,None,1,0,1,0,0,None,None,None,0,0
+23=Americans,TESLA,256,88,78,0,None,1,0,1,0,0,None,None,None,0,0
+; Allied satellite uplink, clear of the refinery and factory exits.
+24=Americans,GASPYSAT,256,56,78,0,None,1,0,1,0,0,None,None,None,0,0
+
+; Keep infantry routed to their faction's barracks in this mixed-base sandbox.
+[GAPILE]
+Owner=British,French,Germans,Americans,Alliance
+[NAHAND]
+Owner=Russians,Confederation,Africans,Arabs
+
+; Every playable ground-vehicle type appears once under player control.
+; Columns run Allied (left), Soviet (center), Yuri (right), below the infantry.
+; Naval transports and flying vehicles are outside this showcase.
+[Units]
+; Allied ground vehicles.
+0=Americans,AMCV,256,90,106,0,Sleep,None,0,-1,0,-1,0,0
+1=Americans,CMIN,256,93,103,0,Sleep,None,0,-1,0,-1,0,0
+2=Americans,MTNK,256,92,108,0,Sleep,None,0,-1,0,-1,0,0
+3=Americans,FV,256,95,105,0,Sleep,None,0,-1,0,-1,0,0
+4=Americans,TNKD,256,94,110,0,Sleep,None,0,-1,0,-1,0,0
+5=Americans,SREF,256,97,107,0,Sleep,None,0,-1,0,-1,0,0
+6=Americans,MGTK,256,96,112,0,Sleep,None,0,-1,0,-1,0,0
+7=Americans,BFRT,256,99,109,0,Sleep,None,0,-1,0,-1,0,0
+8=Americans,ROBO,256,98,114,0,Sleep,None,0,-1,0,-1,0,0
+; Soviet ground vehicles.
+9=Americans,SMCV,256,96,100,0,Sleep,None,0,-1,0,-1,0,0
+10=Americans,HARV,256,99,97,0,Sleep,None,0,-1,0,-1,0,0
+11=Americans,HTNK,256,98,102,0,Sleep,None,0,-1,0,-1,0,0
+12=Americans,HTK,256,101,99,0,Sleep,None,0,-1,0,-1,0,0
+13=Americans,V3,256,100,104,0,Sleep,None,0,-1,0,-1,0,0
+14=Americans,DRON,256,103,101,0,Sleep,None,0,-1,0,-1,0,0
+15=Americans,TTNK,256,102,106,0,Sleep,None,0,-1,0,-1,0,0
+16=Americans,DTRUCK,256,105,103,0,Sleep,None,0,-1,0,-1,0,0
+17=Americans,APOC,256,104,108,0,Sleep,None,0,-1,0,-1,0,0
+; Yuri ground vehicles.
+18=Americans,PCV,256,102,94,0,Sleep,None,0,-1,0,-1,0,0
+19=Americans,SMIN,256,105,91,0,Sleep,None,0,-1,0,-1,0,0
+20=Americans,LTNK,256,104,96,0,Sleep,None,0,-1,0,-1,0,0
+21=Americans,YTNK,256,107,93,0,Sleep,None,0,-1,0,-1,0,0
+22=Americans,TELE,256,106,98,0,Sleep,None,0,-1,0,-1,0,0
+23=Americans,CAOS,256,109,95,0,Sleep,None,0,-1,0,-1,0,0
+24=Americans,MIND,256,108,100,0,Sleep,None,0,-1,0,-1,0,0
+; Stationary enemy targets beside their own power plant and barracks.
+25=Russians,HTNK,256,115,101,0,Sleep,None,0,-1,0,-1,0,0
+26=Russians,HTNK,256,121,101,0,Sleep,None,0,-1,0,-1,0,0
+
+; Infantry use the same three columns south of the paired base defenses.
+; Include country exclusives, stolen-tech infantry and a freed slave worker.
+; The rocketeer is infantry; civilians and unused alternate forms are excluded.
+[Infantry]
+; Allied infantry.
+0=Americans,E1,256,78,94,0,Sleep,0,None,0,-1,0,0,0
+1=Americans,GGI,256,81,91,0,Sleep,0,None,0,-1,0,0,0
+2=Americans,JUMPJET,256,80,96,0,Sleep,0,None,0,-1,0,0,0
+3=Americans,ENGINEER,256,83,93,0,Sleep,0,None,0,-1,0,0,0
+4=Americans,ADOG,256,82,98,0,Sleep,0,None,0,-1,0,0,0
+5=Americans,GHOST,256,85,95,0,Sleep,0,None,0,-1,0,0,0
+6=Americans,SPY,256,84,100,0,Sleep,0,None,0,-1,0,0,0
+7=Americans,CLEG,256,87,97,0,Sleep,0,None,0,-1,0,0,0
+8=Americans,TANY,256,86,102,0,Sleep,0,None,0,-1,0,0,0
+9=Americans,SNIPE,256,89,99,0,Sleep,0,None,0,-1,0,0,0
+10=Americans,CCOMAND,256,88,104,0,Sleep,0,None,0,-1,0,0,0
+11=Americans,PTROOP,256,91,101,0,Sleep,0,None,0,-1,0,0,0
+; Soviet infantry.
+12=Americans,E2,256,84,88,0,Sleep,0,None,0,-1,0,0,0
+13=Americans,FLAKT,256,87,85,0,Sleep,0,None,0,-1,0,0,0
+14=Americans,SHK,256,86,90,0,Sleep,0,None,0,-1,0,0,0
+15=Americans,SENGINEER,256,89,87,0,Sleep,0,None,0,-1,0,0,0
+16=Americans,DOG,256,88,92,0,Sleep,0,None,0,-1,0,0,0
+17=Americans,IVAN,256,91,89,0,Sleep,0,None,0,-1,0,0,0
+18=Americans,DESO,256,90,94,0,Sleep,0,None,0,-1,0,0,0
+19=Americans,TERROR,256,93,91,0,Sleep,0,None,0,-1,0,0,0
+20=Americans,BORIS,256,92,96,0,Sleep,0,None,0,-1,0,0,0
+21=Americans,CIVAN,256,95,93,0,Sleep,0,None,0,-1,0,0,0
+; Yuri infantry.
+22=Americans,INIT,256,90,82,0,Sleep,0,None,0,-1,0,0,0
+23=Americans,YENGINEER,256,93,79,0,Sleep,0,None,0,-1,0,0,0
+24=Americans,BRUTE,256,92,84,0,Sleep,0,None,0,-1,0,0,0
+25=Americans,VIRUS,256,95,81,0,Sleep,0,None,0,-1,0,0,0
+26=Americans,YURI,256,94,86,0,Sleep,0,None,0,-1,0,0,0
+27=Americans,YURIPR,256,97,83,0,Sleep,0,None,0,-1,0,0,0
+28=Americans,SLAV,256,96,88,0,Sleep,0,None,0,-1,0,0,0
+; Stationary enemy infantry outside their own barracks.
+29=Russians,E2,256,119,99,0,Sleep,0,None,0,-1,0,0,0
+30=Russians,E2,256,123,99,0,Sleep,0,None,0,-1,0,0,0

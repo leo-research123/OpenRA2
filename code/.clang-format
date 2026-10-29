@@ -1,0 +1,76 @@
+---
+BasedOnStyle: LLVM
+Standard: c++20
+
+# Indentation: 4 spaces, never tabs.
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+ConstructorInitializerIndentWidth: 4
+AccessModifierOffset: -4
+IndentCaseLabels: true
+IndentPPDirectives: None
+NamespaceIndentation: None
+
+# Braces: the opening brace stays on the line of its statement.
+BreakBeforeBraces: Attach
+BraceWrapping:
+    AfterCaseLabel: false
+    AfterClass: false
+    AfterControlStatement: Never
+    AfterEnum: false
+    AfterFunction: false
+    AfterNamespace: false
+    AfterStruct: false
+    AfterUnion: false
+    BeforeCatch: false
+    BeforeElse: false
+InsertBraces: false
+
+# Spaces: binary and assignment operators are surrounded by one space.
+SpaceBeforeAssignmentOperators: true
+SpacesInParensOptions:
+    Other: false
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: false
+SpaceBeforeCpp11BracedList: false
+SpacesBeforeTrailingComments: 2
+SpacesInLineCommentPrefix:
+    Minimum: 1
+    Maximum: 1
+PointerAlignment: Left
+ReferenceAlignment: Left
+SpaceAroundPointerQualifiers: Default
+
+# Wrapping.
+ColumnLimit: 120
+BinPackArguments: true
+BinPackParameters: true
+AlignAfterOpenBracket: Align
+AlignOperands: Align
+BreakBeforeBinaryOperators: None
+BreakConstructorInitializers: BeforeColon
+PenaltyReturnTypeOnItsOwnLine: 200
+BreakTemplateDeclarations: Yes
+
+# Short forms.
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Never
+AllowShortLambdasOnASingleLine: All
+
+# Layout of declarations and includes.
+AlignConsecutiveAssignments: None
+AlignConsecutiveDeclarations: None
+AlignTrailingComments: true
+FixNamespaceComments: false
+ReflowComments: false
+SortIncludes: Never
+MaxEmptyLinesToKeep: 1
+KeepEmptyLines:
+    AtStartOfBlock: false
+EmptyLineBeforeAccessModifier: LogicalBlock
+...

@@ -1,0 +1,8 @@
+file(READ "${INPUT}" data HEX)
+string(LENGTH "${data}" size)
+math(EXPR remainder "${size} % 8")
+if(size LESS 40 OR NOT remainder EQUAL 0 OR NOT data MATCHES "^03022307")
+    message(FATAL_ERROR "Invalid SPIR-V: ${INPUT}")
+endif()
+string(REGEX REPLACE "([0-9a-f][0-9a-f])([0-9a-f][0-9a-f])([0-9a-f][0-9a-f])([0-9a-f][0-9a-f])" "0x\\4\\3\\2\\1u," words "${data}")
+file(WRITE "${OUTPUT}" "#pragma once\n#include <cstdint>\nnamespace render {\ninline constexpr std::uint32_t ${NAME}[]{${words}};\n}\n")

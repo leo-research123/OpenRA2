@@ -9,6 +9,7 @@ compile_commands.json
 # Editor and platform caches.
 .DS_Store
 .idea/
+/.vscode/settings.json
 
 # Python bytecode caches.
 *.pyc
@@ -21,6 +22,11 @@ __pycache__/
 /code/godot/obj/
 # Generated from the authoritative sources in code/bridge/shaders/.
 /code/godot/shaders/
+# Generated from the authoritative maps in code/data/maps/.
+/code/godot/maps/
 
 # Documentation application backups.
 /.doc-backups/
+
+# Staged from the authoritative third-party dependency notices.
+/code/godot/third_party/icu/LICENSE.txt

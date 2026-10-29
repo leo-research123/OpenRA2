@@ -1,0 +1,138 @@
+#version 450
+
+// Per-pixel ABuffer of one lighting batch (lighting_batch.hpp LightFieldPlan)
+// for the native nonrotating target (row origin 0). A pixel lies in at most
+// two shroud cell footprints, one per iso row; they are applied in draw order
+// (upper row first), then the producers following the grid that cover the
+// pixel's 32-pixel bin, in submission order. This equals submitting every
+// request of the batch through map_abuffer_batch.comp: the same operations in
+// the same per-pixel order, and untouched pixels keep their value.
+layout(local_size_x = 8, local_size_y = 8, local_size_z = 1) in;
+
+// Field tables written by the host; push constant base addresses the header.
+layout(set = 0, binding = 0, std430) readonly buffer Words {
+    int words[];
+};
+layout(set = 0, binding = 1) uniform usampler2DArray resource_pages;
+uint resource_word(int at) { return texelFetch(resource_pages, ivec3(at & 1023, (at >> 10) & 1023, at >> 20), 0).r; }
+layout(set = 0, binding = 2, std430) buffer Lighting {
+    uint lights[];
+};
+
+layout(push_constant, std430) uniform Field {
+    int width;
+    int height;
+    int base;
+    int reserved;
+} field;
+
+// Header words (absolute offsets into words[]):
+// 0 kx, 1 ky, 2 a0, 3 s0, 4 columns, 5 rows, 6 grid, 7 cells, 8 frame table,
+// 9 frame count, 10 other packets, 11 bins, 12 bin columns, 13 other count.
+// Cell entry: clip x, y, width, height, position x, y, frame.
+// Frame table entry: arena offset (-1 when the frame draws nothing), x, y, width, height.
+// Other packets: 20-word lighting packets, word 17 the arena offset.
+const int BIN_SIZE = 32;  // Must match the CPU lighting bin size (32).
+const int PACKET_WORD_COUNT = 20;
+const uint SOURCE_PIXEL_COVERED = 0x10000u;
+const uint WORD_MASK = 0xFFFFu;
+const uint NEUTRAL_LIGHT = 127u;
+const uint SHROUD_SKIP_VALUE = 254u;
+const int OPERATION_SHROUD = 1;
+const int OPERATION_FOG = 2;
+const int OPERATION_ALPHA_SHAPE = 3;
+
+int header(int i) { return words[field.base + i]; }
+
+// Exact floor division: float division can round 45 / 15 below 3.
+int floor_div(int x, int d) { return x >= 0 ? x / d : -((-x + d - 1) / d); }
+
+uint apply_operation(int operation, uint value, uint source) {
+    if (operation == OPERATION_SHROUD) {
+        return source != SHROUD_SKIP_VALUE ? source : value;
+    }
+    if (operation == OPERATION_FOG) {
+        return source <= NEUTRAL_LIGHT ? uint(max(0, int(value) + int(source) - int(NEUTRAL_LIGHT))) : value;
+    }
+    // AlphaShape: truncate and clamp each multiplication separately.
+    return min(255u, value * source / NEUTRAL_LIGHT);
+}
+
+void main() {
+    ivec2 pixel = ivec2(gl_GlobalInvocationID.xy);
+    if (pixel.x >= field.width || pixel.y >= field.height) {
+        return;
+    }
+    int index = pixel.y * field.width + pixel.x;
+    uint value = lights[index] & WORD_MASK;
+    bool changed = false;
+
+    int last_row = floor_div(pixel.y - header(1), 15);
+    for (int row = last_row - 1; row <= last_row; ++row) {
+        int column = floor_div(pixel.x - header(0), 30);
+        if (((column - row) & 1) != 0) {
+            column -= 1;
+        }
+        int grid_row = row - header(3), grid_column = column - header(2);
+        if (grid_row < 0 || grid_column < 0 || grid_row >= header(5) || grid_column >= header(4)) {
+            continue;
+        }
+        int entry = words[header(6) + grid_row * header(4) + grid_column];
+        if (entry < 0) {
+            continue;
+        }
+        int cell = header(7) + entry * 7;
+        if (pixel.x < words[cell] || pixel.y < words[cell + 1] || pixel.x >= words[cell] + words[cell + 2] ||
+            pixel.y >= words[cell + 1] + words[cell + 3]) {
+            continue;
+        }
+        int frame = words[cell + 6];
+        if (frame >= header(9)) {
+            continue;
+        }
+        int image = header(8) + frame * 5;
+        if (int(resource_word(image)) < 0) {
+            continue;
+        }
+        ivec2 local = pixel - ivec2(words[cell + 4] + int(resource_word(image + 1)),
+                                    words[cell + 5] + int(resource_word(image + 2)));
+        if (local.x < 0 || local.y < 0 || local.x >= int(resource_word(image + 3)) ||
+            local.y >= int(resource_word(image + 4))) {
+            continue;
+        }
+        uint sample_value =
+            resource_word(int(resource_word(image)) + local.y * int(resource_word(image + 3)) + local.x);
+        if ((sample_value & SOURCE_PIXEL_COVERED) != 0u) {
+            uint source = sample_value & 0xFFu;
+            if (source != SHROUD_SKIP_VALUE) {
+                value = source;
+                changed = true;
+            }
+        }
+    }
+
+    if (header(13) > 0) {
+        ivec2 bin = pixel / BIN_SIZE;
+        int pair = header(11) + 2 * (bin.y * header(12) + bin.x);
+        int first = header(11) + words[pair];
+        int count = words[pair + 1];
+        for (int k = 0; k < count; ++k) {
+            int p = header(10) + words[first + k] * PACKET_WORD_COUNT;
+            ivec2 local = pixel - ivec2(words[p + 4], words[p + 5]);
+            if (local.x < 0 || local.y < 0 || local.x >= words[p + 2] || local.y >= words[p + 3] ||
+                pixel.x < words[p + 6] || pixel.y < words[p + 7] || pixel.x >= words[p + 6] + words[p + 8] ||
+                pixel.y >= words[p + 7] + words[p + 9]) {
+                continue;
+            }
+            uint sample_value = resource_word(words[p + 17] + local.y * words[p + 2] + local.x);
+            if ((sample_value & SOURCE_PIXEL_COVERED) == 0u) {
+                continue;
+            }
+            value = apply_operation(words[p + 19], value, sample_value & 0xFFu);
+            changed = true;
+        }
+    }
+    if (changed) {
+        lights[index] = value;
+    }
+}

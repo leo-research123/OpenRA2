@@ -1,0 +1,18 @@
+[configuration]
+
+entry_symbol = "ra2_core_library_init"
+compatibility_minimum = "4.4"
+reloadable = false
+
+[libraries]
+
+macos.debug.arm64 = "../../out/debug/bin/ra2_core.arm64.debug.dylib"
+macos.release.arm64 = "../../out/release/bin/ra2_core.arm64.release.dylib"
+macos.debug.x86_64 = "../../out/debug/bin/ra2_core.x86_64.debug.dylib"
+macos.release.x86_64 = "../../out/release/bin/ra2_core.x86_64.release.dylib"
+windows.debug.x86_64 = "../../out/debug/bin/ra2_core.x86_64.debug.dll"
+windows.release.x86_64 = "../../out/release/bin/ra2_core.x86_64.release.dll"
+linux.debug.x86_64 = "../../out/debug/bin/ra2_core.x86_64.debug.so"
+linux.release.x86_64 = "../../out/release/bin/ra2_core.x86_64.release.so"
+linux.debug.arm64 = "../../out/debug/bin/ra2_core.arm64.debug.so"
+linux.release.arm64 = "../../out/release/bin/ra2_core.arm64.release.so"

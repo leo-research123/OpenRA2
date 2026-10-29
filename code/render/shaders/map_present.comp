@@ -1,0 +1,165 @@
+#version 450
+
+// Frame-level compute passes of the native map target: clearing when a compute
+// path writes first, and the Chrono screen transition (ChronoScreenEffect
+// 0x53B560 / 0x53BBA0 / 0x53C0A0). The frame color is itself the published
+// texture; its display truncates it to RGB565. One invocation owns one pixel.
+layout(local_size_x = 8, local_size_y = 8, local_size_z = 1) in;
+
+// Frame color (RGBA8 holding expanded RGB565), as in map_draw.comp. Scene Z
+// is the raster path's D32F attachment; the host clears it with a draw list.
+layout(set = 0, binding = 0, rgba8) uniform image2D output_image;
+layout(set = 0, binding = 1, std430) buffer Lighting {
+    uint light_intensities[];
+};
+// The transition's source image (the original's snapshot surface), as
+// expanded RGBA8 words.
+layout(set = 0, binding = 2, std430) buffer Snapshot {
+    uint snapshot_colors[];
+};
+// The Composite kept across the new-world capture pass.
+layout(set = 0, binding = 3, std430) buffer KeptComposite {
+    uint kept_colors[];
+};
+
+layout(set = 0, binding = 4) uniform sampler2D scene_depth;
+
+layout(push_constant, std430) uniform Frame {
+    int width;
+    int height;
+    int operation;
+    int stage;
+    int warp_step;
+    int initial_duration;
+    int brightness;
+    int reserved0;
+    // Effect area from the target origin: Composite width by Composite
+    // height minus the 32-row command bar.
+    int effect_width;
+    int effect_height;
+    int reserved1;
+    int reserved2;
+} frame;
+
+const int OPERATION_CLEAR = 1;              // Opaque black, neutral ABuffer (host: far Z).
+const int OPERATION_SNAPSHOT = 2;           // Snapshot <- frame.
+const int OPERATION_EFFECT = 3;             // Apply the stage inside the effect area.
+const int OPERATION_CLEAR_STATE = 4;        // Neutral ABuffer (host: far Z); keep color.
+const int OPERATION_KEEP_COMPOSITE = 5;     // Kept <- frame.
+const int OPERATION_RESTORE_COMPOSITE = 6;  // Frame <- kept, Composite columns only.
+const int OPERATION_ION_BLAST = 7;          // Dominator ripple from the current Composite.
+
+// ScreenEffectStage values.
+const int STAGE_WHITE = 2;
+const int STAGE_RESTORE = 4;
+
+const uint CLEAR_COLOR = 0xFF000000u;
+const uint WHITE_COLOR = 0xFFFFFFFFu;  // RGB565 0xFFFF, expanded.
+const uint CLEAR_LIGHT = 127u;         // Original ABuffer constructor baseline.
+
+// Same conversions as map_draw.comp. Frame colors are expanded RGB565, so
+// truncating back to RGB565 recovers the original word exactly.
+uint rgba8_to_rgb565(uint color) { return ((color & 0xF8u) << 8) | ((color >> 5) & 0x7E0u) | ((color >> 19) & 0x1Fu); }
+uint rgb565_to_rgba8(uint color) {
+    uint red = (color >> 11) & 0x1Fu;
+    uint green = (color >> 5) & 0x3Fu;
+    uint blue = color & 0x1Fu;
+    return ((red * 255u + 15u) / 31u) | (((green * 255u + 31u) / 63u) << 8) | (((blue * 255u + 15u) / 31u) << 16) |
+           0xFF000000u;
+}
+
+// Raster blends leave arbitrary 8-bit channels; reads truncate them to RGB565,
+// so the presented frame keeps the original color depth.
+uint load_color(ivec2 position) {
+    uvec3 byte = uvec3(round(imageLoad(output_image, position).rgb * 255.0));
+    return rgb565_to_rgba8(rgba8_to_rgb565(byte.r | (byte.g << 8) | (byte.b << 16)));
+}
+void store_color(ivec2 position, uint color) {
+    uint expanded = rgb565_to_rgba8(rgba8_to_rgb565(color));
+    imageStore(output_image, position,
+               vec4(expanded & 0xFFu, (expanded >> 8) & 0xFFu, (expanded >> 16) & 0xFFu, 255u) / 255.0);
+}
+
+// 0x53C0A0 (RGB565): each channel moves toward its maximum by
+// (brightness * (maximum - channel)) >> 8, then the channels are packed.
+uint whiten_rgb565(uint color, uint brightness) {
+    uint word = rgba8_to_rgb565(color);
+    uint red = (word >> 11) & 0x1Fu;
+    uint green = (word >> 5) & 0x3Fu;
+    uint blue = word & 0x1Fu;
+    red += (brightness * (31u - red)) >> 8;
+    green += (brightness * (63u - green)) >> 8;
+    blue += (brightness * (31u - blue)) >> 8;
+    return rgb565_to_rgba8((red << 11) | (green << 5) | blue);
+}
+
+// 0x53BBA0 rotates each pixel around the effect area's center by an angle
+// growing toward the center. Pixel-exact x87 sampling is intentionally
+// approximated; the swirl parameters, clamping and area follow the original.
+uint warped_snapshot(ivec2 position) {
+    vec2 center = vec2(frame.effect_width / 2, frame.effect_height / 2);
+    vec2 offset = vec2(position) - center;
+    float weight = (1.0 - dot(offset, offset) / max(dot(center, center), 1.0)) * 5.0;
+    float step = float(frame.warp_step);
+    float angle = 0.001 * step * (step + 1.0) * weight * weight;
+    float c = cos(angle), s = sin(angle);
+    ivec2 sample_at = ivec2(vec2(c * offset.x + s * offset.y, c * offset.y - s * offset.x) + center);
+    sample_at = clamp(sample_at, ivec2(0), ivec2(frame.effect_width - 1, frame.effect_height - 1));
+    return snapshot_colors[sample_at.y * frame.width + sample_at.x];
+}
+
+void main() {
+    ivec2 position = ivec2(gl_GlobalInvocationID.xy);
+    if (position.x >= frame.width || position.y >= frame.height) {
+        return;
+    }
+    int index = position.y * frame.width + position.x;
+
+    if (frame.operation == OPERATION_CLEAR || frame.operation == OPERATION_CLEAR_STATE) {
+        if (frame.operation == OPERATION_CLEAR) {
+            store_color(position, CLEAR_COLOR);
+        }
+        light_intensities[index] = CLEAR_LIGHT;
+    } else if (frame.operation == OPERATION_SNAPSHOT) {
+        snapshot_colors[index] = load_color(position);
+    } else if (frame.operation == OPERATION_KEEP_COMPOSITE) {
+        kept_colors[index] = load_color(position);
+    } else if (frame.operation == OPERATION_RESTORE_COMPOSITE) {
+        // The sidebar is a separate original surface the capture pass redraws.
+        if (position.x < frame.effect_width) {
+            store_color(position, kept_colors[index]);
+        }
+    } else if (frame.operation == OPERATION_ION_BLAST) {
+        // Original 0x53D330/0x53D580: an elliptical mask displaces rows downward.
+        // The immutable copy preserves the original forward scan's future-row reads.
+        if (position.x >= frame.effect_width || position.y >= frame.effect_height) return;
+        // 0x53D580 protects pixels in front of the ripple's world-height plane.
+        int threshold = frame.reserved0 - position.y;
+        float depth_scale = frame.stage != 0 ? 16777216.0 : 65536.0;
+        if (frame.stage == 0) threshold = int(uint(threshold) & 0xFFFFu);
+        if (texelFetch(scene_depth, position, 0).r * depth_scale <= float(threshold)) return;
+        ivec2 delta = position - ivec2(frame.reserved1, frame.reserved2);
+        if (abs(delta.x) > 255 || abs(delta.y) > 127) return;
+        float radius = length(vec2(delta.x, 2 * delta.y));
+        float speed = 569.0 * 0.0125;
+        float outer = float(min(frame.warp_step, 36)) * speed;
+        float inner = min(outer, -57.0 + float(frame.warp_step) * speed * 1.2);
+        if (radius < inner || radius > outer) return;
+        int shift = int(
+            (sin((radius - float(frame.warp_step) * speed + 38.0) * 0.11) * 3.5 + 3.0) / (radius / 51.0 + 1.0) + 0.5);
+        if (shift > 0 && position.y + shift < frame.effect_height)
+            store_color(position, kept_colors[(position.y + shift) * frame.width + position.x]);
+    } else if (frame.operation == OPERATION_EFFECT) {
+        // Rows below the effect area and the sidebar keep their contents.
+        if (position.x >= frame.effect_width || position.y >= frame.effect_height) {
+            return;
+        }
+        if (frame.stage == STAGE_WHITE) {
+            store_color(position, WHITE_COLOR);
+        } else if (frame.stage == STAGE_RESTORE) {
+            store_color(position, snapshot_colors[index]);
+        } else {
+            store_color(position, whiten_rgb565(warped_snapshot(position), uint(frame.brightness) & 0xFFFFu));
+        }
+    }
+}

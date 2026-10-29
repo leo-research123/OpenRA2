@@ -1,0 +1,31 @@
+ra2_add_product_contract(ra2_presentation_residency_tests presentation_residency tests/contracts/presentation/residency_tests.cpp)
+target_link_libraries(ra2_presentation_residency_tests PRIVATE ra2_core)
+# Explicit project implementation contracts; no reference corpus or game installation.
+ra2_core_private_includes(ra2_presentation_residency_tests)
+target_include_directories(ra2_presentation_residency_tests PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/render/src")
+
+ra2_add_product_contract(ra2_surface_tests surface tests/contracts/resources/surface_storage_tests.cpp)
+target_link_libraries(ra2_surface_tests PRIVATE ra2_core)
+
+ra2_add_product_contract(ra2_debug_commands_tests debug_commands tests/contracts/host/debug_command_tests.cpp)
+target_link_libraries(ra2_debug_commands_tests PRIVATE ra2_core)
+# Explicit project implementation contracts; no reference corpus or game installation.
+ra2_core_private_includes(ra2_debug_commands_tests)
+
+ra2_add_product_contract(ra2_game_speed_tests game_speed tests/contracts/host/game_speed_tests.cpp)
+target_link_libraries(ra2_game_speed_tests PRIVATE ra2_core)
+# Explicit project implementation contracts; no reference corpus or game installation.
+ra2_core_private_includes(ra2_game_speed_tests)
+target_include_directories(ra2_game_speed_tests PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/bridge/src")
+
+ra2_add_product_contract(ra2_resource_shutdown_tests resource_shutdown tests/contracts/resources/shutdown_tests.cpp)
+target_link_libraries(ra2_resource_shutdown_tests PRIVATE ra2_core)
+
+ra2_add_product_contract(ra2_resource_scope_tests resource_scope tests/contracts/resources/resource_scope_tests.cpp)
+target_link_libraries(ra2_resource_scope_tests PRIVATE ra2_core)
+
+ra2_add_product_contract(ra2_drawing_backend_tests drawing_backend tests/contracts/presentation/drawing_backend_tests.cpp)
+target_link_libraries(ra2_drawing_backend_tests PRIVATE ra2_core)
+# Explicit project implementation contracts; no reference corpus or game installation.
+ra2_core_private_includes(ra2_drawing_backend_tests)
+set_property(TEST drawing_backend APPEND PROPERTY LABELS render-cpu)

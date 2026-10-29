@@ -1,0 +1,15 @@
+#version 450
+layout(local_size_x = 64) in;
+// Three words per update: virtual destination, payload offset, word count.
+// All payloads follow the table in the same upload buffer.
+layout(set = 0, binding = 0, std430) readonly buffer Updates {
+    uint words[];
+};
+layout(set = 0, binding = 1, r32ui) uniform writeonly uimage2DArray resource_pages;
+void main() {
+    uint row = gl_WorkGroupID.y * 3u, index = gl_GlobalInvocationID.x;
+    if (index >= words[row + 2u]) return;
+    uint at = words[row] + index;
+    imageStore(resource_pages, ivec3(at & 1023u, (at >> 10u) & 1023u, at >> 20u),
+               uvec4(words[words[row + 1u] + index]));
+}

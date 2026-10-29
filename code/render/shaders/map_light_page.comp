@@ -1,0 +1,149 @@
+#version 450
+
+// Light ring: the world shroud light field (map_light_field.comp world mode)
+// kept in a world-anchored toroidal R8 texture, one byte per pixel at (world &
+// ring mask). The ring holds, for every world pixel of its 256x256 tiles, the
+// ABuffer value the field gives it after the frame clear: the shroud cells'
+// SHROUD.SHP frames, upper iso row first, then every AlphaShape covering it in
+// AlphaShapeClass::Array order. The cells and AlphaShapes are world-anchored,
+// so a tile stays valid until one of them changes; the view only selects which
+// tiles a frame reads (and generates, when they are new or invalid).
+//
+// Operation 0 generates the tiles listed in the tables (work group z = list
+// entry), one invocation per pixel. Operation 1 expands the ring under the
+// view into the frame's ABuffer (world = target + camera); pixels outside the
+// view keep their value, or take the clear value when the field is the frame's
+// first ABuffer writer.
+layout(local_size_x = 8, local_size_y = 8, local_size_z = 1) in;
+
+// Light field tables of this frame (map_light_field.comp header): only the
+// SHROUD.SHP frame table (header words 8 and 9) is read.
+layout(set = 0, binding = 0, std430) readonly buffer Words {
+    int words[];
+};
+// Frame resource arena (SHROUD.SHP frames) and scene arena (AlphaShape images).
+
+layout(set = 0, binding = 1) uniform usampler2DArray resource_pages;
+uint resource_word(int index) {
+    return texelFetch(resource_pages, ivec3(index & 1023, (index >> 10) & 1023, index >> 20), 0).r;
+}
+// The frame of every cell index (y * 512 + x), -1 for none.
+layout(set = 0, binding = 2, std430) readonly buffer WorldShroud {
+    int world_frames[];
+};
+// Host tables. Generation entry (6 words): tile origin x, y in world pixels, the
+// tile's origin in the ring, first and count of its AlphaShape indexes.
+// AlphaShape (5 words): scene arena offset, world x, y, width, height.
+layout(set = 0, binding = 3, std430) readonly buffer Tables {
+    int tables[];
+};
+layout(set = 0, binding = 4, r8ui) uniform uimage2D ring;
+layout(set = 0, binding = 5, std430) buffer Lighting {
+    uint lights[];
+};
+
+layout(push_constant, std430) uniform Light {
+    int operation;
+    // 0: field header, footprint origin (world), view x, generation entries,
+    //    AlphaShape indexes, AlphaShape table.
+    // 1: width, height, view x, y, width, height, camera x, y, ring mask x, y,
+    //    two unused words, clear outside the view.
+    int a;
+    int b;
+    int c;
+    int d;
+    int e;
+    int f;
+    int g;
+    int h;
+    int i;
+    int j;
+    int k;
+    int l;
+    int m;
+    int n;
+    int o;
+} light;
+
+const uint SOURCE_PIXEL_COVERED = 0x10000u;
+const uint NEUTRAL_LIGHT = 127u;
+const uint SHROUD_SKIP_VALUE = 254u;
+
+int floor_div(int x, int d) { return x >= 0 ? x / d : -((-x + d - 1) / d); }
+
+uint world_light(ivec2 world, int entry) {
+    uint value = NEUTRAL_LIGHT;
+    int header = light.a;
+    ivec2 origin = ivec2(light.b, light.c);
+    int last_row = floor_div(world.y - origin.y, 15);
+    for (int row = last_row - 1; row <= last_row; ++row) {
+        int column = floor_div(world.x - origin.x, 30);
+        if (((column - row) & 1) != 0) {
+            column -= 1;
+        }
+        int x = (row + column) / 2, y = (row - column) / 2;
+        if (x < 0 || y < 0 || x >= 512 || y >= 512) {
+            continue;
+        }
+        int frame = world_frames[y * 512 + x];
+        if (frame < 0 || frame >= words[header + 9]) {
+            continue;
+        }
+        ivec2 footprint = origin + ivec2(30 * column, 15 * row);
+        if (world.x < footprint.x || world.y < footprint.y || world.x >= footprint.x + 60 ||
+            world.y >= footprint.y + 30) {
+            continue;
+        }
+        int image = words[header + 8] + frame * 5;
+        if (int(resource_word(image)) < 0) {
+            continue;
+        }
+        ivec2 local =
+            world - (footprint + ivec2(light.d + int(resource_word(image + 1)), int(resource_word(image + 2))));
+        if (local.x < 0 || local.y < 0 || local.x >= int(resource_word(image + 3)) ||
+            local.y >= int(resource_word(image + 4))) {
+            continue;
+        }
+        uint sample_value =
+            resource_word(int(resource_word(image)) + local.y * int(resource_word(image + 3)) + local.x);
+        if ((sample_value & SOURCE_PIXEL_COVERED) != 0u && (sample_value & 0xFFu) != SHROUD_SKIP_VALUE) {
+            value = sample_value & 0xFFu;
+        }
+    }
+    int first = tables[entry + 4], count = tables[entry + 5];
+    for (int k = 0; k < count; ++k) {
+        int alpha = light.g + tables[light.f + first + k] * 5;
+        ivec2 local = world - ivec2(tables[alpha + 1], tables[alpha + 2]);
+        if (local.x < 0 || local.y < 0 || local.x >= tables[alpha + 3] || local.y >= tables[alpha + 4]) {
+            continue;
+        }
+        uint sample_value = resource_word(tables[alpha] + local.y * tables[alpha + 3] + local.x);
+        if ((sample_value & SOURCE_PIXEL_COVERED) != 0u) {
+            // AlphaShape: truncate and clamp each multiplication separately.
+            value = min(255u, value * (sample_value & 0xFFu) / NEUTRAL_LIGHT);
+        }
+    }
+    return value;
+}
+
+void main() {
+    if (light.operation == 0) {
+        int entry = light.e + int(gl_WorkGroupID.z) * 6;
+        ivec2 local = ivec2(gl_GlobalInvocationID.xy);
+        ivec2 world = ivec2(tables[entry], tables[entry + 1]) + local;
+        imageStore(ring, ivec2(tables[entry + 2], tables[entry + 3]) + local, uvec4(world_light(world, entry)));
+        return;
+    }
+    ivec2 pixel = ivec2(gl_GlobalInvocationID.xy);
+    if (pixel.x >= light.a || pixel.y >= light.b) {
+        return;
+    }
+    if (pixel.x < light.c || pixel.y < light.d || pixel.x >= light.c + light.e || pixel.y >= light.d + light.f) {
+        if (light.m != 0) {
+            lights[pixel.y * light.a + pixel.x] = NEUTRAL_LIGHT;
+        }
+        return;
+    }
+    ivec2 world = pixel + ivec2(light.g, light.h);
+    lights[pixel.y * light.a + pixel.x] = imageLoad(ring, world & ivec2(light.i, light.j)).r;
+}

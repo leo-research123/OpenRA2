@@ -1,0 +1,156 @@
+#version 450
+layout(local_size_x = 64) in;
+layout(set = 0, binding = 0, std430) readonly buffer Commands {
+    int commands[];
+};
+layout(set = 0, binding = 1, std430) readonly buffer Models {
+    uint arena[];
+};
+layout(set = 0, binding = 2, std430) buffer Projection {
+    uint projected[];
+};
+layout(set = 0, binding = 3, std430) buffer Depth {
+    uint depth[];
+};
+layout(set = 0, binding = 4, r32ui) uniform uimage2DArray images;
+ivec3 image_at(uint at) { return ivec3(at & 1023u, (at >> 10u) & 1023u, at >> 20u); }
+uint image_word(uint at) { return imageLoad(images, image_at(at)).r; }
+void store_word(uint at, uint value) { imageStore(images, image_at(at), uvec4(value)); }
+// One dispatch runs one stage of several independent images: workgroup row y
+// takes the image whose command base is commands[list + y]. Every image owns
+// its projection and depth scratch ranges (command words 30 and 31).
+layout(push_constant, std430) uniform Push {
+    uint list;
+    uint mode;
+    uint p0;
+    uint p1;
+} pc;
+uint pack_xy(int x, int y) { return (uint(x) & 65535u) | (uint(y) << 16); }
+void main() {
+    uint id = gl_GlobalInvocationID.x, b = uint(commands[pc.list + gl_WorkGroupID.y]);
+    uint pb = uint(commands[b + 30u]), db = uint(commands[b + 31u]);
+    int kind = commands[b];
+    uint output_base = uint(commands[b + 1u]), width = uint(commands[b + 2u]), height = uint(commands[b + 3u]);
+    uint left = uint(commands[b + 4u]), top = uint(commands[b + 5u]), count = uint(commands[b + 8u]);
+    bool buffered = commands[b + 6u] != 0;
+    if (kind == 2) {
+        if (id >= width * height) return;
+        ivec2 p = ivec2(id % width, id / width);
+        uint value = 0u;
+        for (int i = 0; i < commands[b + 15u]; ++i) {
+            int l = commands[b + 28u] + i * 12;
+            ivec2 q = p - ivec2(commands[l + 3], commands[l + 4]);
+            if (q.x < 0 || q.y < 0 || q.x >= commands[l + 1] || q.y >= commands[l + 2] || p.x < commands[l + 5] ||
+                p.y < commands[l + 6] || p.x >= commands[l + 5] + commands[l + 7] ||
+                p.y >= commands[l + 6] + commands[l + 8])
+                continue;
+            uint index = image_word(uint(commands[l] + q.y * commands[l + 1] + q.x)) & 255u;
+            if (index != 0u) value = 0x1000000u | index;
+        }
+        store_word(output_base + id, value);
+        return;
+    }
+    if (pc.mode == 0u) {
+        if (id < width * height) store_word(output_base + id, 0u);
+        if (buffered && id < height * 256u) depth[db + id] = 0u;
+        return;
+    }
+    if (kind == 1) {
+        if (pc.mode == 1u && id < uint(commands[b + 9u])) {
+            uint occupied = uint(commands[b + 29u]);
+            if (arena[occupied + id] == 0u) return;
+            uint nx = uint(commands[b + 22u]), x = id % nx, y = id / nx;
+            uint px =
+                ((uint(commands[b + 16u]) + x * uint(commands[b + 18u]) + y * uint(commands[b + 20u])) & 65535u) >> 8;
+            uint py =
+                ((uint(commands[b + 17u]) + x * uint(commands[b + 19u]) + y * uint(commands[b + 21u])) & 65535u) >> 8;
+            for (uint side = 0u; side < 2u; ++side) {
+                uint at = py * 256u + px + side, dx = at % 256u, dy = at / 256u;
+                if (dx < left || dx >= left + width || dy < top || dy >= top + height) continue;
+                uint mx = ((px + uint(commands[b + 24u])) & 65535u) + side,
+                     my = (py + uint(commands[b + 25u])) & 65535u;
+                bool masked = commands[b + 12u] >= 0 && mx < uint(commands[b + 13u]) && my < uint(commands[b + 14u]) &&
+                              (image_word(uint(commands[b + 12u]) + my * uint(commands[b + 13u]) + mx) & 255u) != 0u;
+                projected[pb + id * 4u + side * 2u + 1u] = masked ? 0u : 0x1000001u;
+                imageAtomicMax(images, image_at(output_base + (dy - top) * width + dx - left), id * 2u + side + 1u);
+            }
+        }
+    } else if (pc.mode == 1u) {
+        if (id >= uint(commands[b + 9u])) return;
+        uint s = uint(commands[b + 26u]);
+        for (int i = 0; i < commands[b + 7u]; ++i, s += 24u)
+            if (id < uint(commands[s + 18u] + commands[s + 19u])) break;
+        uint source = uint(commands[s + 16u]), column = id - uint(commands[s + 18u]);
+        uint first = arena[source + 2u + column * 2u], n = arena[source + 3u + column * 2u],
+             sample_base = source + 2u + arena[source] * 2u;
+        uint corner = uint(commands[s + 14u]), sizes = uint(commands[s + 13u]), coord = arena[sample_base + first * 2u];
+        uint x = coord & 255u, y = (coord >> 8) & 255u,
+             ix = (corner == 0u || corner == 1u || corner == 4u || corner == 5u) ? (sizes & 255u) - 1u - x : x;
+        uint iy = (corner == 0u || corner == 3u || corner == 4u || corner == 7u) ? ((sizes >> 8) & 255u) - 1u - y : y;
+        uint xy = pack_xy(commands[s], commands[s + 1u]) + ix * pack_xy(commands[s + 3u], commands[s + 4u]) +
+                  iy * pack_xy(commands[s + 6u], commands[s + 7u]),
+             cursor = 0u;
+        for (uint j = 0u; j < n; ++j) {
+            uint local_sample = first + j, k = uint(commands[s + 17u]) + local_sample,
+                 v = arena[sample_base + local_sample * 2u], normal = arena[sample_base + local_sample * 2u + 1u];
+            uint z = (v >> 16) & 255u, iz = corner >= 4u ? ((sizes >> 16) & 255u) - 1u - z : z;
+            uint px, py,
+                pz = (uint(commands[s + 2u] + int(ix) * commands[s + 5u] + int(iy) * commands[s + 8u] +
+                           int(iz) * commands[s + 11u]) &
+                      65535u) >>
+                     8;
+            if (!buffered) {
+                int skip = int(iz - cursor);
+                xy += pack_xy(skip * commands[s + 9u], skip * commands[s + 10u]);
+                px = (xy >> 8) & 255u;
+                py = xy >> 24;
+                xy += pack_xy(commands[s + 9u], commands[s + 10u]);
+                cursor = iz + 1u;
+            } else {
+                px = (uint(commands[s] + int(ix) * commands[s + 3u] + int(iy) * commands[s + 6u] +
+                           int(iz) * commands[s + 9u]) &
+                      65535u) >>
+                     8;
+                py = (uint(commands[s + 1u] + int(ix) * commands[s + 4u] + int(iy) * commands[s + 7u] +
+                           int(iz) * commands[s + 10u]) &
+                      65535u) >>
+                     8;
+            }
+            uint color = v >> 24;
+            if (color != 0u)
+                color =
+                    arena[uint(commands[b + 10u]) +
+                          min(uint(commands[uint(commands[b + 27u]) + normal]), uint(commands[b + 11u]) - 1u) * 256u +
+                          color];
+            uint delta = uint(128 - int(pz) - commands[s + 12u]) & 65535u;
+            projected[pb + k * 2u] = px | (py << 8) | (pz << 16);
+            projected[pb + k * 2u + 1u] = 0x1000000u | (delta << 8) | color;
+            if (!buffered && px >= left && px < left + width && py >= top && py < top + height)
+                imageAtomicMax(images, image_at(output_base + (py - top) * width + px - left), k + 1u);
+        }
+    }
+    if (pc.mode != 2u) return;
+    if (!buffered) {
+        if (id < width * height) {
+            uint rank = image_word(output_base + id);
+            store_word(output_base + id, rank == 0u ? 0u : projected[pb + (rank - 1u) * 2u + 1u]);
+        }
+        return;
+    }
+    // Depth-enabled spans test the first pixel before writing both neighbours.
+    // Replay independent rows in exact section/column/sample order.
+    if (id >= height) return;
+    for (uint k = 0u; k < count; ++k) {
+        uint p = projected[pb + k * 2u];
+        if (((p >> 8) & 255u) != id + top) continue;
+        uint x = p & 255u, z = p >> 16, at = id * 256u + x;
+        if (z <= depth[db + at]) continue;
+        uint color = projected[pb + k * 2u + 1u];
+        if (x >= left && x < left + width) store_word(output_base + id * width + x - left, color);
+        depth[db + at] = z;
+        if (x < 255u) {
+            if (x + 1u >= left && x + 1u < left + width) store_word(output_base + id * width + x + 1u - left, color);
+            depth[db + at + 1u] = z;
+        }
+    }
+}

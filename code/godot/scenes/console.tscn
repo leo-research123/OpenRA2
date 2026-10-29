@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/GameConsole.cs" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="ConsoleBackground"]
+bg_color = Color(0.025, 0.04, 0.055, 0.87)
+border_width_bottom = 2
+border_color = Color(0.45, 0.75, 0.85, 0.9)
+
+[node name="Console" type="PanelContainer"]
+script = ExtResource("1")
+visible = false
+layout_mode = 1
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 534.0
+offset_bottom = 224.0
+mouse_filter = 0
+theme_override_styles/panel = SubResource("ConsoleBackground")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="Margin/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "控制台   ·   ` / Esc 关闭"
+
+[node name="History" type="RichTextLabel" parent="Margin/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 14
+scroll_following = true
+selection_enabled = true
+
+[node name="Command" type="LineEdit" parent="Margin/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+placeholder_text = "> 输入命令并按 Enter"
+keep_editing_on_text_submit = true

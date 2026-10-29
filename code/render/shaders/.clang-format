@@ -1,0 +1,10 @@
+---
+# GLSL stages are formatted with the repository C++ style (code/.clang-format).
+# clang-format has no GLSL mode; these macro expansions only teach it that
+# `uniform Name { ... } instance;` and `buffer Name { ... };` are blocks, so the
+# instance name stays on the closing line.
+BasedOnStyle: InheritParentConfig
+Macros:
+  - 'uniform=struct'
+  - 'buffer=struct'
+...

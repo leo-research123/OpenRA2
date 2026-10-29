@@ -1,0 +1,10 @@
+{
+  "_comment": "Temporary exceptions of the render layering migration (docs/plans/render-layering-2026-10-21.md). A rule may not exceed its count; counts only go down. c: bridge/src no longer includes yrpp (phase 5); d: explicit unit appearance types replaced temporary object writes; b and f are cleared (4.4 and 4.3).",
+  "a": 0,
+  "a2": 0,
+  "b": 0,
+  "c": 0,
+  "d": 0,
+  "e": 0,
+  "f": 0
+}
