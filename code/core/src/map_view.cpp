@@ -578,14 +578,14 @@ static bool valid_skirmish(const SkirmishOptions& setup) noexcept {
     unsigned colors = 0, starts = 0;
     int count = 0;
     bool opponent = false;
-    for (int i = 0; i < 8; ++i) {
+    for (int i = 0; i < SkirmishSlotCount; ++i) {
         const auto& player = setup.players[i];
         if (i && (player.kind < -1 || player.kind > 2)) return false;
         if (player.kind == -1) continue;
         ++count;
         if ((player.country != -2 && (player.country < 0 || player.country > 255)) ||
-            (player.color != -2 && (player.color < 0 || player.color > 7)) ||
-            (player.start != -2 && (player.start < 0 || player.start > 7)) ||
+            (player.color != -2 && (player.color < 0 || player.color >= SkirmishColorCount)) ||
+            (player.start != -2 && (player.start < 0 || player.start >= SkirmishSlotCount)) ||
             player.team < -1 || player.team > 3) return false;
         if (player.color >= 0) {
             if (colors & (1u << player.color)) return false;

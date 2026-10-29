@@ -365,8 +365,8 @@ void RA2Core::begin_skirmish_loading(const godot::String& filename, const godot:
         const godot::Variant slots = options.get("players", godot::Variant());
         if (slots.get_type() != godot::Variant::PACKED_INT32_ARRAY) throw std::runtime_error("Invalid skirmish player list");
         const godot::PackedInt32Array values = slots;
-        if (values.size() != 40) throw std::runtime_error("Skirmish requires eight player slots");
-        for (int i = 0; i < 8; ++i)
+        if (values.size() != game::SkirmishSlotCount * 5) throw std::runtime_error("Skirmish player slot count mismatch");
+        for (int i = 0; i < game::SkirmishSlotCount; ++i)
             setup.players[i] = {values[i * 5], values[i * 5 + 1], values[i * 5 + 2], values[i * 5 + 3], values[i * 5 + 4]};
         begin_map_request(filename, &setup);
     } catch (...) {

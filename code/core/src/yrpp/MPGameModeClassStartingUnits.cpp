@@ -44,14 +44,14 @@ bool MPGameModeClass::StartingPositionsToHouseBaseCells(char) {
 bool MPGameModeClass::StartingPositionsToHouseBaseCells2(bool) {
     DynamicVectorClass<CellStruct> cells;
     if (!ScenarioClass::CollectStartingCells(&cells)) return false;
-    byte used[16];
+    byte used[MaxStartingPositions];
     auto& scenario = *ScenarioClass::Instance;
-    for (int i = 0; i < 16; ++i) used[i] = scenario.HouseIndices[i] != -1;
+    for (int i = 0; i < MaxStartingPositions; ++i) used[i] = scenario.HouseIndices[i] != -1;
     for (int i = 0; i < HouseClass::Array.Count; ++i) {
         auto* house = HouseClass::Array[i];
         if (house->Type->MultiplayPassive) continue;
         int found = -1;
-        for (int j = 0; j < 16; ++j) if (scenario.HouseIndices[j] == i) found = j;
+        for (int j = 0; j < MaxStartingPositions; ++j) if (scenario.HouseIndices[j] == i) found = j;
         if (found >= 0) {
             if (!cells.ValidIndex(found)) return false;
             house->BaseSpawnCell = cells[found];
@@ -61,7 +61,7 @@ bool MPGameModeClass::StartingPositionsToHouseBaseCells2(bool) {
 }
 CellStruct* MPGameModeClass::AssignStartingPositionsToHouse(CellStruct* output, int index,
     DynamicVectorClass<CellStruct>* cells, byte* used) {
-    if (!output || !cells || !used || cells->Count < 1 || cells->Count > 16 || !HouseClass::Array.ValidIndex(index))
+    if (!output || !cells || !used || cells->Count < 1 || cells->Count > MaxStartingPositions || !HouseClass::Array.ValidIndex(index))
         return nullptr;
     auto& scenario = *ScenarioClass::Instance;
     int first = 0;

@@ -3,6 +3,7 @@
 #include "yrpp/platform/ABI.h"
 
 #include "yrpp/GeneralDefinitions.h"
+#include "yrpp/GameModeOptionsClass.h"
 #include "yrpp/Randomizer.h"
 class CellClass;
 #include "yrpp/ArrayClasses.h"
@@ -352,7 +353,7 @@ public:
     int Height;
     int NumberStartingPoints;
     Point2D StartingPoints[0x8];
-    int HouseIndices[0x10];  // starting position => HouseClass::Array.GetItem(#)
+    int HouseIndices[MaxStartingPositions];  // starting position => HouseClass::Array.GetItem(#)
     CellStruct HouseHomeCells[0x8];
     bool TeamsPresent;
     int NumCoopHumanStartSpots;

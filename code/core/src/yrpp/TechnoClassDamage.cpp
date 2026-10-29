@@ -92,7 +92,7 @@ void record_kill_totals(TechnoClass& victim, HouseClass* source) {
         if (building.OwnerCountryIndex != 0xFFFFFFFFu) ++victim.Owner->TotalKilledBuildings;
         if (source && !type->DontScore) {
             tracker = &source->KilledBuildingTypes;
-            if (owner >= 0 && owner < 20) ++source->KilledBuildingsOfHouses[owner];
+            if (owner >= 0 && owner < MaxScoredHouses) ++source->KilledBuildingsOfHouses[owner];
         }
     } else if (kind == AbstractType::Infantry || kind == AbstractType::Unit || kind == AbstractType::Aircraft) {
         ++victim.Owner->TotalKilledUnits;
@@ -100,7 +100,7 @@ void record_kill_totals(TechnoClass& victim, HouseClass* source) {
             tracker = kind == AbstractType::Infantry ? &source->KilledInfantryTypes
                       : kind == AbstractType::Unit   ? &source->KilledUnitTypes
                                                      : &source->KilledAircraftTypes;
-            if (owner >= 0 && owner < 20) ++source->KilledUnitsOfHouses[owner];
+            if (owner >= 0 && owner < MaxScoredHouses) ++source->KilledUnitsOfHouses[owner];
         }
     }
     // UnitTrackerClass::IncrementUnitCount 0x749020 accepts only its populated range.

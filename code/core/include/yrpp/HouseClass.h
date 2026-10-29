@@ -1910,9 +1910,9 @@ public:
     UnitClass* OurFlagCarrier;
     CellStruct OurFlagCoords;
     // for endgame score screen
-    int KilledUnitsOfHouses[20];  // 20 Houses only!
+    int KilledUnitsOfHouses[MaxScoredHouses];  // 20 Houses only in the original
     int TotalKilledUnits;
-    int KilledBuildingsOfHouses[20];  // 20 Houses only!
+    int KilledBuildingsOfHouses[MaxScoredHouses];  // 20 Houses only in the original
     int TotalKilledBuildings;
     int WhoLastHurtMe;
     CellStruct BaseSpawnCell;

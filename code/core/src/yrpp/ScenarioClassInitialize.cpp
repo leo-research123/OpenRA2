@@ -231,7 +231,7 @@ bool YRPP_FASTCALL ScenarioClass::InitializeWorldINI(CCINIClass* ini, bool skip_
                 mission_metadata(auxiliary);
             }
         }
-        std::fill_n(Instance->HouseIndices, 16, -1);
+        std::fill_n(Instance->HouseIndices, MaxStartingPositions, -1);
         if (mode() != 0) {
             if (!Instance->ReadWaypoints(*ini)) return fail();
             if (Instance->IsRandom) std::copy_n(Instance->HouseHomeCells, 8, Instance->Waypoints);

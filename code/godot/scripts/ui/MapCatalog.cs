@@ -14,7 +14,7 @@ public static class MapCatalog
         bool IsCampaign, bool IsTest = false, CampaignVersion Version = CampaignVersion.Unknown,
         CampaignSide Side = CampaignSide.Unknown)
     {
-        public string DisplayFilename => IsTest ? Filename.GetFile() : Filename;
+        public string DisplayFilename => IsTest || Filename.StartsWith("res://", StringComparison.Ordinal) ? Filename.GetFile() : Filename;
         public string Classification
         {
             get

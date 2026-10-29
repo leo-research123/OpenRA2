@@ -230,6 +230,37 @@ void map_resource_changed(CellClass& cell) noexcept {
     ++active_world->presentation_revision;
     RadarClass::Instance.MarkTerrainCellDirty(cell.MapCoords);
 }
+static_assert(SkirmishSlotCount == MaxPlayerSlots && SkirmishColorCount <= MaxHouseBits);
+// Native player colors 8..29 in HSV, after the original eight (0x83ED14): eleven
+// hues between the originals, each as a light and a deep shade.
+const ColorStruct extra_player_colors[SkirmishColorCount - 8]{
+    {12, 140, 255}, {58, 140, 255}, {81, 140, 255}, {104, 140, 255}, {127, 140, 255}, {150, 140, 255},
+    {173, 140, 255}, {196, 140, 255}, {219, 140, 255}, {242, 140, 255}, {35, 140, 255},
+    {12, 255, 170}, {58, 255, 170}, {81, 255, 170}, {104, 255, 170}, {127, 255, 170}, {150, 255, 170},
+    {173, 255, 170}, {196, 255, 170}, {219, 255, 170}, {242, 255, 170}, {35, 255, 170}};
+// AssignHouses maps player colors 0..8 through the original table and uses
+// larger values as scheme indices. Replace native colors with their schemes;
+// those follow the rules colors, so they never read as a color slot again.
+static void resolve_extra_player_colors(MapWorld& world) {
+    int schemes[SkirmishColorCount - 8];
+    for (int i = 0; i < SkirmishColorCount - 8; ++i) {
+        char id[32];
+        std::snprintf(id, sizeof(id), "OpenRA2Player%d", i + 8);
+        schemes[i] = ColorScheme::FindByName(id, extra_player_colors[i], world.impl->presentation.unit_palette,
+                                             FileSystem::TEMPERAT_PAL, 53);
+        if (schemes[i] < SkirmishColorCount) throw std::runtime_error("Could not prepare extra player colors");
+    }
+    const auto resolve = [&](int& color) {
+        if (color >= 8 && color < SkirmishColorCount) color = schemes[color - 8];
+    };
+    auto& slots = SessionClass::Instance.Config.AISlots;
+    for (int i = 0; i < MaxPlayerSlots; ++i)
+        if (slots.Countries[i] != -1) resolve(slots.Colors[i]);
+    for (auto* player : NodeNameType::Array) {
+        resolve(player->Color);
+        resolve(player->InitialColor);
+    }
+}
 // Frontend adaptation only: the live game still owns the original Session,
 // NodeName, House and MPBattle objects. Resolve random menu choices before
 // AssignHouses, as the original dialog does through 0x69B8C0.
@@ -237,7 +268,7 @@ static void prepare_skirmish(MapWorld& world, const SkirmishOptions& setup) {
     auto& view = world.impl->view;
     if (NodeNameType::Array.Count) throw std::runtime_error("Skirmish already has external player records");
     int starts = 0;
-    for (; starts < 8; ++starts) {
+    for (; starts < MaxPlayerSlots; ++starts) {
         char key[4];
         std::snprintf(key, sizeof(key), "%d", starts);
         if (world.map_ini.ReadInteger("Waypoints", key, -1) < 0) break;
@@ -278,21 +309,23 @@ static void prepare_skirmish(MapWorld& world, const SkirmishOptions& setup) {
     config.Crates = setup.crates;
     config.BridgeDestruction = setup.bridge_destruction;
     config.AlliesAllowed = true;
-    for (int i = 0; i < 8; ++i) {
+    for (int i = 0; i < MaxPlayerSlots; ++i) {
         config.AISlots.Countries[i] = -1;
         config.AISlots.Colors[i] = -1;
         config.AISlots.Starts[i] = -2;
         config.AISlots.Allies[i] = -1;
         config.AISlots.Difficulties[i] = 1;
     }
+    // Games that fit the original eight colors draw random colors from those.
+    const int palette = count <= 8 ? 8 : SkirmishColorCount;
     Randomizer random(setup.seed);
-    for (int i = 0; i < 8; ++i) {
+    for (int i = 0; i < MaxPlayerSlots; ++i) {
         const auto& slot = setup.players[i];
         if (slot.kind == -1) continue;
         const int country = slot.country == -2 ? countries[random.RandomRanged(0, int(countries.size()) - 1)] : slot.country;
         int color = slot.color;
         if (color == -2) {
-            do { color = random.RandomRanged(0, 7); } while (used_colors & (1u << color));
+            do { color = random.RandomRanged(0, palette - 1); } while (used_colors & (1u << color));
             used_colors |= 1u << color;
         }
         if (!i) {
@@ -367,7 +400,7 @@ bool load_map_world(MapWorld& world, char* error, std::size_t error_size, const 
                 player.Team = player.InitialTeam = -1;
                 player.SpectatorFlag = 0;
                 if (!NodeNameType::Array.AddItem(&player)) throw std::bad_alloc();
-                for (int i = 0; i < 8; ++i) {
+                for (int i = 0; i < MaxPlayerSlots; ++i) {
                     config.AISlots.Countries[i] = i ? -1 : 5;
                     config.AISlots.Colors[i] = i + 1;
                     config.AISlots.Starts[i] = -2;
@@ -413,6 +446,7 @@ bool load_map_world(MapWorld& world, char* error, std::size_t error_size, const 
                                 load_world_palettes(c.world);
                                 RulesClass::Read_Colors(CCINIClass::INI_Rules);
                             }
+                            if (SessionClass::Instance.GameMode != GameMode::Campaign) resolve_extra_player_colors(c.world);
                             c.ok = ScenarioClass::StartScenario(
                                 ScenarioClass::Instance->FileName,
                                 c.world.impl->view.continuation_loading &&

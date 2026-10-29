@@ -66,7 +66,7 @@ bool TechnoClass::SetOwningHouse(HouseClass* house, bool) {
     house->PointTotal += type->GetActualCost(old);
     old->RemoveTracking(this);
     house->AddTracking(this);
-    if (!type->DontScore && old->ArrayIndex >= 0 && old->ArrayIndex < 20) {
+    if (!type->DontScore && old->ArrayIndex >= 0 && old->ArrayIndex < MaxScoredHouses) {
         if (WhatAmI() == AbstractType::Building)
             ++house->KilledBuildingsOfHouses[old->ArrayIndex];
         else if (WhatAmI() == AbstractType::Infantry || WhatAmI() == AbstractType::Unit ||

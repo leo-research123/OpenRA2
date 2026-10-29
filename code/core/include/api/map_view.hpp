@@ -155,8 +155,12 @@ bool load_map_view(MapViewHandle& view, const char* filename, std::uint32_t file
 struct SkirmishPlayer {
     int kind = -1, country = -2, color = -2, start = -2, team = -1;
 };
+// Thirty players plus Neutral and Special fill the 32-bit per-House masks.
+// Colors 0..7 are the original multiplayer colors; 8..29 are native additions.
+constexpr int SkirmishSlotCount = 30;
+constexpr int SkirmishColorCount = 30;
 struct SkirmishOptions {
-    SkirmishPlayer players[8]{};
+    SkirmishPlayer players[SkirmishSlotCount]{};
     int money = 10000, unit_count = 10;
     int game_speed = 1; // Original delay: 0 fastest, 6 slowest.
     std::uint32_t seed = 0;

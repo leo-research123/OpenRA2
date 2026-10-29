@@ -248,5 +248,5 @@ public:
 };
 #if defined(_MSC_VER) && defined(_M_IX86)
 #pragma pack(pop)
-static_assert(sizeof(SessionClass) == 0x30DC);
+static_assert(sizeof(SessionClass) == 0x30DC + sizeof(AISlotsStruct) - 0xA0);
 #endif

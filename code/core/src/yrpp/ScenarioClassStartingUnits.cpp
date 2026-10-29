@@ -11,13 +11,13 @@ DynamicVectorClass<CellStruct>* YRPP_FASTCALL ScenarioClass::CollectStartingCell
     try {
         const CellStruct invalid{0, 0};
         int count = 0;
-        while (count < 8 && Instance->Waypoints[count] != invalid) ++count;
+        while (count < MaxPlayerSlots && Instance->Waypoints[count] != invalid) ++count;
         int spectators = 0;
         for (auto* player : NodeNameType::Array)
             if (player->SpectatorFlag == -1) ++spectators;
         count = std::max(count, SessionClass::Instance.Config.AIPlayers + NodeNameType::Array.Count - spectators);
         // Original multiplayer assignment has only sixteen starting-position slots.
-        if (count < 0 || count > 16) return nullptr;
+        if (count < 0 || count > MaxStartingPositions) return nullptr;
         DynamicVectorClass<CellStruct> cells;
         for (int i = 0; i < count; ++i)
             if (Instance->Waypoints[i] != invalid && !cells.AddItem(Instance->Waypoints[i])) return nullptr;

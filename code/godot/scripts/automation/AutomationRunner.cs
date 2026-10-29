@@ -152,6 +152,18 @@ public partial class AutomationRunner : Node
                 var wanted = JsonNode.Parse(step.GetProperty("equals").GetRawText());
                 Require(JsonNode.DeepEquals(actual, wanted), $"Assertion {Text(step, "field")}: expected {wanted}, got {actual}");
                 break;
+            case "start_skirmish":
+                // Lobby path: pick a map by filename fragment, seat AIs on every start, launch.
+                Require(_app.CurrentScreen == App.Screen.Skirmish, "Skirmish lobby is not open");
+                var lobby = _app.SkirmishLobbyScreen;
+                await WaitUntil(() => !lobby.Scanning, step);
+                Require(lobby.SelectMapContaining(Text(step, "map")), "Requested skirmish map is not in the list");
+                if (step.TryGetProperty("fill", out var fill) && fill.GetBoolean()) lobby.FillWithAI();
+                await Frame();
+                Require(!lobby.StartButton.Disabled, lobby.StartButton.TooltipText);
+                lobby.StartButton.EmitSignal(BaseButton.SignalName.Pressed);
+                await Frame();
+                break;
             case "wait_objects":
                 await WaitUntil(() => CountObjects(step) == step.GetProperty("count").GetInt32(), step);
                 break;

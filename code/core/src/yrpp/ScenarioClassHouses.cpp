@@ -104,7 +104,7 @@ void YRPP_FASTCALL ScenarioClass::AssignHouses() {
     int created_ai = 0;
     const int requested_ai = SessionClass::Instance.Config.AIPlayers;
     const auto& slots = SessionClass::Instance.Config.AISlots;
-    for (int slot = 0; slot < 8; ++slot) {
+    for (int slot = 0; slot < MaxPlayerSlots; ++slot) {
         const int country = slots.Countries[slot];
         if (created_ai >= requested_ai || country == -1 || country == -3) continue;
         ++created_ai;
@@ -130,4 +130,7 @@ void YRPP_FASTCALL ScenarioClass::AssignHouses() {
         house->ColorSchemeIndex = neutral_color();
         house->UpdateColor();
     }
+    // Alliance, cloak and base-spacing masks hold one bit per House and wrap
+    // larger indices onto other Houses.
+    if (HouseClass::Array.Count > MaxHouseBits) throw std::runtime_error("Scenario has more Houses than house masks hold");
 }

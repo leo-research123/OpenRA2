@@ -78,7 +78,7 @@ void build_radar_names(GameUiFrame& context, const RadarClass& self) noexcept {
         }
         draw_ui_text(name, clip, {left, y}, color, flags);
         unsigned kills = 0;
-        for (int i = 0; i < 20; ++i)
+        for (int i = 0; i < MaxScoredHouses; ++i)
             kills += static_cast<unsigned>(house->KilledUnitsOfHouses[i]) +
                      static_cast<unsigned>(house->KilledBuildingsOfHouses[i]);
         wchar_t number[32]{};

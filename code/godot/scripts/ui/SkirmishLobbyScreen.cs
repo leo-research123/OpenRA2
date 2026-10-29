@@ -58,7 +58,7 @@ public partial class SkirmishLobbyScreen : Control
     {
         for (var i = 0; i < _slots.Length; i++) _slots[i] = new SkirmishSlot();
         _slots[0].Kind = SkirmishSlotKind.Human;
-        _slots[1].Kind = SkirmishSlotKind.NormalAI;
+        _slots[1].Kind = SkirmishSlotKind.HardAI;
         BuildLayout();
         StartButton.Pressed += StartGame;
         _mode.ItemSelected += _ => RefreshStartButton();
@@ -91,7 +91,8 @@ public partial class SkirmishLobbyScreen : Control
         }
         ShowMap(null);
         _status.Text = "正在查找遭遇战地图…";
-        _scan = MapCatalog.Discover(core, directory).GetEnumerator();
+        // The bundled thirty-start map is a skirmish-only addition to the catalog.
+        _scan = MapCatalog.Discover(core, directory).Concat(BundledTestMaps.SkirmishEntries()).GetEnumerator();
         SetProcess(true);
     }
 
@@ -142,6 +143,15 @@ public partial class SkirmishLobbyScreen : Control
     }
 
     public override void _ExitTree() => CancelScan();
+
+    // Automation selects bundled maps by a fragment of their materialized name.
+    public bool SelectMapContaining(string fragment)
+    {
+        var entry = _maps.Find(map => map.Filename.Contains(fragment, StringComparison.OrdinalIgnoreCase));
+        if (entry == null) return false;
+        SelectMap(entry);
+        return true;
+    }
 
     public bool SelectMap(string filename)
     {
@@ -247,7 +257,9 @@ public partial class SkirmishLobbyScreen : Control
         {
             try
             {
-                using var ini = MapCatalog.LoadIni(_core, entry.Filename);
+                if (!BundledTestMaps.NativeFilename(entry.Filename, out var filename, out var error))
+                    throw new InvalidOperationException(error);
+                using var ini = MapCatalog.LoadIni(_core, filename);
                 if (ini != null)
                 {
                     ReadStarts(ini);
@@ -333,6 +345,27 @@ public partial class SkirmishLobbyScreen : Control
         // Too many seats for the new map: open the last computer seats first.
         for (var i = _slots.Length - 1; i > 0 && _slots.Count(slot => slot.IsOccupied) > limit; i--)
             if (_slots[i].IsOccupied && _slots[i].Kind != SkirmishSlotKind.Human) Open(_slots[i]);
+    }
+
+    // Seat Hard AIs in open slots until every start point is taken.
+    public void FillWithAI()
+    {
+        var free = _starts.Count - _slots.Count(slot => slot.IsOccupied);
+        foreach (var slot in _slots)
+        {
+            if (free <= 0) break;
+            if (slot.IsOccupied) continue;
+            slot.Kind = SkirmishSlotKind.HardAI;
+            --free;
+        }
+        RefreshSlots();
+    }
+
+    private void ClearAI()
+    {
+        foreach (var slot in _slots)
+            if (slot.IsOccupied && slot.Kind != SkirmishSlotKind.Human) Open(slot);
+        RefreshSlots();
     }
 
     private static void Open(SkirmishSlot slot)
@@ -426,8 +459,13 @@ public partial class SkirmishLobbyScreen : Control
             ["game_speed"] = 6 - Mathf.RoundToInt(_speed.Value), ["seed"] = (long)(uint)Time.GetTicksUsec()
         };
         foreach (var (key, checkbox) in _options) options[key] = checkbox.ButtonPressed;
+        if (!BundledTestMaps.NativeFilename(SelectedMap, out var filename, out error))
+        {
+            _status.Text = error;
+            return;
+        }
         CancelScan();
-        StartRequested?.Invoke(SelectedMap, options);
+        StartRequested?.Invoke(filename, options);
     }
 
     private void UpdateScanStatus()
@@ -471,10 +509,25 @@ public partial class SkirmishLobbyScreen : Control
         var left = new VBoxContainer { SizeFlagsHorizontal = SizeFlags.ExpandFill, SizeFlagsStretchRatio = 1.7f };
         left.AddThemeConstantOverride("separation", 8);
         body.AddChild(left);
-        var grid = new GridContainer { Columns = 4, SizeFlagsVertical = SizeFlags.ExpandFill };
+        var seats = new HBoxContainer();
+        seats.AddThemeConstantOverride("separation", 10);
+        left.AddChild(seats);
+        var fill = new Button { Text = "电脑填满出生点", CustomMinimumSize = new Vector2(150, 32) };
+        fill.Pressed += FillWithAI;
+        seats.AddChild(fill);
+        var clear = new Button { Text = "清空电脑", CustomMinimumSize = new Vector2(110, 32) };
+        clear.Pressed += ClearAI;
+        seats.AddChild(clear);
+        // Thirty seats do not fit one screen; the slot grid scrolls vertically.
+        var scroll = new ScrollContainer
+        {
+            SizeFlagsVertical = SizeFlags.ExpandFill, HorizontalScrollMode = ScrollContainer.ScrollMode.Disabled
+        };
+        left.AddChild(scroll);
+        var grid = new GridContainer { Columns = 4, SizeFlagsHorizontal = SizeFlags.ExpandFill };
         grid.AddThemeConstantOverride("h_separation", 10);
         grid.AddThemeConstantOverride("v_separation", 10);
-        left.AddChild(grid);
+        scroll.AddChild(grid);
         for (var i = 0; i < _cards.Length; i++)
         {
             var card = new SkirmishSlotCard(_slots[i]) { PlayerName = PlayerName, Name = $"Slot{i + 1}" };
